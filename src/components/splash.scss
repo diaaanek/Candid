@@ -1,0 +1,203 @@
+// splash page structure:
+// root
+//  + nav-bar
+//  + splash
+//  + footer
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  padding: 10px 45px;
+  width: 100%;
+  min-width: 750px;
+  // border-bottom: 1px solid gray;
+  background-color: #FDFDFD;;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+
+  .logo {
+    width: 240px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .nav-links {
+    margin-top: 15px;
+    ul {
+      display: flex;
+    }
+  }
+}
+// end nav bar
+
+.splash {
+  padding: 20px 45px;
+  padding-top: 160px;
+  height: 100%;
+  overflow: scroll;
+
+  .first-page{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    // height: 100vh;
+    // match the viewport height of the browser window
+  }
+
+// computer image
+  img {
+    width: 250px;
+    display:inline-block;
+    margin-right: 16px;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+  }
+
+  #manage {
+    margin-left: 25px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  #first-line {
+    margin-top: 20px;
+  }
+  #second-line {
+    margin-top: 10px;
+    display: flex;
+    p {
+      padding-top: 10px;
+    }
+    img {
+      margin-left: 20px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .mainbutton {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .splash-left {
+    margin-top: 37px;
+  }
+
+  .splash-right {
+    margin-right: 80px;
+  }
+
+  #laptop {
+    padding: 10px;
+    background-image: url("https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589863/desk.png");
+    width: 450px;
+    height: 400px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+  }
+
+}
+  .footer {
+    position: sticky;
+    bottom: 0;
+    padding: 15px 45px 15px 45px;
+    width: 100%;
+
+    // background-color: darken( $backgroundgray, 2% );
+
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    // border-top: 1px solid $gray;
+
+    a {
+      padding: 10px;
+      font-size: 15px;
+
+      // font-size: 32px;
+    }
+    p{
+      position: sticky;
+      bottom: 0;
+
+      font-size: 15px;
+    }
+  }
+
+  // buttons
+
+  .button {
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .button:hover {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  }
+
+  .signin {
+    border: 2px solid black;
+  }
+
+  .signin:hover, .demo:hover {
+    // border: 2px solid $lightblue;
+    background-color: white;
+    // color: $lightblue;
+  }
+
+  .signup {
+    background-color: #5576D8;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #5576D8;
+}
+
+  .signup:hover {
+    background-color: blue;
+    border: 2px solid blue;
+  }
+
+  .nav-bar .signup {
+    margin-left: 15px;
+  }
+
+  .splash .signup {
+    margin-top: 20px;
+  }
+
+  .demo {
+    margin-left: 15px;
+    border: 2px solid black;
+  }
+
+  .footer a:hover {
+    color: blue;
+  }
+
+//
+//   .desk {
+//   background-image: url("desk.png");
+//   position: absolute;
+//   left: 868px;
+//   top: 213px;
+//   width: 466px;
+//   height: 541px;
+//   z-index: 16;
+// }
+//
