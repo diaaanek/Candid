@@ -7,7 +7,7 @@ import "./components/splash.scss";
 
 import './App.css';
 
-import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
 
 class App extends Component {

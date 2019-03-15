@@ -1,5 +1,5 @@
 import React from 'react';
-import "./splash.scss";
+import "./splash.scss";import Button from 'react-toolbox/lib/button/Button';
 
 // import NavBarContainer from './components/navbar_container';
 // import Footer from './components/footer'
@@ -21,7 +21,10 @@ export default () => {
 
 
 
-          <button type="button" className="signup button mainbutton">Click to start</button>
+          <button type="button" className="signup button mainbutton">Sign in with Github</button>
+            <Button raised primary>
+              Hi!
+            </Button>
 
       </section>
 

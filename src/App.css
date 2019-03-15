@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Open+Sans|Nunito|Roboto|Montserrat");
 
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   /* text-align: center; */
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   /* font-weight: 200; */
-  position: relative;
+  /* position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; */
   /* display: flex;
   flex-direction: row; */
 }
