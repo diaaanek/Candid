@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
    <ThemeProvider theme={theme}>
-  <App />
+      <App />
    </ThemeProvider>
 , document.getElementById('root'));
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import "./splash.scss";import Button from 'react-toolbox/lib/button/Button';
+import "./Splash.scss";
+import Button from 'react-toolbox/lib/button/Button';
 
 // import NavBarContainer from './components/navbar_container';
 // import Footer from './components/footer'
