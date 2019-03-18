@@ -5,7 +5,7 @@ import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import theme from './toolbox/theme';
 
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

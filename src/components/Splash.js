@@ -1,9 +1,11 @@
+
+
 import React from 'react';
-import "./Splash.scss";
+// import "./Splash.scss";
 import Button from 'react-toolbox/lib/button/Button';
 
 import NavBarContainer from './components/NavBarContainer';
-import Footer from './components/Footer'
+import Footer from './Footer'
 
 export default () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./splash.scss";
+
 // import fontawesome from '@fortawesome/fontawesome';
 // import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 // import brands from '@fortawesome/fontawesome-free-brands';

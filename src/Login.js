@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import "./Splash.scss";
 import LoginButton from './LoginButton';
 import './Login.css';
+import NavBarContainer from './components/NavBarContainer';
+// import Footer from './components/Footer'
 
 class Login extends Component {
   render() {
     return (
       <div className="Login">
+
         <div className="Login-header">
+          <NavBarContainer />
           <h2 className="Login-title">
             CANDID
           </h2>
@@ -20,7 +24,8 @@ class Login extends Component {
         </div>
         <button type="button" className="signup button mainbutton">Sign in with Github</button>
 
-      
+
+
       </div>
     );
   }
