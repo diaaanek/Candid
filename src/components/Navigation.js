@@ -27,7 +27,7 @@ const NavigationAuth = () => (
     </li>
 
     <li>
-      <Link to={routes.ACCOUNT}>Code</Link>
+      <Link to={routes.CODE}>Code</Link>
     </li>
     <li>
       <SignOutButton />

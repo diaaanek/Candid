@@ -7,7 +7,7 @@ import SignUpPage from './SignUp'
 import SignInPage from './SignIn'
 
 import HomePage from './Home'
-import AccountPage from './Account'
+import AccountPage from './challenges/Account'
 import withAuthentication from './withAuthentication'
 
 import * as routes from '../constants/routes'
@@ -21,7 +21,7 @@ const App = () => (
       <Route exact path={routes.SIGN_UP} component={SignUpPage} />
       <Route exact path={routes.SIGN_IN} component={SignInPage} />
       <Route exact path={routes.HOME} component={HomePage} />
-      <Route exact path={routes.ACCOUNT} component={AccountPage} />
+      <Route exact path={routes.CODE} component={AccountPage} />
     </div>
   </Router>
 )

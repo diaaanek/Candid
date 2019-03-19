@@ -72,7 +72,13 @@ render() {
     selectedProblem={this.state.selectedProblem}
     description={this.state.currentProblem.description}
   />
-<CodeBox/>
+<CodeBox
+  problemIndex={this.state.problemIndex}
+  problemSelected={this.state.problemSelected}
+  selectedProblem={this.state.selectedProblem}
+  description={this.state.currentProblem.description}
+
+  />
 </div>
 );
   }
