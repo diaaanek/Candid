@@ -11,7 +11,7 @@ a {
 }
 
 .nav-bar {
-
+height: 85px;
   font-family: "Quicksand";
   position: fixed;
   top: 0;
@@ -32,9 +32,10 @@ a {
   }
 
   .nav-links {
-    margin-top: 15px;
+
     ul {
       display: flex;
+
     }
   }
 }

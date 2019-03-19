@@ -23,6 +23,7 @@ const NavigationAuth = () => (
     <section className="nav-links">
   <ul>
     <li>
+        <button type="button" className="signup button">Create Account</button>
       <Link to={routes.HOME}>Learn......   ] </Link>
     </li>
 
