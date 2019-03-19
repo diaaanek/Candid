@@ -6,7 +6,7 @@ import LandingPage from './Landing'
 import SignUpPage from './SignUp'
 import SignInPage from './SignIn'
 
-import HomePage from './Home'
+import HomePage from './dashboard/Home'
 import AccountPage from './challenges/Account'
 import withAuthentication from './withAuthentication'
 

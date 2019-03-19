@@ -1,5 +1,5 @@
 .flashcards-page {
-	background: gray;
+	background: #f1f1f1;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -10,6 +10,7 @@
 .flip-container {
 	align-self: center;
 	perspective: 1000px;
+
 
 }
 	/* flip the pane when hovered */
@@ -44,8 +45,9 @@
 	color: gray;
 
 	h1 {
-		font-size: 36px;
+		font-size: 25px;
 		align-self: center;
+		font-family: "Avenir";
 
 	}
 }
@@ -72,8 +74,8 @@ ul.prev-next-buttons {
 	color: turquoise;
 
 	li:nth-child(2) {
-		font-size: 24px;
-		color: blue;
+		font-size: 20px;
+	font-family: "Quicksand";
 		align-self: center;
 	}
 
@@ -92,5 +94,6 @@ button.active {
 
 div.instructions {
 	align-self: center;
-	color: blue;
+font-family: "Quicksand";
+font-size: 10px;
 }
