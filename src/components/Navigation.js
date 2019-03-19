@@ -23,7 +23,7 @@ const NavigationAuth = () => (
     <section className="nav-links">
   <ul>
     <li>
-      <Link to={routes.HOME}>Learn</Link>
+      <Link to={routes.HOME}>Learn......   ] </Link>
     </li>
 
     <li>
