@@ -23,6 +23,7 @@ function CodeBox(props) {
     <div className="CodeBox">
 
           <div className="flashcards-page">
+
           				<div className="instructions">
                     <h1>CodeBox / CodeMirror Component Here </h1>
 
@@ -37,6 +38,10 @@ function CodeBox(props) {
                         mode: 'jsx',
                       }}
                     />
+                  <div className="buttonContainer">
+                  <button className="submit button">Submit </button>
+                  <button className="test button">Test </button>
+                  </div>
                   {/*<div className="flipper">
           						<div className="front">
           						<textarea>Front code goes heree</textarea>

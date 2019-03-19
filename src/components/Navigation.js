@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 import AuthUserContext from './AuthUserContext'
 import SignOutButton from './SignOut'
@@ -23,8 +23,8 @@ const NavigationAuth = () => (
     <section className="nav-links">
   <ul>
     <li>
-        <button type="button" className="signup button">Create Account</button>
-      <Link to={routes.HOME}>Learn......   ] </Link>
+        {/*}<button type="button" className="signup button"> Learn</button> */}
+      <Link to={routes.HOME}>Learn </Link>
     </li>
 
     <li>

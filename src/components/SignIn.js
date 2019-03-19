@@ -59,10 +59,11 @@ class SignInForm extends Component {
     return (
       <div className="session-page">
         <div className="session-form-container">
-        <div className= "big-cross-off-logo">
+          <h1 style={{fontFamily: "Quicksand", textAlign:"center"}}>Sign in</h1>
+        <div className= "logo">
           <Link to="/">
             <img src=" "
-            className="big-crossoff-icon" />
+            className="icon" />
           </Link>
         </div>
 

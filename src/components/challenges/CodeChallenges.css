@@ -1,7 +1,7 @@
-/* @font-face {
-  font-family: 'Marker';
-  src: url(../../assets/fonts/marker.ttf)
-} */
+
+.app{
+    margin-top: 78px;
+}
 
 .whiteboard {
   margin-top: 78px;
@@ -13,9 +13,7 @@
   width: 100%;
 }
 
-/* .whiteboard.marker-font {
-  font-family: 'Marker', cursive;
-} */
+
 
 .whiteboard h1 {
   font-family: "Quicksand";
@@ -46,9 +44,9 @@
 
 
 .info-panel {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8;
   border-top: 10px solid #adb2bd;
-  box-shadow: inset -1px 2px 2px #404040;
+  box-shadow: inset -1px 2px 2px #404040; */
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   padding: 16px;

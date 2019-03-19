@@ -1,0 +1,26 @@
+#Card {
+  border-radius: 10px;
+}
+
+.dashboard{
+  margin-top: 95px;
+  font-family: "Quicksand"
+}
+h1 {
+  font-size: 25px;
+  align-self: center;
+
+}
+
+.start {
+  background-color: #5576D8;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #5576D8;
+  border-radius: 5px;
+}
+
+.start:hover {
+  background-color: blue;
+  border: 2px solid blue;
+}

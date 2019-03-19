@@ -5,7 +5,6 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 
 import ChatBot from "react-simple-chatbot";
-import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 
 
@@ -67,7 +66,7 @@ export default ({ user }) => (
 
           <section className="splash-right">
             <div id="laptop">
-    <img src=""/>
+
             </div>
           </section>
 

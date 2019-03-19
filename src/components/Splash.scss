@@ -5,10 +5,15 @@
 //  + footer
 
 @import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Open+Sans|Nunito|Quicksand|Montserrat");
+html { height: 100% }
+
+body { min-height: 100% }
 
 a {
   list-style: none;
+  text-decoration: none;
 }
+
 
 .nav-bar {
 height: 85px;
@@ -34,9 +39,25 @@ height: 85px;
   .nav-links {
 
     ul {
-      display: flex;
+      margin: 0 2px;
+      padding: 0;
+      // display: flex;
+      //
+      // padding: 5px;
 
     }
+    li {
+   display: inline-block;
+   padding: 5px 5px;
+}
+a {
+  font-weight: bold;
+  padding: 10px 5px;
+}
+
+a: hover{
+  color: red;
+}
   }
 }
 // end nav bar
@@ -44,12 +65,16 @@ height: 85px;
 .splash {
   padding: 20px 45px;
   padding-top: 150px;
-  height: 100%;
+   min-height: calc(100vh - 40px);
+
+
+
   background: linear-gradient(to bottom,#f9fbf7, #C9D8FF);
 
 
 
   .first-page{
+      min-height: 100vh;
       font-family: "Quicksand";
     display: flex;
     justify-content: space-around;

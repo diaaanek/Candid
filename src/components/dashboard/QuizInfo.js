@@ -9,15 +9,13 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 class QuizInfo extends Component {
-  constructor(props) {
-    super(props)
-  }
+
 
   render() {
     const { quiz, onBack, onPress, logout } = this.props;
     return (
       <div>
-      
+
 
         {/* <h1>{quiz.name}</h1> */}
         <div style={{ margin: '80px 3% 3% 3%' }}>
@@ -41,9 +39,9 @@ class QuizInfo extends Component {
 
                   {subQuiz.score ?
                     <CardContent>
-                      <Typography gutterBottom variant="headline" component="h2" style={{ textAlign: 'left' }}>
+                    <h1 gutterBottom variant="headline" component="h1" style={{ textAlign: 'left', fontFamily: "Quicksand"}}>
                         {subQuiz.name}
-                      </Typography>
+                      </h1>
 
                       <Typography variant="caption" style={{ textAlign: 'left', fontSize: '13px' }}>
                         You have attempted this Quiz.
@@ -60,9 +58,9 @@ class QuizInfo extends Component {
                     </CardContent>
                     :
                     <CardContent>
-                      <Typography gutterBottom variant="headline" component="h2" style={{ textAlign: 'left' }}>
+                      <h1 gutterBottom variant="headline" component="h1" style={{ textAlign: 'left', fontFamily: "Quicksand"}}>
                         {subQuiz.name}
-                      </Typography>
+                      </h1>
 
                       <Typography variant="caption" style={{ textAlign: 'left', fontSize: '13px' }}>
                         This Quiz is based on the following criteria:

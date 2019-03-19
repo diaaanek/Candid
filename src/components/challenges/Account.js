@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import InfoPanel from './InfoPanel';
 import CodeBox from './CodeBox';
 import Whiteboard from './Whiteboard';
+import './CodeChallenges.css'
 // import AuthUserContext from './AuthUserContext'
 
 
@@ -60,23 +61,25 @@ render() {
   return (
 
     <div className="app">
-  <Whiteboard
+   {/*<Whiteboard
     title={this.state.currentProblem.title}
     body={this.state.currentProblem.body}
     problemSelected={this.state.problemSelected}
-  />
+    description={this.state.currentProblem.description}
+  /> */}
   <InfoPanel
     handleSelectionChange={(event) => this.fetchProblemHandler(event)}
     problemIndex={this.state.problemIndex}
     problemSelected={this.state.problemSelected}
     selectedProblem={this.state.selectedProblem}
+      body={this.state.currentProblem.body}
     description={this.state.currentProblem.description}
   />
 <CodeBox
   problemIndex={this.state.problemIndex}
+  title={this.state.currentProblem.title}
+  body={this.state.currentProblem.body}
   problemSelected={this.state.problemSelected}
-  selectedProblem={this.state.selectedProblem}
-  description={this.state.currentProblem.description}
 
   />
 </div>

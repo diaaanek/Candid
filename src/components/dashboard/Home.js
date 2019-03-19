@@ -6,12 +6,11 @@ import QuizList from './QuizList'
 import QuizInfo from './QuizInfo'
 import StartQuiz from './StartQuiz'
 
+import "./Dashboard.css";
 // + Home
 //  ++ QuizList
 //   +++ Quiz Info
 //    ++++ QuizList
-
-
 
 export default class Home extends Component {
   constructor() {
@@ -582,15 +581,15 @@ export default class Home extends Component {
       // user: authUser,
 
     };
-        this.joinQuiz = this.joinQuiz.bind(this);
-        this.showList = this.showList.bind(this);
-        this.startQuiz = this.startQuiz.bind(this);
-        this.nextQstn = this.nextQstn.bind(this);
-        this.back = this.back.bind(this);
+        // this.joinQuiz = this.joinQuiz.bind(this);
+        // this.showList = this.showList.bind(this);
+        // this.startQuiz = this.startQuiz.bind(this);
+        // this.nextQstn = this.nextQstn.bind(this);
+        // this.back = this.back.bind(this);
       }
 
 
-      joinQuiz(quizIndex) {
+  joinQuiz = (quizIndex) => {
   const { quizzes } = this.state;
   this.setState({
     quiz: quizzes[quizIndex],
@@ -599,13 +598,12 @@ export default class Home extends Component {
   });
 }
 
-showList() {
+showList = () => {
   this.setState({ quiz: null });
 }
 
-startQuiz(subQuizIndex) {
+startQuiz = (subQuizIndex) => {
   const { quizzes, quizIndex } = this.state;
-
   this.setState({
     started: quizzes[quizIndex].subQuiz[subQuizIndex],
     subQuizIndex: subQuizIndex,
@@ -613,14 +611,13 @@ startQuiz(subQuizIndex) {
   });
 }
 
-nextQstn(nextQstnNo) {
-
+nextQstn = (nextQstnNo) => {
   this.setState({
     qstnNo: nextQstnNo + 1
   });
 }
 
-back() {
+back = () => {
   this.setState({
     started: null,
     qstnNo: 0,
@@ -633,7 +630,7 @@ back() {
     return (
       <div className="dashboard">
 
-              <center>
+              <center><h1>Welcome to your dashboard!</h1>
               <div>
 
     { (!quiz && !started) &&

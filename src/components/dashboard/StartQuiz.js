@@ -182,9 +182,9 @@ class QuizList extends Component {
           <div>
 
 
-            <Typography variant="display1" >
+          <h2>
               {quizName}({subQuizName})
-            </Typography>
+            </h2>
             <br />
             <div className='resultDiv'>
               <div >
@@ -211,7 +211,7 @@ class QuizList extends Component {
           </div>
           :
           <div>
-          
+
             <Typography variant="title" >
               {min}:{sec}
             </Typography>

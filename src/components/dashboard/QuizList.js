@@ -5,24 +5,22 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 // map through quiz
 // render image, name, description
 // button to onclick start
 class QuizList extends Component {
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
 
   render() {
     const { list, onPress, logout } = this.props;
     return (
       <div>
-  
 
-        <div style={{ margin:'80px 3% 3% 3%'}}>
+
+        <div style={{ margin:'20px 3% 3% 3%'}}>
 
           {list.map((quiz, index) => {
 
@@ -37,23 +35,22 @@ class QuizList extends Component {
                     component="img"
                     // className={classes.media}
                     style={{ objectFit: 'cover' }}
-                    height="140"
+                    height="150"
                     image={quiz.image}
                     title={quiz.name}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2" style={{ textAlign: 'left' }}>
+                    <h1 gutterBottom variant="headline" component="h1" style={{ textAlign: 'left', fontFamily: "Quicksand"}}>
                       {quiz.name}
-                    </Typography>
-                    <Typography component="p" style={{ textAlign: 'left' }}>
+                    </h1>
+                    <div component="p" style={{ textAlign: 'left' }}>
                       {quiz.description}
-                    </Typography>
+                    </div>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button onClick={() => onPress(index)} size="large" color="primary"> Start
-
-              </Button>
+                  <button className="start" onClick={() => onPress(index)} size="large" color="primary"> Start
+              </button>
                 </CardActions>
               </Card>
 
