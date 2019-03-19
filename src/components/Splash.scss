@@ -6,26 +6,29 @@
 
 @import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Open+Sans|Nunito|Quicksand|Montserrat");
 
+a {
+  list-style: none;
+}
+
 .nav-bar {
+
   font-family: "Quicksand";
   position: fixed;
   top: 0;
   padding: 10px 45px;
   width: 100%;
-  min-width: 750px;
+  // min-width: 750px;
   // border-bottom: 1px solid gray;
   background-color: #FDFDFD;;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 3px -1px rgba(0,0,0,.2);
 
   .logo {
-    width: 240px;
-    img {
-      // width: 100%;
-    }
+    // width: 240px;
+
   }
 
   .nav-links {
@@ -41,6 +44,7 @@
   padding: 20px 45px;
   padding-top: 150px;
   height: 100%;
+  background: linear-gradient(to bottom,#f9fbf7, #C9D8FF);
 
 
 
@@ -60,7 +64,6 @@
 
 // computer image
   img {
-    // width: 250px;
     display:inline-block;
     margin-right: 16px;
     vertical-align: bottom;
@@ -108,7 +111,7 @@
 
   #laptop {
     padding: 10px;
-    background-image: url("https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589863/desk.png");
+    background-image: url("https://cdn.pixabay.com/photo/2019/03/01/05/04/developer-4027337__340.png");
     width: 450px;
     height: 400px;
     background-size: 100%;
@@ -119,7 +122,7 @@
 }
   .footer {
     position: sticky;
-      font-family: "Quicksand";
+    font-family: "Quicksand";
     bottom: 0;
     padding: 15px 45px 15px 45px;
     width: 100%;
@@ -150,7 +153,7 @@
 
   .button {
     padding: 15px 20px;
-      font-family: "Quicksand";
+    font-family: "Quicksand";
     font-size: 15px;
     font-weight: bold;
     border-radius: 6px;
@@ -194,15 +197,15 @@
     margin-top: 20px;
   }
 
-  .demo {
-    margin-left: 15px;
-    border: 2px solid black;
-  }
-
   .footer a:hover {
     color: blue;
   }
 
+
+input.rsc-input.sc-kAzzGY.fCeMBp {
+  font-family: "Avenir";
+
+}
 //
 //   .desk {
 //   background-image: url("desk.png");

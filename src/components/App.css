@@ -2,25 +2,13 @@
 
 
 @import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Open+Sans|Nunito|Quicksand|Montserrat");
-@import "reset.scss";
-@import "colors.scss";
-@import "fonts.scss";
-@import "modal.scss";
-@import "app.scss";
-@import "splash.scss";
-@import "api/sessions.scss";
-@import "api/sidebar.scss";
-@import "api/user_profile.scss";
-@import "api/lists.scss";
-@import "main.scss";
-@import "api/tasks.scss";
-@import "api/add_tags.scss";
+
 
 .App {
-  display: flex;
-  font-family: 'Nunito';
-  flex-direction: column;
-  min-height: 100vh;
+  /* display: flex; */
+  /* font-family: 'Nunito';
+  flex-direction: column; */
+  /* min-height: 100vh; */
   /* text-align: center; */
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -32,6 +20,6 @@
   flex-direction: row; */
 }
 
-ul {
+a {
   list-style-type: none;
 }
