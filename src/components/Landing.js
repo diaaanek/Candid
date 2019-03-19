@@ -56,9 +56,6 @@ export default ({ user }) => (
            <p id="first-line"> With candid, you can blah blah blahs, and of course blah blah blahs,blah blah blahs,blah.</p>
 
 
-
-
-
                 <Link to="/SignUp">
          <button type="button" className="signup button mainbutton">
            Get started

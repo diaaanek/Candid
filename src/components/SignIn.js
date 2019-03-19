@@ -61,7 +61,7 @@ class SignInForm extends Component {
         <div className="session-form-container">
         <div className= "big-cross-off-logo">
           <Link to="/">
-            <img src="https://codingblonde.com/wp-content/uploads/2018/04/final-logo-coding-blonde-black-pink-square.png"
+            <img src=" "
             className="big-crossoff-icon" />
           </Link>
         </div>

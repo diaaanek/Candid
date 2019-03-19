@@ -23,11 +23,11 @@ const NavigationAuth = () => (
     <section className="nav-links">
   <ul>
     <li>
-      <Link to={routes.HOME}>Dashboard</Link>
+      <Link to={routes.HOME}>Learn</Link>
     </li>
 
     <li>
-      <Link to={routes.ACCOUNT}>Account</Link>
+      <Link to={routes.ACCOUNT}>Code</Link>
     </li>
     <li>
       <SignOutButton />

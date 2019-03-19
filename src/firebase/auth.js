@@ -10,3 +10,13 @@ export const doSignInWithEmailAndPassword = (email, password) =>
 
 // Sign Out
 export const doSignOut = () => auth.signOut()
+
+// // Password Reset
+// export const doPasswordReset = email =>
+//   auth.sendPasswordResetEmail(email, {
+//     url: 'https://m3ypyo6wq9.codesandbox.io/signin'
+//   })
+//
+// // Password Change
+// export const doPasswordUpdate = password =>
+//   auth.currentUser.updatePassword(password)

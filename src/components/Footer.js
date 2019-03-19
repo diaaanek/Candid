@@ -11,8 +11,6 @@ export default () => (
 
       </a>
       <a href="https://www.linkedin.com/in/dianeelizabeth/">linkedin
-
-
       </a>
     </section>
 
