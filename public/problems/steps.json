@@ -1,0 +1,24 @@
+{
+  "title": "Step Generator",
+  "body": [
+    "function steps(n, row = 0, stair = '') {",
+    "  let currentLevel = stair;",
+    "",
+    "  if (n === row) return;",
+    "  if (n === currentLevel.length) {",
+    "    console.log(currentLevel);",
+    "    steps(n, row + 1);",
+    "    return;",
+    "  }",
+    "",
+    "  if (stair.length <= row) {",
+    "    currentLevel += '#';",
+    "  } else {",
+    "    currentLevel += ' ';",
+    "  }",
+    "",
+    "  steps(n, row, currentLevel);",
+    "}"
+  ],
+  "description": "Given a positive number N, console log a step shape with N levels using the # character. Make sure the step has spaces on the right hand side."
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Integer Reverser",
+  "body": [
+    "function reverseInt(num) {",
+    "  const absNum = Math.abs(num);",
+    "  const arr = `${absNum}`.split('');",
+    "  const str = arr.reduce((rev, char) => char + rev, '');",
+    "  return Number(str * Math.sign(num));",
+    "}"
+  ],
+  "description": "Given an integer, return an integer that is reversed, and the same sign as the original."
+}

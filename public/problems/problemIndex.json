@@ -1,0 +1,13 @@
+{
+  "problemIndex": [
+    { "FizzBuzz": "fizzBuzz.json"},
+    { "Anagram Identifier": "anagrams.json" },
+    { "String Reverser": "reverseString.json"},
+    { "Palindrome Identifier": "palindromes.json" },
+    { "Integer Reverser": "reverseInt.json" },
+    { "Most Common Character": "maxChar.json" },
+    { "Array Chunks": "arrayChunks.json" },
+    { "String Capitalization": "capitalize.json" },
+    { "Step Generator": "steps.json" }
+  ]
+}

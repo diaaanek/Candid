@@ -44,8 +44,7 @@ export default class Home extends Component {
     return (
       <div>
         <h1>Home Page</h1>
-        <button onClick={test}>Test Link</button>
-        <button onClick={unlinkFB}>Unlink Facebook</button>
+      
           <h1>Home Page</h1>
       </div>
     )

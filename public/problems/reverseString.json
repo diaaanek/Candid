@@ -1,0 +1,9 @@
+{
+  "title": "String Reverser",
+  "body": [
+    "function reverse(str) {",
+    "  return Array.from(str).reduce((rev, char) => char + rev, '');",
+    "}"
+  ],
+  "description": "Given a string, return a new string with the characters in reversed order."
+}

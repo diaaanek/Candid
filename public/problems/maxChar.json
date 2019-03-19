@@ -1,0 +1,26 @@
+{
+  "title": "Most Common Character",
+  "body": [
+    "function maxChar(string) {",
+    "  const charMap = {};",
+    "  const stringArr = string.split('');",
+    "  let max = 0;",
+    "  let maxCharString = '';",
+    "",
+    "  stringArr.forEach((char) => {",
+    "    charMap[char] = charMap[char] + 1 || 1;",
+    "  });",
+    "",
+    "  const charMapKeys = Object.keys(charMap);",
+    "",
+    "  charMapKeys.forEach((key) => {",
+    "    if (charMap[key] > max) {",
+    "      max = charMap[key];",
+    "      maxCharString = key;",
+    "    }",
+    "  });",
+    "  return maxCharString;",
+    "}"
+  ],
+  "description": "Given a string, return the most commmon character in that string."
+}

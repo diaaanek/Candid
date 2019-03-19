@@ -1,0 +1,16 @@
+{
+  "title": "Array Chunks",
+  "body": [
+    "function chunk(array, size) {",
+    "  const chunks = [];",
+    "  let index = 0;",
+    "  while (index < array.length) {",
+    "    chunks.push(array.slice(index, index + size));",
+    "    index += size;",
+    "  }",
+    "",
+    "  return chunks;",
+    "}"
+  ],
+  "description": "Given an array and chunk size, divide the array into many subarrays where each subarray is of length size."
+}
