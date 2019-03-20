@@ -1,11 +1,22 @@
 import React from 'react';
 import './CodeChallenges.css';
 
+
+import Select from 'react-select'
+
+
+const customStyles = {
+  
+}
+
 // Changing code challenge problems
 function Controls(props) {
   return (
     <div className="controls">
-      <select value={props.selectedProblem} onChange={props.handleSelectionChange}>
+      <select
+        styles={customStyles}
+
+        value={props.selectedProblem} onChange={props.handleSelectionChange}>
         {props.problemSelected ? null : <option value="default">Pick your challenge!</option>}
         {props.problemIndex.map((item) => {
           const key = Object.keys(item)[0];

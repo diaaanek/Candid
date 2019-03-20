@@ -6,6 +6,8 @@ import QuizList from './QuizList'
 import QuizInfo from './QuizInfo'
 import StartQuiz from './StartQuiz'
 
+import Footer from '../Footer'
+
 import "./Dashboard.css";
 // + Home
 //  ++ QuizList
@@ -655,6 +657,7 @@ back = () => {
 
               </div>
               </center>
+              <Footer/>
       </div>
     )
   }

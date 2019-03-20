@@ -17,6 +17,7 @@ a {
 
 .nav-bar {
 height: 85px;
+// position: sticky;
   font-family: "Quicksand";
   position: fixed;
   top: 0;
@@ -147,7 +148,7 @@ a: hover{
 
 }
   .footer {
-    position: sticky;
+    // position: sticky;
     font-family: "Quicksand";
     bottom: 0;
     padding: 15px 45px 15px 45px;
@@ -231,6 +232,11 @@ a: hover{
 input.rsc-input.sc-kAzzGY.fCeMBp {
   font-family: "Avenir";
 
+}
+
+.signupform {
+  margin-top: 150px;
+  font-family: "Quicksand"
 }
 //
 //   .desk {

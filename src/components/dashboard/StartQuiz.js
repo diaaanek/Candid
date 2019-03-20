@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import lightBlue from '@material-ui/core/colors/lightBlue';
+import swal from 'sweetalert';
 
 import Button from '@material-ui/core/Button';
 import NavigateNext from '@material-ui/icons/NavigateNext';
@@ -50,7 +51,9 @@ class QuizList extends Component {
     // var radio = document.querySelector("input[name='option']:checked");
 
     if (radioVal == null) {
-      alert('Selection Required');
+            swal ( "Oops" ,  "Please select an option!" ,  "error", {
+               className: "alert",
+            } )
     }
 
     else {

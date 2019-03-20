@@ -7,7 +7,8 @@ import React from 'react';
 export default () => (
   <div className="footer">
     <section id="footer-left">
-      <a href="https://github.com/diaaanek">github
+<i class="fab fa-github"></i>
+      <a href="https://github.com/diaaanek">gtihub
 
       </a>
       <a href="https://www.linkedin.com/in/dianeelizabeth/">linkedin
@@ -15,7 +16,7 @@ export default () => (
     </section>
 
     <section id="footer-right">
-      <p>© 2019 Diane Korongy &hearts;</p>
+      <p>💓 2019 Diane Korongy</p>
     </section>
   </div>
 );

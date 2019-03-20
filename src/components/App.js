@@ -1,14 +1,17 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
-import "./Splash.scss";
+
 import Navigation from './Navigation'
 import LandingPage from './Landing'
-import SignUpPage from './SignUp'
-import SignInPage from './SignIn'
+import SignUpPage from './user/SignUp'
+import SignInPage from './user/SignIn'
 
 import HomePage from './dashboard/Home'
 import AccountPage from './challenges/Account'
+
 import withAuthentication from './withAuthentication'
+
+import "./Splash.scss";
 
 import * as routes from '../constants/routes'
 

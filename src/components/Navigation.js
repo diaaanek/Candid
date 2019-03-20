@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, Redirect } from 'react-router-dom'
 
 import AuthUserContext from './AuthUserContext'
-import SignOutButton from './SignOut'
+import SignOutButton from './user/SignOut'
 import * as routes from '../constants/routes'
 
 const Navigation = () => (
@@ -31,7 +31,7 @@ const NavigationAuth = () => (
       <Link to={routes.CODE}>Code</Link>
     </li>
     <li>
-      <SignOutButton />
+      <Link to='/'><SignOutButton /></Link>
     </li>
   </ul>
 </section>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { auth } from '../firebase'
 
-import * as routes from '../constants/routes'
+import { auth } from '../../firebase'
+import * as routes from '../../constants/routes'
 
 const SignUpPage = ({ history }) => (
-  <div>
+  <div className="signupform">
     <h1>SignUp</h1>
     <SignUpForm history={history} />
   </div>

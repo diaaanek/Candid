@@ -16,8 +16,7 @@ class AccountPage extends Component {
       title: '',
       body: '',
       description: '',
-    },
-    markerFont: true,
+    }
   }
 
   fetchJSON = (path, callback) => {
@@ -61,12 +60,12 @@ render() {
   return (
 
     <div className="app">
-   {/*<Whiteboard
+   <Whiteboard
     title={this.state.currentProblem.title}
     body={this.state.currentProblem.body}
     problemSelected={this.state.problemSelected}
     description={this.state.currentProblem.description}
-  /> */}
+  />
   <InfoPanel
     handleSelectionChange={(event) => this.fetchProblemHandler(event)}
     problemIndex={this.state.problemIndex}
