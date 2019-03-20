@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import lightBlue from '@material-ui/core/colors/lightBlue';
+
 import swal from 'sweetalert';
 
-import Button from '@material-ui/core/Button';
 import NavigateNext from '@material-ui/icons/NavigateNext';
 
 import SentimentSatisfied from '@material-ui/icons/SentimentSatisfiedRounded';
@@ -18,8 +17,6 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import Typography from '@material-ui/core/Typography';
-
 class QuizList extends Component {
   constructor() {
     super()
@@ -33,12 +30,12 @@ class QuizList extends Component {
       similey: null,
 
     }
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
     this.quizTimer = this.quizTimer.bind(this);
     this.timer()
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       radioVal: e.target.value
     });
@@ -195,29 +192,29 @@ class QuizList extends Component {
                 <br />
                 <CircularProgress size={200} thickness={2} variant="static" value={scored} />
                 {this.state.similey}
-                <Typography variant="headline" >
+                <div variant="headline" >
                   {scored} %
-                </Typography>
+                </div>
                 <br />
-                <Typography variant="subheading" >
+                <div variant="subheading" >
                   Total Questions: {started.qArr.length}
-                </Typography>
-                <Typography variant="subheading" >
+                </div>
+                <p variant="subheading" >
                   Correct: {correct}
-                </Typography>
+                </p>
 
               </div>
-              <Button className="backBtn" size='large' variant="contained" color="primary" onClick={() => back()}>
+              <button className="backBtn" onClick={() => back()}>
                 back
-              </Button>
+              </button>
             </div>
           </div>
           :
           <div>
 
-            <Typography variant="title" >
+            <div variant="title" >
               {min}:{sec}
-            </Typography>
+            </div>
             <br/>
             <div className='qstnDiv'>
 
@@ -246,9 +243,11 @@ class QuizList extends Component {
 
             </div>
 
-            <Button className="nextBtn" variant="fab" color="primary" onClick={this.updating.bind(this)}>
+            <button
+              className="nextBtn"
+              onClick={this.updating.bind(this)}>
               <NavigateNext />
-            </Button>
+            </button>
           </div>
 
         }

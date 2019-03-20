@@ -7,7 +7,13 @@ import './CodeChallenges.css'
 // import AuthUserContext from './AuthUserContext'
 
 
-class AccountPage extends Component {
+// + CodeChallenges
+//  ++ Sidebar --> Tags
+//   +++ Whiteboard
+//    ++++ InfoPanel
+//     ++++ Codebox --> Timer, Userscore
+
+class CodeChallenges extends Component {
   state = {
     problemIndex: [],
     problemSelected: false,
@@ -44,7 +50,6 @@ fetchProblemHandler = (event) => {
       currentProblem: { title, body, description },
       selectedProblem: target,
     });
-    // hljs.highlightBlock(document.getElementById('codeArea'));
   });
 }
 
@@ -60,6 +65,8 @@ render() {
   return (
 
     <div className="app">
+
+
    <Whiteboard
     title={this.state.currentProblem.title}
     body={this.state.currentProblem.body}
@@ -74,6 +81,7 @@ render() {
       body={this.state.currentProblem.body}
     description={this.state.currentProblem.description}
   />
+
 <CodeBox
   problemIndex={this.state.problemIndex}
   title={this.state.currentProblem.title}
@@ -82,6 +90,7 @@ render() {
 
   />
 </div>
+
 );
   }
 }
@@ -98,4 +107,4 @@ render() {
   //   </AuthUserContext.Consumer>
   // )
 
-export default AccountPage;
+export default CodeChallenges;

@@ -9,41 +9,44 @@ import CardMedia from '@material-ui/core/CardMedia';
 // map through quiz
 // render image, name, description
 // button to onclick start
+
 class QuizList extends Component {
-  // constructor() {
-  //   super()
-  // }
 
   render() {
     const { list, onPress, logout } = this.props;
     return (
-      <div>
+      <div >
 
 
-        <div style={{ margin:'20px 3% 3% 3%'}}>
+        <div style={{ margin:'20px 10% 10% 10%'}}>
 
           {list.map((quiz, index) => {
 
             return (
+
 
               <Card
                 // className={classes.card}
                 style={{ maxWidth: 345,display:'inline-block', margin:'1%' }}
               >
                 <CardActionArea>
+
                   <CardMedia
                     component="img"
                     // className={classes.media}
                     style={{ objectFit: 'cover' }}
                     height="150"
                     image={quiz.image}
+
                     title={quiz.name}
                   />
+
                   <CardContent>
+                    <p style={{textAlign: 'left', color:"grey"}}>Programming, Web Development</p>
                     <h1 gutterBottom variant="headline" component="h1" style={{ textAlign: 'left', fontFamily: "Quicksand"}}>
                       {quiz.name}
                     </h1>
-                    <div component="p" style={{ textAlign: 'left' }}>
+                    <div component="p" style={{ textAlign: 'left', fontSize: '13px'}}>
                       {quiz.description}
                     </div>
                   </CardContent>
@@ -59,7 +62,6 @@ class QuizList extends Component {
           )}
 
         </div>
-
       </div>
     )
   }

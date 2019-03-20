@@ -4,7 +4,8 @@
 
 .dashboard{
   margin-top: 95px;
-  font-family: "Quicksand"
+  font-family: "Quicksand";
+  /* background-color: "#f7fafc" */
 }
 h1 {
   font-size: 25px;
@@ -29,3 +30,16 @@ h1 {
 .alert{
   font-family: "Quicksand"
 }
+
+
+/* .Main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Main-content {
+  display: grid;
+  flex-direction: row;
+  flex: 4;
+} */

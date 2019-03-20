@@ -8,7 +8,7 @@ class Sidebar extends Component {
       <div className='Sidebar'>
         <Tags
           tags={this.props.tags}
-          onClickTag={this.props.onClickTag}
+
         />
       </div>
     );

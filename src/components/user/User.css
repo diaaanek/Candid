@@ -1,4 +1,5 @@
 
+
 ul li {
   list-style: none;
 }
@@ -7,12 +8,22 @@ ul li {
 input[type="password"],
 input[type="email"],
 input[type="text"],
+alt-session-link,
 input[type="submit"],
 textarea,
 button {
-  font-family: "Quicksand";
-  -webkit-appearance: none;
-  -moz-appearance: none;
+    font-family: 'Quicksand', sans-serif;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    /* width: 100%; */
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 1 2px 0 rgba(0,0,0,0.03) inset;
 
 
 }
@@ -67,6 +78,7 @@ input[type="submit"] {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+
   }
 }
 
@@ -74,10 +86,6 @@ input[type="submit"] {
   margin-bottom: 28px;
   display: flex;
   justify-content: center;
-}
-
-.row:focus-within {
-  border-bottom: 1px solid blue;
 }
 
 .session-icon {

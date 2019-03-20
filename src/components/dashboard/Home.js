@@ -9,10 +9,12 @@ import StartQuiz from './StartQuiz'
 import Footer from '../Footer'
 
 import "./Dashboard.css";
+
 // + Home
 //  ++ QuizList
 //   +++ Quiz Info
 //    ++++ QuizList
+//     ++++ Start Quiz
 
 export default class Home extends Component {
   constructor() {
@@ -258,7 +260,7 @@ export default class Home extends Component {
         {
           name: 'Ruby',
           image:  "https://cdn.lynda.com/courses/769290-636849648289149989_270x480_thumb.jpg",
-          description:' JavaScript is a "client-side" programming language. JavaScript scripts are read, interpreted and executed in your Web browser.',
+          description: 'Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language learn more.',
           subQuiz: [
             {
               name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
@@ -365,7 +367,7 @@ export default class Home extends Component {
         {
           name: 'Algorithms',
           image:  "https://cdn.lynda.com/course/124398/124398-636322775180650840-16x9.jpg",
-          description:' JavaScript is a "client-side" programming language. JavaScript scripts are read, interpreted and executed in your Web browser.',
+          description: 'Write simple algorithms in pseudocode and compare competing algorithms by weighing their advantages and disadvantages.',
           subQuiz: [
             {
               name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
@@ -471,7 +473,7 @@ export default class Home extends Component {
         {
           name: 'Data Structures',
           image:  "https://cdn.lynda.com/course/718636/718636-636771107236305802-16x9.jpg",
-          description:' JavaScript is a "client-side" programming language. JavaScript scripts are read, interpreted and executed in your Web browser.',
+          description: 'Your goal is to understand data structures so that you can pick the data structure that’s most optimal for the problem at hand.',
           subQuiz: [
             {
               name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
@@ -632,7 +634,7 @@ back = () => {
     return (
       <div className="dashboard">
 
-              <center><h1>Welcome to your dashboard!</h1>
+              <center>
               <div>
 
     { (!quiz && !started) &&

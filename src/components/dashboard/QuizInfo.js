@@ -6,7 +6,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 class QuizInfo extends Component {
 
@@ -43,17 +42,17 @@ class QuizInfo extends Component {
                         {subQuiz.name}
                       </h1>
 
-                      <Typography variant="caption" style={{ textAlign: 'left', fontSize: '13px' }}>
+                      <div variant="caption" style={{ textAlign: 'left', fontSize: '13px', fontFamily: "Quicksand" }}>
                         You have attempted this Quiz.
-                      </Typography>
+                      </div>
                       <br />
-                      <Typography variant="body2" style={{ textAlign: 'left' }}>
+                      <div variant="body2" style={{ textAlign: 'left' }}>
                         Percentage: {subQuiz.score} %
                         <br />
                         Attempted Date: {subQuiz.attemptDate}
                         <br />
                         Attempted Time: {subQuiz.attemptTime}
-                      </Typography>
+                      </div>
 
                     </CardContent>
                     :
@@ -62,28 +61,29 @@ class QuizInfo extends Component {
                         {subQuiz.name}
                       </h1>
 
-                      <Typography variant="caption" style={{ textAlign: 'left', fontSize: '13px' }}>
+                      <div variant="caption" style={{ textAlign: 'left', fontSize: '13px', fontFamily: "Quicksand"  }}>
                         This Quiz is based on the following criteria:
-                      </Typography>
+                      </div>
                       <br />
-                      <Typography variant="body2" style={{ textAlign: 'left' }}>
+                      <div variant="body2" style={{ textAlign: 'left', fontFamily: "Quicksand" }}>
                         Total Questions: {subQuiz.questions}
                         <br />
                         Total Time: {subQuiz.time}
                         <br />
                         Passing Score: 60 %
-                      </Typography>
+                      </div>
                     </CardContent>}
 
                 </CardActionArea>
 
                 <CardActions>
-                  <Button onClick={onBack} size="small" color="secondary">
+                  <button onClick={onBack} size="small" color="secondary">
                     back
-                </Button>
-                  {!subQuiz.score ? <Button onClick={() => onPress(index)} size="small" color="primary">
-                    start
-                </Button> : null}
+                </button>
+                  {!subQuiz.score ?
+                      <button onClick={() => onPress(index)} size="small" color="primary">
+                          start
+                    </button> : null}
 
                 </CardActions>
 

@@ -43,6 +43,7 @@ function CodeBox(props) {
                   <div className="buttonContainer">
                   <button className="submit button">Submit </button>
                   <button className="test button">Test </button>
+                  
                   </div>
                   {/*<div className="flipper">
           						<div className="front">

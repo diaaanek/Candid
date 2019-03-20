@@ -14,9 +14,9 @@ function InfoPanel(props) {
         problemSelected={props.problemSelected}
         selectedProblem={props.selectedProblem}
 
-      />
+      />  <button className="submit button">Show Solution</button>
 
-    <button className="submit button">Show Solution</button>
+
 
     </div>
   );
