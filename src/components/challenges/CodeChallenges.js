@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Sidebar from "./Sidebar"
 import InfoPanel from './InfoPanel';
 import CodeBox from './CodeBox';
 import Whiteboard from './Whiteboard';
@@ -39,6 +40,7 @@ class CodeChallenges extends Component {
   httpRequest.send();
 }
 
+// setting state to grab current problem (selected)
 fetchProblemHandler = (event) => {
   const target = event.target.value;
   this.fetchJSON(`./problems/${target}`, (data) => {
@@ -65,30 +67,35 @@ render() {
   return (
 
     <div className="app">
-
-
+ <div className='Main-content'>
+      <Sidebar />
    <Whiteboard
     title={this.state.currentProblem.title}
     body={this.state.currentProblem.body}
-    problemSelected={this.state.problemSelected}
     description={this.state.currentProblem.description}
+
+    problemSelected={this.state.problemSelected}
+
   />
+
   <InfoPanel
     handleSelectionChange={(event) => this.fetchProblemHandler(event)}
     problemIndex={this.state.problemIndex}
     problemSelected={this.state.problemSelected}
     selectedProblem={this.state.selectedProblem}
-      body={this.state.currentProblem.body}
+    body={this.state.currentProblem.body}
     description={this.state.currentProblem.description}
   />
 
 <CodeBox
   problemIndex={this.state.problemIndex}
-  title={this.state.currentProblem.title}
+  description={this.state.currentProblem.description}
   body={this.state.currentProblem.body}
   problemSelected={this.state.problemSelected}
 
   />
+</div>
+
 </div>
 
 );

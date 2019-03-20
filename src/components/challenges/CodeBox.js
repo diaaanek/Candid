@@ -9,7 +9,7 @@ import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/keymap/sublime';
 import 'codemirror/theme/monokai.css';
 
-const code = '//Insert code here';
+// const code = '//';
 
 
 
@@ -32,18 +32,20 @@ function CodeBox(props) {
           				</div>
           				<div className="flip-container" >
                     <CodeMirror
-                      value={code}
+                      value={props.body}
 
                       options={{
                         theme: 'monokai',
                         keyMap: 'sublime',
                         mode: 'jsx',
+                        lineWrapping: true,
+
                       }}
                     />
                   <div className="buttonContainer">
                   <button className="submit button">Submit </button>
                   <button className="test button">Test </button>
-                  
+
                   </div>
                   {/*<div className="flipper">
           						<div className="front">

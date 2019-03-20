@@ -5,12 +5,17 @@ import './Sidebar.css';
 class Sidebar extends Component {
   render() {
     return (
+
       <div className='Sidebar'>
         <Tags
-          tags={this.props.tags}
 
-        />
+
+        /> Hiiiiiiiiiiiiiiiiii
+        Hiiiiiiiiiiiiiiiiii
+        Hiiiiiiiiiiiiiiiiii
+        HiiiiiiiiiiiiiiiiiiHiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
       </div>
+
     );
   }
 }

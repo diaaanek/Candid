@@ -4,6 +4,7 @@ import ListItem from 'react-toolbox/lib/list/ListItem';
 import ListSubHeader from 'react-toolbox/lib/list/ListSubHeader';
 // import { sortObjects } from './utils';
 import './Tags.css';
+
 import InfoPanel from './InfoPanel'
 
 class Tags extends Component {
@@ -39,7 +40,7 @@ class Tags extends Component {
   render() {
     return (
       <div className='Tags'>
-        
+
       </div>
     );
   }

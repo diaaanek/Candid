@@ -6,10 +6,11 @@ import Select from 'react-select'
 
 
 const customStyles = {
-  
+
 }
 
 // Changing code challenge problems
+// SELECT DROP DOWN
 function Controls(props) {
   return (
     <div className="controls">
