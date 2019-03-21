@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import Card from 'react-toolbox/lib/card/Card';
-import CardText from 'react-toolbox/lib/card/CardText';
+import React, { Component } from "react";
+import Card from "react-toolbox/lib/card/Card";
+import CardText from "react-toolbox/lib/card/CardText";
 
+import Flashcards from "./Flashcards";
 
-import Flashcards from './Flashcards';
-
-import './Study.css'
+import "./Study.css";
 // TO DO:
 // CRUD for decks and flashcards
 // Audio upload and playback
@@ -14,19 +13,9 @@ import './Study.css'
 // Animated flashcard view
 
 class Study extends Component {
-
-
   render() {
-
-
-    return (
-    <Flashcards/>
-    )
-
+    return <Flashcards />;
   }
-
-
-
 }
 
 export default Study;

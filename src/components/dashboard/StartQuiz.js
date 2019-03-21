@@ -191,50 +191,53 @@ class QuizList extends Component {
                 {min}:{sec}
               </div>
               <br />
-              <div className="qstnDiv">
-                <FormControl
-                  component="fieldset"
-                  style={{ margin: "15px 15px 30px 15px" }}
-                >
-                  <h3>
-                    {qstnNo + 1}. {started.qArr[qstnNo].question}
-                  </h3>
 
-                  <RadioGroup
-                    // aria-label="Gender"
-                    // name="gender1"
-                    // className={classes.group}
-                    value={this.state.radioVal}
-                    onChange={this.handleChange}
+              <aside className="sidebar">
+                <div className="qstnDiv">
+                  <FormControl
+                    component="fieldset"
+                    style={{ margin: "15px 15px 30px 15px" }}
                   >
-                    <FormControlLabel
-                      value="1"
-                      name="option"
-                      control={<Radio />}
-                      label={started.qArr[qstnNo].option1}
-                    />
-                    <FormControlLabel
-                      value="2"
-                      name="option"
-                      control={<Radio />}
-                      label={started.qArr[qstnNo].option2}
-                    />
-                    <FormControlLabel
-                      value="3"
-                      name="option"
-                      control={<Radio />}
-                      label={started.qArr[qstnNo].option3}
-                    />
-                    <FormControlLabel
-                      value="4"
-                      name="option"
-                      control={<Radio />}
-                      label={started.qArr[qstnNo].option4}
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </div>
+                    <h3>
+                      {qstnNo + 1}. {started.qArr[qstnNo].question}
+                    </h3>
 
+                    <RadioGroup
+                      // aria-label="Gender"
+                      // name="gender1"
+                      // className={classes.group}
+                      value={this.state.radioVal}
+                      onChange={this.handleChange}
+                    >
+                      <FormControlLabel
+                        value="1"
+                        name="option"
+                        control={<Radio />}
+                        label={started.qArr[qstnNo].option1}
+                      />
+                      <FormControlLabel
+                        value="2"
+                        name="option"
+                        control={<Radio />}
+                        label={started.qArr[qstnNo].option2}
+                      />
+                      <FormControlLabel
+                        value="3"
+                        name="option"
+                        control={<Radio />}
+                        label={started.qArr[qstnNo].option3}
+                      />
+                      <FormControlLabel
+                        value="4"
+                        name="option"
+                        control={<Radio />}
+                        label={started.qArr[qstnNo].option4}
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </div>
+              </aside>
+              <br />
               <button className="nextBtn" onClick={this.updating.bind(this)}>
                 <NavigateNext />
               </button>

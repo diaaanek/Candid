@@ -1,8 +1,10 @@
+@import url("https://use.typekit.net/nui7rmo.css");
+
 #Card {
   border-radius: 10px;
 }
 
-.dashboard{
+.dashboard {
   margin-top: 95px;
   font-family: "Quicksand";
   /* background-color: "#f7fafc" */
@@ -10,30 +12,44 @@
 h1 {
   font-size: 25px;
   align-self: center;
+  /* font-family: menco, sans-serif; */
 
+  font-weight: 500;
+
+  font-style: normal;
 }
 
 .start {
-  background-color: salmon;
-    padding: 12px 18px;
-    font-size: 14px;
+  background-color: #e0540e;
+  padding: 12px 18px;
+  font-size: 14px;
   color: white;
   font-weight: bold;
-  border: 2px solid salmon;
+  border: 2px solid #e0540e;
   border-radius: 5px;
 }
 
 .start:hover {
-  background-color: blue;
-  border: 2px solid blue;
+  background-color: #eca570;
+  border: 2px solid #eca570;
 }
 
-
-.alert{
-  font-family: "Quicksand"
+.alert {
+  font-family: "Quicksand";
 }
 
-
+.nextBtn {
+  background: #ffc334;
+  /* border: 3px solid #fff; */
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px #ffb401 inset, 0 5px 5px rgba(103, 73, 0, 0.17),
+    0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  color: white;
+}
 /* .Main {
   display: flex;
   flex-direction: column;

@@ -5,19 +5,38 @@
 //  + footer
 
 @import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Open+Sans|Nunito|Quicksand|Montserrat");
-html { height: 100% }
+html {
+  height: 100%;
+}
 
-body { min-height: 100% }
+body {
+  min-height: 100%;
+}
 
 a {
   list-style: none;
   text-decoration: none;
 }
 
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.avatar:hover {
+  background-color: yellow;
+  box-shadow: 0px 4px 4px yellow;
+  // rgba(46, 229, 157, 0.4);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
 
 .nav-bar {
-height: 85px;
-// position: sticky;
+  height: 85px;
+  // position: sticky;
   font-family: "Quicksand";
   position: fixed;
   top: 0;
@@ -25,40 +44,37 @@ height: 85px;
   width: 100%;
   // min-width: 750px;
   // border-bottom: 1px solid gray;
-  background-color: #FDFDFD;;
+  background-color: #fdfdfd;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  box-shadow: 0 2px 3px -1px rgba(0,0,0,.2);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.2);
 
   .logo {
     // width: 240px;
-
   }
 
   .nav-links {
-
     ul {
       margin: 0 2px;
       padding: 0;
       // display: flex;
       //
       // padding: 5px;
-
     }
     li {
-   display: inline-block;
-   padding: 5px 5px;
-}
-a {
-  font-weight: bold;
-  padding: 10px 5px;
-}
+      display: inline-block;
+      padding: 5px 5px;
+    }
+    a {
+      font-weight: bold;
+      padding: 10px 5px;
+    }
 
-a: hover{
-  color: red;
-}
+    a: hover {
+      color: red;
+    }
   }
 }
 // end nav bar
@@ -66,32 +82,28 @@ a: hover{
 .splash {
   padding: 20px 45px;
   padding-top: 150px;
-   min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
 
+  background: linear-gradient(to bottom, #f9fbf7, #c9d8ff);
 
-
-  background: linear-gradient(to bottom,#f9fbf7, #C9D8FF);
-
-
-
-  .first-page{
-      min-height: 100vh;
-      font-family: "Quicksand";
+  .first-page {
+    min-height: 100vh;
+    font-family: "Quicksand";
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
     // height: 100vh;
     // overflow:hidden;
-    overflow:hidden;
-    height:100%;
-    width:100%;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
     // match the viewport height of the browser window
   }
 
-// computer image
+  // computer image
   img {
-    display:inline-block;
+    display: inline-block;
     margin-right: 16px;
     vertical-align: bottom;
     margin-bottom: 10px;
@@ -103,7 +115,7 @@ a: hover{
 
   p {
     font-size: 16px;
-   font-family: "Quicksand";
+    font-family: "Quicksand";
     margin-left: 20px;
   }
 
@@ -143,100 +155,89 @@ a: hover{
     height: 400px;
     background-size: 100%;
     background-repeat: no-repeat;
-
   }
-
 }
-  .footer {
-    // position: sticky;
-    font-family: "Quicksand";
-    bottom: 0;
-    padding: 15px 45px 15px 45px;
-    width: 100%;
+.footer {
+  // position: sticky;
+  font-family: "Quicksand";
+  bottom: 0;
+  padding: 15px 45px 15px 45px;
+  width: 100%;
 
-    // background-color: darken( $backgroundgray, 2% );
+  // background-color: darken( $backgroundgray, 2% );
 
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 
-    // border-top: 1px solid $gray;
+  // border-top: 1px solid $gray;
 
-    a {
-      padding: 10px;
-      font-size: 15px;
-
-      // font-size: 32px;
-    }
-    p{
-      position: sticky;
-      bottom: 0;
-
-      font-size: 15px;
-    }
-  }
-
-  // buttons
-
-  .button {
-    padding: 15px 20px;
-    font-family: "Quicksand";
+  a {
+    padding: 10px;
     font-size: 15px;
-    font-weight: bold;
-    border-radius: 6px;
-    text-align: center;
-  }
 
-  .button:hover {
-    -webkit-transform: translateY(-1px);
-    transform: translateY(-1px);
-    -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    // font-size: 32px;
   }
+  p {
+    position: sticky;
+    bottom: 0;
 
-  .signin {
-    border: 2px solid black;
+    font-size: 15px;
   }
-
-  .signin:hover, .demo:hover {
-    // border: 2px solid $lightblue;
-    background-color: white;
-    // color: $lightblue;
-  }
-
-  .signup {
-    background-color: #5576D8;
-    color: white;
-    font-weight: bold;
-    border: 2px solid #5576D8;
 }
 
-  .signup:hover {
-    background-color: blue;
-    border: 2px solid blue;
-  }
+// buttons
 
-  .nav-bar .signup {
-    margin-left: 15px;
-  }
+.button {
+  padding: 15px 20px;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
 
-  .splash .signup {
-    margin-top: 20px;
-  }
+.button:hover {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
 
-  .footer a:hover {
-    color: blue;
-  }
+.signup {
+  background-color: #3ec4ff;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #3ec4ff;
+  box-shadow: 0 5px 7px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
 
+.signup:hover {
+  background-color: #aadd32;
+  border: 2px solid #aadd32;
+}
+
+.nav-bar .signup {
+  margin-left: 15px;
+}
+
+.splash .signup {
+  margin-top: 20px;
+}
+
+.footer a:hover {
+  color: blue;
+}
 
 input.rsc-input.sc-kAzzGY.fCeMBp {
-  font-family: "Avenir";
-
+  font-family: "Quicksand";
 }
 
 .signupform {
   margin-top: 150px;
-  font-family: "Quicksand"
+  font-family: "Quicksand";
 }
 //
 //   .desk {
