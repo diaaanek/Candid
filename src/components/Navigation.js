@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./Splash.scss";
+
 import AuthUserContext from "./AuthUserContext";
 import SignOutButton from "./user/SignOut";
 import * as routes from "../constants/routes";

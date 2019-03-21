@@ -1,7 +1,14 @@
+/* body {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+} */
+
 .Main {
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin-top: 100px;
 }
 
 .Main-content {
@@ -14,4 +21,33 @@
   position: fixed;
   bottom: 40px;
   right: 50px;
+}
+
+.search-field {
+  margin-bottom: 25px;
+  height: 50px;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+}
+
+input {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  padding: 1px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  appearance: none;
+}
+
+.deck-index {
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
 }

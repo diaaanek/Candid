@@ -1,20 +1,18 @@
-import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navigation from './Navigation'
-import LandingPage from './Landing'
-import SignUpPage from './user/SignUp'
-import SignInPage from './user/SignIn'
+import Navigation from "./Navigation";
+import LandingPage from "./Landing";
+import SignUpPage from "./user/SignUp";
+import SignInPage from "./user/SignIn";
 
-import HomePage from './dashboard/Home'
-import CodeChallenges from './challenges/CodeChallenges'
-import Study from './study/Study'
+import HomePage from "./dashboard/Home";
+import CodeChallenges from "./challenges/CodeChallenges";
+import Study from "./study/Study";
 
-import withAuthentication from './withAuthentication'
+import withAuthentication from "./withAuthentication";
 
-import "./Splash.scss";
-
-import * as routes from '../constants/routes'
+import * as routes from "../constants/routes";
 
 // ****** sets routes ****** //
 // ******   TO DO:   ****** //
@@ -25,7 +23,7 @@ const App = () => (
   <Router>
     <div>
       <Navigation />
-      <hr />
+
       <Route exact path={routes.LANDING} component={LandingPage} />
       <Route exact path={routes.SIGN_UP} component={SignUpPage} />
       <Route exact path={routes.SIGN_IN} component={SignInPage} />
@@ -34,6 +32,6 @@ const App = () => (
       <Route exact path={routes.STUDY} component={Study} />
     </div>
   </Router>
-)
+);
 
-export default withAuthentication(App)
+export default withAuthentication(App);
