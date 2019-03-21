@@ -2,9 +2,6 @@ import React from 'react';
 import './CodeChallenges.css';
 
 
-import Select from 'react-select'
-
-
 const customStyles = {
 
 }

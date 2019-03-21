@@ -3,13 +3,14 @@ import React from 'react'
 import AuthUserContext from './AuthUserContext'
 import { firebase } from '../firebase'
 
+// ****** set authenticated user ****** //
+
 const withAuthentication = Component =>
   class WithAuthentication extends React.Component {
     constructor(props) {
       super(props)
-
       this.state = {
-        authUser: null
+      authUser: null
       }
     }
 

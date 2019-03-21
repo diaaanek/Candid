@@ -2,6 +2,7 @@ import React from 'react';
 import './CodeChallenges.css';
 import './Codebox.scss'
 
+
 import CodeMirror from '@uiw/react-codemirror';
 import 'codemirror/addon/display/autorefresh';
 import 'codemirror/addon/comment/comment';
@@ -11,14 +12,6 @@ import 'codemirror/theme/monokai.css';
 
 // const code = '//';
 
-
-
-
-// import Card from 'react-toolbox/lib/card/Card';
-// import CardText from 'react-toolbox/lib/card/CardText';
-// import CardActions from 'react-toolbox/lib/card/CardActions';
-// import Button from 'react-toolbox/lib/button/Button';
-
 function CodeBox(props) {
   return (
 
@@ -27,7 +20,7 @@ function CodeBox(props) {
           <div className="flashcards-page">
 
           				<div className="instructions">
-                    <h1>CodeBox / CodeMirror Component Here </h1>
+                    <h1> Code </h1>
 
           				</div>
           				<div className="flip-container" >
@@ -39,12 +32,12 @@ function CodeBox(props) {
                         keyMap: 'sublime',
                         mode: 'jsx',
                         lineWrapping: true,
-
                       }}
                     />
                   <div className="buttonContainer">
-                  <button className="submit button">Submit </button>
                   <button className="test button">Test </button>
+                    <button className="submit button">Submit </button>
+                    <button className="save button">Save </button>
 
                   </div>
                   {/*<div className="flipper">

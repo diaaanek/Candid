@@ -6,6 +6,7 @@ import './CodeChallenges.css';
 function InfoPanel(props) {
   return (
     <div className="info-panel">
+  {props.title ? <h1>{props.title}</h1>  : null}
 
       {props.description ? <p>{props.description}</p>  : null}
      <Controls
@@ -14,7 +15,7 @@ function InfoPanel(props) {
         problemSelected={props.problemSelected}
         selectedProblem={props.selectedProblem}
 
-      />  <button className="submit button">Show Solution</button>
+      />
 
 
 

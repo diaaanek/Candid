@@ -5,18 +5,20 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+
+
 
 class QuizInfo extends Component {
 
 
   render() {
-    const { quiz, onBack, onPress, logout } = this.props;
+    const { quiz, onBack, onPress } = this.props;
     return (
+
       <div>
 
-
         {/* <h1>{quiz.name}</h1> */}
+
         <div style={{ margin: '80px 3% 3% 3%' }}>
 
           {quiz.subQuiz.map((subQuiz, index) => {
@@ -31,7 +33,7 @@ class QuizInfo extends Component {
                     component="img"
                     // className={classes.media}
                     style={{ objectFit: 'cover' }}
-                    height="140"
+                    height="150"
                     image={quiz.image}
                     title={subQuiz.name}
                   />
@@ -98,14 +100,3 @@ class QuizInfo extends Component {
 }
 
 export default QuizInfo;
-
-//CHILD --> PARENT STATE UPDATE
-//=============================
-
-//1) Create a function in Parent that
-//will update the State.
-
-//2) Pass the function in the Child's
-//Component's Props
-
-//3) Call that function from Child Props.

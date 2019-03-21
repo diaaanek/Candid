@@ -14,10 +14,12 @@ h1 {
 }
 
 .start {
-  background-color: #5576D8;
+  background-color: salmon;
+    padding: 12px 18px;
+    font-size: 14px;
   color: white;
   font-weight: bold;
-  border: 2px solid #5576D8;
+  border: 2px solid salmon;
   border-radius: 5px;
 }
 

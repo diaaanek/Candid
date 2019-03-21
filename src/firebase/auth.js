@@ -11,6 +11,15 @@ export const doSignInWithEmailAndPassword = (email, password) =>
 // Sign Out
 export const doSignOut = () => auth.signOut()
 
+// export function saveUser (user) {
+//   return ref.child(`users/${user.uid}/info`)
+//     .set({
+//       email: user.email,
+//       uid: user.uid
+//     })
+//     .then(() => user)
+// }
+
 // returns firebase auth service
 // export const getAuth = () => {
 //   return firebase.auth();
@@ -18,10 +27,6 @@ export const doSignOut = () => auth.signOut()
 //
 // export const githubOAuth = () => {
 //   return new firebase.firebase_.auth.GithubAuthProvider();
-// };
-//
-// export const facebookOAuth = () => {
-//   return new firebase.firebase_.auth.FacebookAuthProvider();
 // };
 
 // // Password Reset

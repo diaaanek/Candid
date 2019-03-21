@@ -38,20 +38,14 @@ class Flashcards extends Component {
           />
         </div>
         <Flashcard
-          flashcard={currentFlashcard}
-          onClickEdit={onClickEdit}
-          onClickDelete={onClickDelete}
+
         />
         <div className='Flashcards-button'>
           <Button icon='keyboard_arrow_right' floating
-            disabled={selectedFlashcardIndex === flashcards.length - 1}
-            onClick={onClickNextFlashcard}
           />
         </div>
         <div className='Flashcards-index'>
-          <Chip>
-            {selectedFlashcardIndex + 1} / {flashcards.length}
-          </Chip>
+
         </div>
       </div>
     );
@@ -60,7 +54,7 @@ class Flashcards extends Component {
   render() {
     return (
       <div className='Flashcards'>
-        {this.renderFlashcards()}
+        
       </div>
     );
   }

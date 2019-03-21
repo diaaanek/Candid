@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import User from './User.css'
-
+import { Link } from 'react-router-dom'
 import { SignUpLink } from './SignUp'
 import { auth } from '../../firebase'
 import * as routes from '../../constants/routes'
 
-import { Link } from 'react-router-dom'
+
+import './User.css'
 
 const SignInPage = ({ history }) => (
   <div>

@@ -10,12 +10,12 @@ input[type="email"],
 input[type="text"],
 alt-session-link,
 input[type="submit"],
-textarea,
+/* textarea, */
 button {
     font-family: 'Quicksand', sans-serif;
     background: rgba(255,255,255,0.1);
     border-radius: 8px;
-    font-size: 16px;
+    /* font-size: 16px; */
     height: auto;
     margin: 0;
     outline: 0;

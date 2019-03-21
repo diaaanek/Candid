@@ -13,7 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 class QuizList extends Component {
 
   render() {
-    const { list, onPress, logout } = this.props;
+    const { list, onPress} = this.props;
     return (
       <div >
 
@@ -35,14 +35,13 @@ class QuizList extends Component {
                     component="img"
                     // className={classes.media}
                     style={{ objectFit: 'cover' }}
-                    height="150"
+                    height="170"
                     image={quiz.image}
 
                     title={quiz.name}
                   />
 
                   <CardContent>
-                    <p style={{textAlign: 'left', color:"grey"}}>Programming, Web Development</p>
                     <h1 gutterBottom variant="headline" component="h1" style={{ textAlign: 'left', fontFamily: "Quicksand"}}>
                       {quiz.name}
                     </h1>

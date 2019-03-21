@@ -8,6 +8,9 @@ import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
 
+
+// ****** chat bot feature ****** //
+
 const theme = {
   background: "#f5f8fb",
   fontFamily: "Avenir",
@@ -39,6 +42,11 @@ const Suggestions = () => {
   );
 };
 
+// ****** end chat bot features ****** //
+
+
+// ****** render landing page ****** //
+
 export default ({ user }) => (
 
   <div>
@@ -52,15 +60,14 @@ export default ({ user }) => (
             <h2 id="manage"><h2>  Learn from the best tools and stuff to
             </h2> <h2> practice stuff and landing page.</h2> </h2>
 
-           <p id="first-line"> With candid, you can blah blah blahs, and of course blah blah blahs,blah blah blahs,blah.</p>
+            <p id="first-line"> With candid, you can blah blah blahs, and of course blah blah blahs,blah blah blahs,blah.</p>
 
 
-                <Link to="/SignUp">
+     <Link to="/SignUp">
          <button type="button" className="signup button mainbutton">
            Get started
          </button>
      </Link>
-
 
           </section>
 
@@ -69,9 +76,7 @@ export default ({ user }) => (
 
             </div>
           </section>
-
         </section>
-
 
           <ThemeProvider theme={theme}>
                   <ChatBot
@@ -140,9 +145,6 @@ export default ({ user }) => (
                     ]}
                   />
                 </ThemeProvider>
-
-
-
 
       </div>
   <Footer/>

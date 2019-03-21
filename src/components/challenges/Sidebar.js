@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import Tags from './Tags'
+
 import './Sidebar.css';
 
-class Sidebar extends Component {
-  render() {
+function Sidebar(props) {
     return (
+      <React.Fragment>
 
       <div className='Sidebar'>
-        <Tags
+  <div className="ProblemList">
 
-
-        /> Hiiiiiiiiiiiiiiiiii
-        Hiiiiiiiiiiiiiiiiii
-        Hiiiiiiiiiiiiiiiiii
-        HiiiiiiiiiiiiiiiiiiHiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+  {props.problemIndex.map((item) => {
+    const key = Object.keys(item)[0];
+    const value = item[key]
+    return <button className="problemBtn"   key={value.split('.')[0]} value={value}>
+      {key}
+        </button>
+      })}
       </div>
-
-    );
+    </div>
+      </React.Fragment>
+    )
   }
-}
-
 export default Sidebar;

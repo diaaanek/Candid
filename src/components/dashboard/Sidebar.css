@@ -1,0 +1,64 @@
+aside.sidebar{
+	background: white;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	font-size: 16px;
+	color: $gray;
+	z-index: 100;
+	box-shadow: 1px 0 15px -2px gray;
+	min-height: 100%;
+
+
+	i {
+		margin-right: 5px;
+		color: $turquoise;
+	}
+}
+
+ul.top-sidebar {
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	padding-top: 30px;
+	border-bottom: 1px solid light-gray;
+
+	#new-study-set {
+		color: turquoise;
+	}
+}
+
+div.link {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	&:hover {
+		background: yellow;
+		color: gray;
+	}
+
+}
+
+ul.folders-sidebar {
+	display: flex;
+	flex-direction: column;
+
+	padding-top: 10px;
+
+	#modal-link {
+		color: turquoise;
+		letter-spacing: 1px;
+	}
+}
+
+div.sidebar-header {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	font-size: 12px;
+	letter-spacing: 1px;
+
+	&:hover {
+		color: blue;
+	}
+}

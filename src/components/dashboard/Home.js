@@ -1,34 +1,37 @@
-import React, { Component } from 'react'
-import firebase from 'firebase/app'
+import React, { Component } from "react";
 import "../Splash.scss";
 
-import QuizList from './QuizList'
-import QuizInfo from './QuizInfo'
-import StartQuiz from './StartQuiz'
+import QuizList from "./QuizList";
+import QuizInfo from "./QuizInfo";
+import StartQuiz from "./StartQuiz";
 
-import Footer from '../Footer'
+import Footer from "../Footer";
 
 import "./Dashboard.css";
 
-// + Home
-//  ++ QuizList
-//   +++ Quiz Info
-//    ++++ QuizList
-//     ++++ Start Quiz
+// + Home --> state
+//  ++ QuizList --> render quiz cards in grid
+//   +++ Quiz Info --> render subquiz info {quiz/${id}}
+//     ++++ Start Quiz --> load quiz, timer, quiz questions
 
 export default class Home extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       quizzes: [
         {
-          name: 'HTML',
-          image: "https://www.graycelltech.com/wp-content/uploads/2015/06/GCT-HTML5.jpg" ,
-          description:'HTML stands for HyperText Markup Language, It defines the structure of a Web document by using a variety of tags and attributes.',
+          name: "HTML",
+          image:
+            "https://www.graycelltech.com/wp-content/uploads/2015/06/GCT-HTML5.jpg",
+          description:
+            "HTML stands for HyperText Markup Language, It defines the structure of a Web document by using a variety of tags and attributes.",
           subQuiz: [
             {
-              name: 'Basics', questions: '3', time: '30 sec', score: false,
+              name: "Basics",
+              questions: "3",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "What is use for image insertion?",
@@ -47,19 +50,20 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "HTML stands for?",
                   option1: "HYPER TEXT MARKUP LANGUAGE'",
                   option2: "HTPER TEXT TELESCOPR",
                   option3: "HELP TEXT TERMINAL LANGUAGE",
                   option4: "NONE",
                   answer: "1"
-                },
-
+                }
               ]
             },
             {
-              name: 'Advanced', questions: '3', time: '30 sec', score: false,
+              name: "Advanced",
+              questions: "3",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "HTML use for?",
@@ -78,7 +82,6 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "HTML stands for?",
                   option1: "HYPER TEXT MARKUP LANGUAGE'",
                   option2: "HTPER TEXT TELESCOPR",
@@ -87,16 +90,21 @@ export default class Home extends Component {
                   answer: "1"
                 }
               ]
-            },
+            }
           ]
         },
         {
-          name: 'CSS',
-          image: "https://udemy-images.udemy.com/course/750x422/1832410_d0da_2.jpg" ,
-          description:'CSS stands for Cascading Style Sheets, It describes how HTML elements are to be displayed on screen, paper, or in other media.',
+          name: "CSS",
+          image:
+            "https://udemy-images.udemy.com/course/750x422/1832410_d0da_2.jpg",
+          description:
+            "CSS stands for Cascading Style Sheets, It describes how HTML elements are to be displayed on screen, paper, or in other media.",
           subQuiz: [
             {
-              name: 'Quiz 1', questions: '6', time: '30 sec', score: false,
+              name: "Quiz 1",
+              questions: "6",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "Css stands for?",
@@ -145,19 +153,23 @@ export default class Home extends Component {
                   option3: "using javascript",
                   option4: "using img",
                   answer: "1"
-                },
-
+                }
               ]
-            },
+            }
           ]
         },
         {
-          name: 'JavaScript',
-          image:  "https://cdn.lynda.com/course/574716/574716-636614621185089877-16x9.jpg",
-          description:' JavaScript is a "client-side" programming language. JavaScript scripts are read, interpreted and executed in your Web browser.',
+          name: "JavaScript",
+          image:
+            "https://cdn.lynda.com/course/574716/574716-636614621185089877-16x9.jpg",
+          description:
+            ' JavaScript is a "client-side" programming language. JavaScript scripts are read, interpreted and executed in your Web browser.',
           subQuiz: [
             {
-              name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
+              name: "Quiz 1",
+              questions: "4",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "How to create alert box?",
@@ -168,7 +180,6 @@ export default class Home extends Component {
                   answer: "4"
                 },
                 {
-
                   question: "How to initialize variable?",
                   option1: "variable name = 'ali'",
                   option2: "var name = 'ali'",
@@ -177,7 +188,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "How to push value in array?",
                   option1: "arr.push(value)",
                   option2: "arr.push.value",
@@ -186,21 +196,22 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "What is javascript?",
                   option1: "programming language",
                   option2: "scripting language",
                   option3: "coding language",
                   option4: "web language",
                   answer: "2"
-                },
+                }
               ]
             },
             {
-              name: 'Quiz 2', questions: '6', time: '30 sec', score: false,
+              name: "Quiz 2",
+              questions: "6",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
-
                   question: "Which creates random number?",
                   option1: "Math.floor()",
                   option2: "Math.ceil()",
@@ -209,7 +220,6 @@ export default class Home extends Component {
                   answer: "3"
                 },
                 {
-
                   question: "What does array returns?",
                   option1: "function",
                   option2: "object",
@@ -218,7 +228,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object property name & value are separated by?",
                   option1: "semicolon ;",
                   option2: "colon :",
@@ -227,7 +236,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object properties are separated by?",
                   option1: "comma ,",
                   option2: "dot .",
@@ -236,8 +244,8 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
-                  question: "What is the correct syntax for object initialization?",
+                  question:
+                    "What is the correct syntax for object initialization?",
                   option1: "var var_name = {property_name:property_value}",
                   option2: "var var_name = {property_value:property_name}",
                   option3: "var var_value = {property_name:property_value}",
@@ -245,25 +253,29 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "DOM stands for?",
                   option1: "document object modification",
                   option2: "document observed module",
                   option3: "document object model",
                   option4: "document object module",
                   answer: "3"
-                },
+                }
               ]
-            },
+            }
           ]
         },
         {
-          name: 'Ruby',
-          image:  "https://cdn.lynda.com/courses/769290-636849648289149989_270x480_thumb.jpg",
-          description: 'Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language learn more.',
+          name: "Ruby",
+          image:
+            "https://cdn.lynda.com/courses/769290-636849648289149989_270x480_thumb.jpg",
+          description:
+            "Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language learn more.",
           subQuiz: [
             {
-              name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
+              name: "Quiz 1",
+              questions: "4",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "How to create alert box?",
@@ -274,7 +286,6 @@ export default class Home extends Component {
                   answer: "4"
                 },
                 {
-
                   question: "How to initialize variable?",
                   option1: "variable name = 'ali'",
                   option2: "var name = 'ali'",
@@ -283,7 +294,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "How to push value in array?",
                   option1: "arr.push(value)",
                   option2: "arr.push.value",
@@ -292,21 +302,22 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "What is javascript?",
                   option1: "programming language",
                   option2: "scripting language",
                   option3: "coding language",
                   option4: "web language",
                   answer: "2"
-                },
+                }
               ]
             },
             {
-              name: 'Quiz 2', questions: '6', time: '30 sec', score: false,
+              name: "Quiz 2",
+              questions: "6",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
-
                   question: "Which creates random number?",
                   option1: "Math.floor()",
                   option2: "Math.ceil()",
@@ -315,7 +326,6 @@ export default class Home extends Component {
                   answer: "3"
                 },
                 {
-
                   question: "What does array returns?",
                   option1: "function",
                   option2: "object",
@@ -324,7 +334,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object property name & value are separated by?",
                   option1: "semicolon ;",
                   option2: "colon :",
@@ -333,7 +342,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object properties are separated by?",
                   option1: "comma ,",
                   option2: "dot .",
@@ -342,8 +350,8 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
-                  question: "What is the correct syntax for object initialization?",
+                  question:
+                    "What is the correct syntax for object initialization?",
                   option1: "var var_name = {property_name:property_value}",
                   option2: "var var_name = {property_value:property_name}",
                   option3: "var var_value = {property_name:property_value}",
@@ -351,26 +359,30 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "DOM stands for?",
                   option1: "document object modification",
                   option2: "document observed module",
                   option3: "document object model",
                   option4: "document object module",
                   answer: "3"
-                },
+                }
               ]
-            },
+            }
           ]
         },
 
         {
-          name: 'Algorithms',
-          image:  "https://cdn.lynda.com/course/124398/124398-636322775180650840-16x9.jpg",
-          description: 'Write simple algorithms in pseudocode and compare competing algorithms by weighing their advantages and disadvantages.',
+          name: "Algorithms",
+          image:
+            "https://cdn.lynda.com/course/124398/124398-636322775180650840-16x9.jpg",
+          description:
+            "Write simple algorithms in pseudocode and compare competing algorithms by weighing their advantages and disadvantages.",
           subQuiz: [
             {
-              name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
+              name: "Quiz 1",
+              questions: "4",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "How to create alert box?",
@@ -381,7 +393,6 @@ export default class Home extends Component {
                   answer: "4"
                 },
                 {
-
                   question: "How to initialize variable?",
                   option1: "variable name = 'ali'",
                   option2: "var name = 'ali'",
@@ -390,7 +401,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "How to push value in array?",
                   option1: "arr.push(value)",
                   option2: "arr.push.value",
@@ -399,21 +409,22 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "What is javascript?",
                   option1: "programming language",
                   option2: "scripting language",
                   option3: "coding language",
                   option4: "web language",
                   answer: "2"
-                },
+                }
               ]
             },
             {
-              name: 'Quiz 2', questions: '6', time: '30 sec', score: false,
+              name: "Quiz 2",
+              questions: "6",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
-
                   question: "Which creates random number?",
                   option1: "Math.floor()",
                   option2: "Math.ceil()",
@@ -422,7 +433,6 @@ export default class Home extends Component {
                   answer: "3"
                 },
                 {
-
                   question: "What does array returns?",
                   option1: "function",
                   option2: "object",
@@ -431,7 +441,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object property name & value are separated by?",
                   option1: "semicolon ;",
                   option2: "colon :",
@@ -440,7 +449,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object properties are separated by?",
                   option1: "comma ,",
                   option2: "dot .",
@@ -449,8 +457,8 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
-                  question: "What is the correct syntax for object initialization?",
+                  question:
+                    "What is the correct syntax for object initialization?",
                   option1: "var var_name = {property_name:property_value}",
                   option2: "var var_name = {property_value:property_name}",
                   option3: "var var_value = {property_name:property_value}",
@@ -458,25 +466,29 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "DOM stands for?",
                   option1: "document object modification",
                   option2: "document observed module",
                   option3: "document object model",
                   option4: "document object module",
                   answer: "3"
-                },
+                }
               ]
-            },
+            }
           ]
         },
         {
-          name: 'Data Structures',
-          image:  "https://cdn.lynda.com/course/718636/718636-636771107236305802-16x9.jpg",
-          description: 'Your goal is to understand data structures so that you can pick the data structure that’s most optimal for the problem at hand.',
+          name: "Data Structures",
+          image:
+            "https://cdn.lynda.com/course/718636/718636-636771107236305802-16x9.jpg",
+          description:
+            "Your goal is to understand data structures so that you can pick the data structure that’s most optimal for the problem at hand.",
           subQuiz: [
             {
-              name: 'Quiz 1', questions: '4', time: '30 sec', score: false,
+              name: "Quiz 1",
+              questions: "4",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
                   question: "How to create alert box?",
@@ -487,7 +499,6 @@ export default class Home extends Component {
                   answer: "4"
                 },
                 {
-
                   question: "How to initialize variable?",
                   option1: "variable name = 'ali'",
                   option2: "var name = 'ali'",
@@ -496,7 +507,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "How to push value in array?",
                   option1: "arr.push(value)",
                   option2: "arr.push.value",
@@ -505,21 +515,22 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "What is javascript?",
                   option1: "programming language",
                   option2: "scripting language",
                   option3: "coding language",
                   option4: "web language",
                   answer: "2"
-                },
+                }
               ]
             },
             {
-              name: 'Quiz 2', questions: '6', time: '30 sec', score: false,
+              name: "Quiz 2",
+              questions: "6",
+              time: "30 sec",
+              score: false,
               qArr: [
                 {
-
                   question: "Which creates random number?",
                   option1: "Math.floor()",
                   option2: "Math.ceil()",
@@ -528,7 +539,6 @@ export default class Home extends Component {
                   answer: "3"
                 },
                 {
-
                   question: "What does array returns?",
                   option1: "function",
                   option2: "object",
@@ -537,7 +547,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object property name & value are separated by?",
                   option1: "semicolon ;",
                   option2: "colon :",
@@ -546,7 +555,6 @@ export default class Home extends Component {
                   answer: "2"
                 },
                 {
-
                   question: "Object properties are separated by?",
                   option1: "comma ,",
                   option2: "dot .",
@@ -555,8 +563,8 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
-                  question: "What is the correct syntax for object initialization?",
+                  question:
+                    "What is the correct syntax for object initialization?",
                   option1: "var var_name = {property_name:property_value}",
                   option2: "var var_name = {property_value:property_name}",
                   option3: "var var_value = {property_name:property_value}",
@@ -564,103 +572,100 @@ export default class Home extends Component {
                   answer: "1"
                 },
                 {
-
                   question: "DOM stands for?",
                   option1: "document object modification",
                   option2: "document observed module",
                   option3: "document object model",
                   option4: "document object module",
                   answer: "3"
-                },
+                }
               ]
-            },
+            }
           ]
-        },
-
+        }
       ],
       quizIndex: null,
       subQuizIndex: null,
       qstnNo: 0,
 
-      // user: authUser,
-
+      user: null
     };
-        // this.joinQuiz = this.joinQuiz.bind(this);
-        // this.showList = this.showList.bind(this);
-        // this.startQuiz = this.startQuiz.bind(this);
-        // this.nextQstn = this.nextQstn.bind(this);
-        // this.back = this.back.bind(this);
-      }
+  }
 
+  joinQuiz = quizIndex => {
+    const { quizzes } = this.state;
+    this.setState({
+      quiz: quizzes[quizIndex],
+      quizIndex: quizIndex,
+      quizName: quizzes[quizIndex].name
+    });
+  };
 
-  joinQuiz = (quizIndex) => {
-  const { quizzes } = this.state;
-  this.setState({
-    quiz: quizzes[quizIndex],
-    quizIndex: quizIndex,
-    quizName: quizzes[quizIndex].name,
-  });
-}
+  showList = () => {
+    this.setState({ quiz: null });
+  };
 
-showList = () => {
-  this.setState({ quiz: null });
-}
+  startQuiz = subQuizIndex => {
+    const { quizzes, quizIndex } = this.state;
+    this.setState({
+      started: quizzes[quizIndex].subQuiz[subQuizIndex],
+      subQuizIndex: subQuizIndex,
+      subQuizName: quizzes[quizIndex].subQuiz[subQuizIndex].name
+    });
+  };
 
-startQuiz = (subQuizIndex) => {
-  const { quizzes, quizIndex } = this.state;
-  this.setState({
-    started: quizzes[quizIndex].subQuiz[subQuizIndex],
-    subQuizIndex: subQuizIndex,
-    subQuizName: quizzes[quizIndex].subQuiz[subQuizIndex].name,
-  });
-}
+  nextQstn = nextQstnNo => {
+    this.setState({
+      qstnNo: nextQstnNo + 1
+    });
+  };
 
-nextQstn = (nextQstnNo) => {
-  this.setState({
-    qstnNo: nextQstnNo + 1
-  });
-}
-
-back = () => {
-  this.setState({
-    started: null,
-    qstnNo: 0,
-  });
-}
-
+  back = () => {
+    this.setState({
+      started: null,
+      qstnNo: 0
+    });
+  };
 
   render() {
-      const { quizzes, quiz, started, qstnNo, quizName, subQuizName, user } = this.state;
+    const {
+      quizzes,
+      quiz,
+      started,
+      qstnNo,
+      quizName,
+      subQuizName,
+      user
+    } = this.state;
     return (
       <div className="dashboard">
+        <center>
+          <div>
+            {!quiz && !started && (
+              <QuizList list={quizzes} onPress={this.joinQuiz} />
+            )}
+            {quiz && !started && (
+              <QuizInfo
+                quiz={quiz}
+                onPress={this.startQuiz}
+                onBack={this.showList}
+              />
+            )}
 
-              <center>
-              <div>
-
-    { (!quiz && !started) &&
-    <QuizList
-      list={quizzes}
-      onPress={this.joinQuiz}
-      />}
-    {(quiz && !started) &&
-    <QuizInfo
-      quiz={quiz}
-      onPress={this.startQuiz}
-      onBack={this.showList} />}
-
-    { started &&
-    <StartQuiz
-      quizName={quizName}
-      subQuizName={subQuizName}
-      started={started}
-      qstnNo={qstnNo}
-      onPress={this.nextQstn}
-      back={this.back} />}
-
-              </div>
-              </center>
-              <Footer/>
+            {started && (
+              <StartQuiz
+                quizName={quizName}
+                subQuizName={subQuizName}
+                started={started}
+                qstnNo={qstnNo}
+                onPress={this.nextQstn}
+                back={this.back}
+              />
+            )}
+          </div>
+        </center>
+        <Footer />
       </div>
-    )
+    );
   }
 }

@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 import Sidebar from "./Sidebar"
 import InfoPanel from './InfoPanel';
 import CodeBox from './CodeBox';
-import Whiteboard from './Whiteboard';
+// import Whiteboard from './Whiteboard';
 import './CodeChallenges.css'
 // import AuthUserContext from './AuthUserContext'
 
 
 // + CodeChallenges
-//  ++ Sidebar --> Tags
-//   +++ Whiteboard
+//  ++ Sidebar --> problems.title
+//                          +++ Whiteboard
 //    ++++ InfoPanel
 //     ++++ Codebox --> Timer, Userscore
 
-class CodeChallenges extends Component {
+export default class CodeChallenges extends Component {
   state = {
     problemIndex: [],
     problemSelected: false,
@@ -68,17 +68,18 @@ render() {
 
     <div className="app">
  <div className='Main-content'>
-      <Sidebar />
-   <Whiteboard
+   <Sidebar
+     handleSelectionChange={(event) => this.fetchProblemHandler(event)}
+     problemIndex={this.state.problemIndex}
+     problemSelected={this.state.problemSelected}
+     selectedProblem={this.state.selectedProblem}
+     body={this.state.currentProblem.body}
+     description={this.state.currentProblem.description}
+     />
+
+
+   <InfoPanel
     title={this.state.currentProblem.title}
-    body={this.state.currentProblem.body}
-    description={this.state.currentProblem.description}
-
-    problemSelected={this.state.problemSelected}
-
-  />
-
-  <InfoPanel
     handleSelectionChange={(event) => this.fetchProblemHandler(event)}
     problemIndex={this.state.problemIndex}
     problemSelected={this.state.problemSelected}
@@ -88,10 +89,13 @@ render() {
   />
 
 <CodeBox
+  title={this.state.currentProblem.title}
+  handleSelectionChange={(event) => this.fetchProblemHandler(event)}
   problemIndex={this.state.problemIndex}
-  description={this.state.currentProblem.description}
-  body={this.state.currentProblem.body}
   problemSelected={this.state.problemSelected}
+  selectedProblem={this.state.selectedProblem}
+  body={this.state.currentProblem.body}
+  description={this.state.currentProblem.description}
 
   />
 </div>
@@ -113,5 +117,3 @@ render() {
   //     )}
   //   </AuthUserContext.Consumer>
   // )
-
-export default CodeChallenges;

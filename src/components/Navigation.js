@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import AuthUserContext from './AuthUserContext'
 import SignOutButton from './user/SignOut'
 import * as routes from '../constants/routes'
 
+// ****** is user logged in ??? ****** //
 const Navigation = () => (
   <AuthUserContext.Consumer>
     {authUser =>
@@ -13,10 +14,11 @@ const Navigation = () => (
   </AuthUserContext.Consumer>
 )
 
+// ****** when user is LOGGED IN ****** //
 const NavigationAuth = () => (
   <header className="nav-bar">
 
-    <Link to="/">
+    <Link to={routes.HOME}>
     <section className="logo"> <h1> candid  </h1> </section>
     </Link>
 
@@ -30,6 +32,11 @@ const NavigationAuth = () => (
     <li>
       <Link to={routes.CODE}>Code</Link>
     </li>
+
+    <li>
+      <Link to={routes.STUDY}>Study</Link>
+    </li>
+    
     <li>
       <Link to='/'><SignOutButton /></Link>
     </li>
@@ -38,6 +45,7 @@ const NavigationAuth = () => (
 </header>
 )
 
+// ****** when user is NOT LOGGED IN ****** //
 const NavigationNonAuth = () => (
   <header className="nav-bar">
 
