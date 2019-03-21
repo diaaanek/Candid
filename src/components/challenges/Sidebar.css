@@ -5,21 +5,13 @@
   margin-left: 25px;
 }
 
-
-
-
 .ProblemList {
-
-
   justify-content: center;
   margin-right: 30px;
   padding-top: 25px;
-
 }
 
-
 .problemBtn {
-
   padding: 15px 25px;
   font-family: "Quicksand";
   font-size: 15px;
@@ -35,6 +27,7 @@
 .problemBtn:hover {
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
-  -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }

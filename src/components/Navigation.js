@@ -6,6 +6,8 @@ import SignOutButton from "./user/SignOut";
 import * as routes from "../constants/routes";
 
 // ****** is user logged in ??? ****** //
+
+// basic av
 const Navigation = () => (
   <AuthUserContext.Consumer>
     {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
@@ -24,7 +26,6 @@ const NavigationAuth = () => (
     <section className="nav-links">
       <ul>
         <li>
-          {/*}<button type="button" className="signup button"> Learn</button> */}
           <Link to={routes.HOME}>Learn </Link>
         </li>
 
@@ -44,11 +45,9 @@ const NavigationAuth = () => (
           />
         </li>
 
-        <li>
-          <Link to="/">
-            <SignOutButton />
-          </Link>
-        </li>
+        <Link to="/">
+          <SignOutButton />
+        </Link>
       </ul>
     </section>
   </header>

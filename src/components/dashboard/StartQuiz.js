@@ -168,7 +168,7 @@ class QuizList extends Component {
                   <br />
                   <CircularProgress
                     size={200}
-                    thickness={2}
+                    thickness={5}
                     variant="static"
                     value={scored}
                   />
@@ -196,16 +196,16 @@ class QuizList extends Component {
                 <div className="qstnDiv">
                   <FormControl
                     component="fieldset"
-                    style={{ margin: "15px 15px 30px 15px" }}
+                    style={{
+                      margin: "15px 15px 30px 15px",
+                      fontFamily: "Quicksand"
+                    }}
                   >
                     <h3>
                       {qstnNo + 1}. {started.qArr[qstnNo].question}
                     </h3>
 
                     <RadioGroup
-                      // aria-label="Gender"
-                      // name="gender1"
-                      // className={classes.group}
                       value={this.state.radioVal}
                       onChange={this.handleChange}
                     >

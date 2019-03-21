@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import FileSaver from "file-saver";
 
-class SaveButton extends React.Component {
+export default class SaveButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,14 +43,9 @@ class SaveButton extends React.Component {
 
   render() {
     return (
-      <Button
-        className="btn-primary col-lg-12"
-        onClick={this.saveCode.bind(this)}
-      >
-        save
-      </Button>
+      <button className="save button" onClick={this.saveCode.bind(this)}>
+        Save{" "}
+      </button>
     );
   }
 }
-
-export default SaveButton;
