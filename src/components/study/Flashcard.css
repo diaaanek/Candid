@@ -15,3 +15,9 @@
 .Flashcard-actions {
   justify-content: center;
 }
+
+.Flashcard {
+  width: 200px;
+  height: 100px;
+  border-color: black;
+}

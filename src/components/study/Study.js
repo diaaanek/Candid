@@ -2,10 +2,14 @@ import React, { Component } from "react";
 import Card from "react-toolbox/lib/card/Card";
 import CardText from "react-toolbox/lib/card/CardText";
 import CardActions from "react-toolbox/lib/card/CardActions";
-import Button from "react-toolbox/lib/button/Button";
+
 import IconMenu from "react-toolbox/lib/menu/IconMenu";
 import Flashcard from "./Flashcard";
 import "./Flashcards.css";
+
+import { withStyles } from "@material-ui/core/styles";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from "@material-ui/icons/Add";
 
 import "./Study.css";
 // TO DO:
@@ -28,10 +32,13 @@ class Study extends Component {
             Search Deck Component
             <input type="text" value="" />
           </div>
-          <h1>Hiiiii</h1>
-          <button className="Main-button"> Hi </button>
+          <h1>Flashcard Category Title</h1>
+          <div className="Main-button">
+            <Fab color="primary" aria-label="Add">
+              <AddIcon />
+            </Fab>
+          </div>
         </div>
-        <Flashcard />
       </div>
     );
   }

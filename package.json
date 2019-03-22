@@ -8,7 +8,7 @@
     "@uiw/react-codemirror": "^1.0.19",
     "codemirror": "^5.44.0",
     "file-saver": "^2.0.1",
-    "firebase": "^5.9.0",
+    "firebase": "^5.9.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-codemirror": "^1.0.0",

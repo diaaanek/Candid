@@ -23,7 +23,7 @@ const NavigationAuth = () => (
       <section className="logo">
         <img
           className="logo"
-          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553219411/logo.png"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553258252/logo.png"
         />
       </section>
     </Link>
@@ -65,7 +65,7 @@ const NavigationNonAuth = () => (
       <section className="logo">
         <img
           className="logo"
-          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553219411/logo.png"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553258252/logo.png"
         />
       </section>
     </Link>
