@@ -4,36 +4,15 @@
 //  + splash
 //  + footer
 
-@import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Open+Sans|Nunito|Quicksand|Montserrat");
 html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
+  // height: 100vhm;
 }
 
 a {
-  list-style: none;
   text-decoration: none;
 }
 
-.avatar {
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.avatar:hover {
-  background-color: yellow;
-  box-shadow: 0px 4px 4px yellow;
-  // rgba(46, 229, 157, 0.4);
-  transform: translateY(-2px);
-  cursor: pointer;
-}
-
+// Nav bar main page
 .nav-bar {
   height: 85px;
   // position: sticky;
@@ -43,16 +22,33 @@ a {
   padding: 10px 45px;
   width: 100%;
   // min-width: 750px;
-  // border-bottom: 1px solid gray;
-  background-color: #fdfdfd;
+  background-color: #aadd32;
+  // background-color: #fdfdfd;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
 
   .logo {
-    // width: 240px;
+    width: 190px;
+  }
+
+  // # profile pic in nav bar
+  .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .avatar:hover {
+    // background-color: yellow;
+    box-shadow: 0px 4px 4px yellow;
+    // rgba(46, 229, 157, 0.4);
+    transform: translateY(-2px);
+    cursor: pointer;
   }
 
   .nav-links {
@@ -61,7 +57,6 @@ a {
       padding: 0;
       // display: flex;
       //
-      // padding: 5px;
     }
     li {
       display: inline-block;
@@ -79,10 +74,12 @@ a {
 }
 // end nav bar
 
+// before log in
 .splash {
+  overflow: hidden;
   padding: 20px 45px;
   padding-top: 150px;
-  min-height: calc(100vh - 40px);
+  // min-height: calc(100vh - 40px);
 
   background: linear-gradient(to bottom, #f9fbf7, #c9d8ff);
 
@@ -94,7 +91,6 @@ a {
     flex-wrap: wrap;
 
     // height: 100vh;
-    // overflow:hidden;
     overflow: hidden;
     height: 100%;
     width: 100%;

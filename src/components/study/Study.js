@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import Card from "react-toolbox/lib/card/Card";
 import CardText from "react-toolbox/lib/card/CardText";
-
-import Flashcards from "./Flashcards";
+import CardActions from "react-toolbox/lib/card/CardActions";
+import Button from "react-toolbox/lib/button/Button";
+import IconMenu from "react-toolbox/lib/menu/IconMenu";
+import Flashcard from "./Flashcard";
+import "./Flashcards.css";
 
 import "./Study.css";
 // TO DO:
@@ -28,6 +31,7 @@ class Study extends Component {
           <h1>Hiiiii</h1>
           <button className="Main-button"> Hi </button>
         </div>
+        <Flashcard />
       </div>
     );
   }

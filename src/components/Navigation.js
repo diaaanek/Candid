@@ -21,7 +21,10 @@ const NavigationAuth = () => (
   <header className="nav-bar">
     <Link to={routes.HOME}>
       <section className="logo">
-        <h1> candid </h1>{" "}
+        <img
+          className="logo"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553219411/logo.png"
+        />
       </section>
     </Link>
 
@@ -60,8 +63,10 @@ const NavigationNonAuth = () => (
   <header className="nav-bar">
     <Link to="/">
       <section className="logo">
-        {" "}
-        <h1> candid </h1>{" "}
+        <img
+          className="logo"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553219411/logo.png"
+        />
       </section>
     </Link>
 

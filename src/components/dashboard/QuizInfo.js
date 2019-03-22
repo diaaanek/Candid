@@ -20,6 +20,16 @@ class QuizInfo extends Component {
         {/* <h1>{quiz.name}</h1> */}
 
         <div style={{ margin: "80px 3% 3% 3%" }}>
+          <h1> Take Quizzes </h1>
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589874/calendar.svg"
+            style={{
+              height: "100px",
+              width: "100px"
+            }}
+          />
+
+          <br />
           {quiz.subQuiz.map((subQuiz, index) => {
             return (
               <Card
@@ -119,6 +129,14 @@ class QuizInfo extends Component {
               </Card>
             );
           })}
+          <h1> Learning Resources </h1>
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589874/archive.svg"
+            style={{
+              height: "100px",
+              width: "100px"
+            }}
+          />
         </div>
       </div>
     );

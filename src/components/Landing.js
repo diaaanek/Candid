@@ -141,7 +141,7 @@ export default ({ user }) => (
           ]}
         />
       </ThemeProvider>
+      <Footer />
     </div>
-    <Footer />
   </div>
 );
