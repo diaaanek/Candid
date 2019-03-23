@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import swal from "sweetalert";
-import Sidebar from "./Sidebar";
 
 import NavigateNext from "@material-ui/icons/NavigateNext";
 
@@ -154,7 +153,6 @@ class QuizList extends Component {
     const { correct, scored, min, sec } = this.state;
     return (
       <div>
-        <Sidebar />
         <div style={{ margin: "80px 3% 3% 3%" }}>
           {scored !== false ? (
             <div>
@@ -192,51 +190,50 @@ class QuizList extends Component {
               </div>
               <br />
 
-              <aside className="sidebar">
-                <div className="qstnDiv">
-                  <FormControl
-                    component="fieldset"
-                    style={{
-                      margin: "15px 15px 30px 15px",
-                      fontFamily: "Quicksand"
-                    }}
-                  >
-                    <h3>
-                      {qstnNo + 1}. {started.qArr[qstnNo].question}
-                    </h3>
+              <div className="qstnDiv">
+                <FormControl
+                  component="fieldset"
+                  style={{
+                    margin: "15px 15px 30px 15px",
+                    fontFamily: "Quicksand"
+                  }}
+                >
+                  <h3>
+                    {qstnNo + 1}. {started.qArr[qstnNo].question}
+                  </h3>
 
-                    <RadioGroup
-                      value={this.state.radioVal}
-                      onChange={this.handleChange}
-                    >
-                      <FormControlLabel
-                        value="1"
-                        name="option"
-                        control={<Radio />}
-                        label={started.qArr[qstnNo].option1}
-                      />
-                      <FormControlLabel
-                        value="2"
-                        name="option"
-                        control={<Radio />}
-                        label={started.qArr[qstnNo].option2}
-                      />
-                      <FormControlLabel
-                        value="3"
-                        name="option"
-                        control={<Radio />}
-                        label={started.qArr[qstnNo].option3}
-                      />
-                      <FormControlLabel
-                        value="4"
-                        name="option"
-                        control={<Radio />}
-                        label={started.qArr[qstnNo].option4}
-                      />
-                    </RadioGroup>
-                  </FormControl>
-                </div>
-              </aside>
+                  <RadioGroup
+                    value={this.state.radioVal}
+                    onChange={this.handleChange}
+                  >
+                    <FormControlLabel
+                      value="1"
+                      name="option"
+                      control={<Radio />}
+                      label={started.qArr[qstnNo].option1}
+                    />
+                    <FormControlLabel
+                      value="2"
+                      name="option"
+                      control={<Radio />}
+                      label={started.qArr[qstnNo].option2}
+                    />
+                    <FormControlLabel
+                      value="3"
+                      name="option"
+                      control={<Radio />}
+                      label={started.qArr[qstnNo].option3}
+                    />
+                    <FormControlLabel
+                      value="4"
+                      name="option"
+                      control={<Radio />}
+                      label={started.qArr[qstnNo].option4}
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </div>
+
               <br />
               <button className="nextBtn" onClick={this.updating.bind(this)}>
                 <NavigateNext />

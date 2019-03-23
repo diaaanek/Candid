@@ -1,6 +1,11 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 
+// import * as firebase from "firebase";
+import firestore from "firebase/firestore";
+
+const settings = { timestampsInSnapshots: true };
+
 const config = {
   apiKey: "AIzaSyAF-5GWykIAhZDhNnK70wqJ7hpP0J8sA_4",
   authDomain: "candid-3f079.firebaseapp.com",
@@ -12,5 +17,12 @@ const config = {
 
 firebase.initializeApp(config);
 
-const auth = firebase.auth();
-export { auth };
+firebase.firestore().settings(settings);
+
+export const provider = new firebase.auth.GoogleAuthProvider();
+
+export const auth = firebase.auth();
+// const auth = firebase.auth();
+// export { auth };
+
+export default firebase;

@@ -1,0 +1,85 @@
+{
+  "flashcards": {
+    "Javascript": [
+      {
+        "question": "What's a typical use case for anonymous functions in JavaScript?",
+        "answer": "Pass them as arguments to other functions"
+      },
+      {
+        "question": "What's the difference between a variable that is: null, undefined or undeclared?",
+        "answer": "undefined is a variable that has been declared but no value exists and is a type of itself ‘undefined’. null is a value of a variable and is a type of object. undeclared variables is a variable that has been declared without ‘var’, 'let', or 'const' keyword"
+      },
+      {
+        "question": "What is the difference between Map and forEach",
+        "answer": "the forEach() method doesn't actually return anything (undefined). It simply calls a provided function on each element in your array. ... The difference is that map() utilizes return values and actually returns a new Array of the same size"
+      },
+      {
+        "question": "Why would you use Event Delegation over Event Listeners",
+        "answer": "When an element in the DOM is clicked, the event bubbles all the way up to the parent element (the document and then the window). This allows you to listen for events on the parent item and still detect clicks that happen inside it. Event delegation improves web performance and dynamically renders element"
+      },
+      {
+        "question": "What is hoisting? How does it work?",
+        "answer": "Hoisting is the JavaScript interpreter's action of moving all variable and function declarations to the top of the current scope. However, only the actual declarations are hoisted. Any assignments are left where they are."
+      },
+      {
+        "question": "What is prototypal inheritance? How does it work?",
+        "answer": "In JavaScript, class inheritance is implemented on top of prototypal inheritance, but that does not mean that it does the same thing: JavaScript's class inheritance uses the prototype chain to wire the child `Constructor.prototype` to the parent `Constructor.prototype` for delegation."
+      },
+      {
+        "question": "What is AJAX and How do we use it?",
+        "answer": "AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. Ajax uses XHTML for content, CSS for presentation, along with Document Object Model and JavaScript for dynamic content display."
+      },
+      {
+        "question": "How do methods differ from functions?",
+        "answer": "A function is a piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed. A method is a piece of code that is called by a name that is associated with an object. In most respects it is identical to a function except for two key differences: (1) A method is implicitly passed the object on which it was called. (2) A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data)."
+      },
+      {
+        "question": "Explain `this",
+        "answer": " 'this' is a reference to the current object instantiated by the class. In JavaScript, 'this' normally refers to the object which 'owns' the method, but it depends on how a function is called."
+      }
+    ],
+    "Ruby": [
+      {
+        "question": "Adjacent",
+        "answer": "近隣の",
+        "options": ["霞みがかった", "調節できる", "脆い", "明るい", "近隣の"]
+      },
+      {
+        "question": "Tangible",
+        "answer": "有形の"
+      },
+      {
+        "question": "Vague",
+        "answer": "漠然とした"
+      },
+      {
+        "question": "Novice",
+        "answer": "初心者"
+      },
+      {
+        "question": "Indict",
+        "answer": "起訴する"
+      },
+      {
+        "question": "Tenacious",
+        "answer": "粘り強い"
+      },
+      {
+        "question": "Tedious",
+        "answer": "退屈な"
+      },
+      {
+        "question": "Obscure",
+        "answer": "はっきりしない"
+      },
+      {
+        "question": "Discrepancy",
+        "answer": "矛盾、不一致"
+      },
+      {
+        "question": "Unindicted Co-conspirator",
+        "answer": "起訴されていない共謀者"
+      }
+    ]
+  }
+}

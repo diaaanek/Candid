@@ -1,15 +1,14 @@
 import React from "react";
-// import Splash from './Splash'
-import Footer from "./Footer";
-import "./Splash.scss";
-
 import { Link } from "react-router-dom";
+
+import "./Splash.scss";
 
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
-// ****** chat bot feature ****** //
+import Footer from "./Footer";
 
+// ****** chat bot feature ****** //
 const theme = {
   background: "#f5f8fb",
   fontFamily: "Quicksand",
@@ -55,18 +54,19 @@ export default ({ user }) => (
             <h2> Learn from the best tools and stuff to</h2>{" "}
             <h2> practice stuff and landing page.</h2>{" "}
           </h2>
-
           <p id="first-line">
             {" "}
             With candid, you can blah blah blahs, and of course blah blah
             blahs,blah blah blahs,blah.
           </p>
-
           <Link to="/SignUp">
             <button type="button" className="signup button mainbutton">
               Get started
             </button>
           </Link>
+          // GOOGLE OAUTH
+          <span>or </span>
+          <button> Sign up with Google</button>
         </section>
 
         <section className="splash-right">

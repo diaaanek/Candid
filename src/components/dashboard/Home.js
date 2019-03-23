@@ -101,9 +101,9 @@ export default class Home extends Component {
             "CSS stands for Cascading Style Sheets, It describes how HTML elements are to be displayed on screen, paper, or in other media.",
           subQuiz: [
             {
-              name: "Quiz 1",
+              name: "Basics",
               questions: "6",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -485,9 +485,9 @@ export default class Home extends Component {
             "Your goal is to understand data structures so that you can pick the data structure that’s most optimal for the problem at hand.",
           subQuiz: [
             {
-              name: "Quiz 1",
+              name: "Data Structures Basics",
               questions: "4",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -525,7 +525,7 @@ export default class Home extends Component {
               ]
             },
             {
-              name: "Quiz 2",
+              name: "Nodes",
               questions: "6",
               time: "30 sec",
               score: false,
@@ -578,6 +578,12 @@ export default class Home extends Component {
                   option3: "document object model",
                   option4: "document object module",
                   answer: "3"
+                },
+                {
+                  name: "Lists",
+                  questions: "6",
+                  time: "60 sec",
+                  score: false
                 }
               ]
             }
@@ -587,7 +593,6 @@ export default class Home extends Component {
       quizIndex: null,
       subQuizIndex: null,
       qstnNo: 0,
-
       user: null
     };
   }
