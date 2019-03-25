@@ -5,7 +5,6 @@
 }
 
 .dashboard {
-  margin-top: 80px;
   font-family: "Quicksand";
   background: #f4f8fb;
 }
@@ -18,7 +17,9 @@ h1 {
 
   font-style: normal;
 }
-
+.quizContainer {
+  padding-top: 100px;
+}
 .start {
   background-color: #e0540e;
   padding: 12px 18px;

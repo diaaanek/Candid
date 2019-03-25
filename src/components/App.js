@@ -1,16 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navigation from "./Navigation";
-import LandingPage from "./Landing";
-import SignUpPage from "./user/SignUp";
-import SignInPage from "./user/SignIn";
+import Nav from "./Nav";
+import Main from "./Main";
 
-import HomePage from "./dashboard/Home";
-import CodeChallenges from "./challenges/CodeChallenges";
-import Study from "./study/Study";
+import withAuth from "./withAuth";
 
-import withAuthentication from "./withAuthentication";
+// import LandingPage from "./Landing";
+// import SignUpPage from "./user/SignUp";
+
+// import HomePage from "./dashboard/Home";
+// import CodeChallenges from "./challenges/CodeChallenges";
+// import Study from "./study/Study";
 
 import * as routes from "../constants/routes";
 
@@ -20,19 +21,10 @@ import * as routes from "../constants/routes";
 //    <AuthUserContext.Provider value={authUser}>
 
 const App = () => (
-  <Router>
-    <div>
-      <Navigation />
-
-      <Route exact path={routes.LANDING} component={LandingPage} />
-      <Route exact path={routes.SIGN_UP} component={SignUpPage} />
-      <Route exact path={routes.SIGN_IN} component={SignInPage} />
-      <Route exact path={routes.HOME} component={HomePage} />
-
-      <Route exact path={routes.CODE} component={CodeChallenges} />
-      <Route exact path={routes.STUDY} component={Study} />
-    </div>
-  </Router>
+  <div>
+    <Nav />
+    <Main />
+  </div>
 );
 
-export default withAuthentication(App);
+export default withAuth(App);

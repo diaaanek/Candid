@@ -1,6 +1,6 @@
 .flashcards-page {
   background: #f1f1f1;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -11,10 +11,6 @@
   perspective: 1000px;
 }
 /* flip the pane when hovered */
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
 
 .flip-container,
 .front,
@@ -25,31 +21,22 @@
   top: 100px;
 }
 
-/* flip speed goes here */
-.flipper {
-  transition: 1s;
-  transform-style: preserve-3d;
+// /* hide back of pane during swap */
+// .front,
+// .back {
+//   backface-visibility: hidden;
+//   background: white;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: center;
+//   color: gray;
 
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front,
-.back {
-  backface-visibility: hidden;
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  color: gray;
-
-  h1 {
-    font-size: 25px;
-    align-self: center;
-    font-family: "Avenir";
-  }
+h1 {
+  font-size: 25px;
+  align-self: center;
+  font-family: "Avenir";
 }
 
 /* front pane, placed above back */

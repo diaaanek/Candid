@@ -4,7 +4,7 @@ import "../Splash.scss";
 import QuizList from "./QuizList";
 import QuizInfo from "./QuizInfo";
 import StartQuiz from "./StartQuiz";
-
+import Sidebar from "../Sidebar";
 import Footer from "../Footer";
 
 import "./Dashboard.css";
@@ -644,6 +644,7 @@ export default class Home extends Component {
     } = this.state;
     return (
       <div className="dashboard">
+        <Sidebar />
         <center>
           <div>
             {!quiz && !started && (

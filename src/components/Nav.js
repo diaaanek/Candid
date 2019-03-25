@@ -1,39 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-
-import "./Splash.scss";
 import * as routes from "../constants/routes";
 
-// import AuthUserContext from "./AuthUserContext";
-// import SignOutButton from "./user/SignOut";
+import AuthUserContext from "./AuthUserContext";
+import UserInfo from "./UserInfo";
 
-// ****** is user logged in ??? ****** //
+import SignIn from "./SignIn";
+import "./Splash.scss";
 
-// basic av
-const Navigation = () => (
+const Nav = () => (
   <AuthUserContext.Consumer>
-    {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+    {authUser => (authUser.authUser ? <NavAuth /> : <NavNonAuth />)}
   </AuthUserContext.Consumer>
 );
 
 // ****** when user is LOGGED IN ****** //
-const NavigationAuth = () => (
+// ***** user in signed in and authenticated  *****
+
+const NavAuth = () => (
   <header className="nav-bar">
-    <Link to={routes.HOME}>
+    <Link to={routes.LANDING}>
       <section className="logo">
-        <img
+        {" "}
+        candid
+        {/*  <img
           className="logo"
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553258252/logo.png"
         />
+        */}
       </section>
     </Link>
 
     <section className="nav-links">
       <ul>
         <li>
-          <Link to={routes.HOME}>Learn </Link>
+          <Link to={routes.HOME}>Learn</Link>
         </li>
-
         <li>
           <Link to={routes.CODE}>Code</Link>
         </li>
@@ -42,16 +44,8 @@ const NavigationAuth = () => (
           <Link to={routes.STUDY}>Study</Link>
         </li>
 
-        <li>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJTTHwcDBb-goOaP1yZfq1pob4M3ggbPbS-DdO_00KDiO-NWAj"
-            alt="Avatar"
-            class="avatar"
-          />
-        </li>
-
-        <Link to="/">
-          <SignOutButton />
+        <Link to={routes.MYPROFILE}>
+          <UserInfo />
         </Link>
       </ul>
     </section>
@@ -59,9 +53,10 @@ const NavigationAuth = () => (
 );
 
 // ****** when user is NOT LOGGED IN ****** //
-const NavigationNonAuth = () => (
+
+const NavNonAuth = () => (
   <header className="nav-bar">
-    <Link to="/">
+    <Link to={routes.LANDING}>
       <section className="logo">
         <img
           className="logo"
@@ -73,11 +68,11 @@ const NavigationNonAuth = () => (
     <section className="nav-links">
       <ul>
         <li>
-          <Link to={routes.SIGN_IN}>Sign In</Link>
+          <Link to={routes.HOME}>Sign In</Link>
         </li>
       </ul>
     </section>
   </header>
 );
 
-export default Navigation;
+export default Nav;

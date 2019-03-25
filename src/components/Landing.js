@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Splash.scss";
+import SignIn from "./SignIn";
 
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
@@ -66,7 +67,7 @@ export default ({ user }) => (
           </Link>
           // GOOGLE OAUTH
           <span>or </span>
-          <button> Sign up with Google</button>
+          <SignIn />
         </section>
 
         <section className="splash-right">

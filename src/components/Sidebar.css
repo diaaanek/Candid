@@ -1,0 +1,82 @@
+.Sidebar {
+  border-right: 2px solid #e7e7e7;
+  display: flex;
+  flex: 1;
+  margin-left: 25px;
+}
+
+.ProblemList {
+  justify-content: center;
+  margin-right: 30px;
+  padding-top: 25px;
+}
+
+.problemBtn {
+  padding: 15px 25px;
+  font-family: "Quicksand";
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #d90;
+  color: white;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.problemBtn:hover {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.aside {
+  margin-top: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.header,
+.content {
+  border: 10px solid rgba(red, 0.2);
+  box-shadow: inset 0 0 50px rgba(red, 0.3);
+}
+.scrollcontent {
+  border: 10px solid rgba(green, 0.2);
+  box-shadow: inset 0 0 50px rgba(green, 0.3);
+}
+.header {
+  font-size: 25px;
+  flex: 0 0 auto;
+}
+.content {
+  flex: 1 1 auto;
+  position: relative;
+}
+.scrollcontent {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+.contentbody {
+  height: 100vh;
+}

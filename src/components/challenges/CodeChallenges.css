@@ -59,7 +59,7 @@
 
 .info-panel p {
   border-bottom: none;
-  max-width: 60%;
+  /* max-width: 60%; */
   padding-bottom: 0;
 }
 
