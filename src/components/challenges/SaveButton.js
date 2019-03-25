@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FileSaver from "file-saver";
+// import FileSaver from "file-saver";
 
 export default class SaveButton extends Component {
   constructor(props) {
@@ -11,16 +11,16 @@ export default class SaveButton extends Component {
     };
   }
 
-  fileExtension(lang) {
-    const fileExtensionDict = {
-      javascript: "js"
-    };
-    return fileExtensionDict[lang];
-  }
-
-  fileNameify(name) {
-    return name.split(" ").join("_");
-  }
+  // fileExtension(lang) {
+  //   const fileExtensionDict = {
+  //     javascript: "js"
+  //   };
+  //   return fileExtensionDict[lang];
+  // }
+  //
+  // fileNameify(name) {
+  //   return name.split(" ").join("_");
+  // }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
@@ -29,23 +29,19 @@ export default class SaveButton extends Component {
       lang: nextProps.lang
     });
   }
-  saveCode(e) {
-    e.preventDefault();
-    const code = this.state.text;
-    const blob = new Blob([code], { type: "text/plain;charset=utf-8" });
-    FileSaver.saveAs(
-      blob,
-      `${this.fileNameify(this.state.title)}.${this.fileExtension(
-        this.state.lang
-      )}`
-    );
-  }
-
+  // saveCode(e) {
+  //   e.preventDefault();
+  //   const code = this.state.text;
+  //   const blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+  //   FileSaver.saveAs(
+  //     blob,
+  //     `${this.fileNameify(this.state.title)}.${this.fileExtension(
+  //       this.state.lang
+  //     )}`
+  //   );
+  // }
+  // onClick={this.saveCode.bind(this)
   render() {
-    return (
-      <button className="save button" onClick={this.saveCode.bind(this)}>
-        Save{" "}
-      </button>
-    );
+    return <button className="save button">Save </button>;
   }
 }

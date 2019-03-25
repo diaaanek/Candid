@@ -51,13 +51,13 @@ export default ({ user }) => (
         <section className="splash-left">
           <div />
           <h2 id="manage">
-            <h2> Learn from the best tools and stuff to</h2>{" "}
+            <h2> Learn from the best tools</h2>{" "}
             <h2> practice stuff and landing page.</h2>{" "}
           </h2>
           <p id="first-line">
             {" "}
-            With candid, you can blah blah blahs, and of course blah blah
-            blahs,blah blah blahs,blah.
+            A social interview prep community for aspiring and bad ass web
+            developers.
           </p>
           <Link to="/SignUp">
             <button type="button" className="signup button mainbutton">

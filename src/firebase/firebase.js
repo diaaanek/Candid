@@ -20,6 +20,7 @@ firebase.initializeApp(config);
 firebase.firestore().settings(settings);
 
 export const provider = new firebase.auth.GoogleAuthProvider();
+export const githubProvider = new firebase.auth.GithubAuthProvider();
 
 export const auth = firebase.auth();
 // const auth = firebase.auth();

@@ -28,6 +28,7 @@ const App = () => (
       <Route exact path={routes.SIGN_UP} component={SignUpPage} />
       <Route exact path={routes.SIGN_IN} component={SignInPage} />
       <Route exact path={routes.HOME} component={HomePage} />
+
       <Route exact path={routes.CODE} component={CodeChallenges} />
       <Route exact path={routes.STUDY} component={Study} />
     </div>

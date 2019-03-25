@@ -5,9 +5,9 @@
 }
 
 .dashboard {
-  margin-top: 95px;
+  margin-top: 80px;
   font-family: "Quicksand";
-  /* background-color: "#f7fafc" */
+  background: #f4f8fb;
 }
 h1 {
   font-size: 25px;
