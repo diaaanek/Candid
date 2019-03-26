@@ -8,8 +8,8 @@ export default () => (
         <img
           src="https://image.flaticon.com/icons/svg/25/25231.svg"
           alt="github"
-          height="37"
-          width="37"
+          height="35"
+          width="35"
         />
       </a>
 
@@ -17,8 +17,8 @@ export default () => (
         <img
           src="https://cdn1.iconfinder.com/data/icons/somacro___dpi_social_media_icons_by_vervex-dfjq/500/linkedin.png"
           alt="linkedin"
-          height="37"
-          width="37"
+          height="35"
+          width="35"
         />
       </a>
 
@@ -26,15 +26,15 @@ export default () => (
         <img
           src="http://www.iconsalot.com/asset/icons/dinosoftlabs/banking-and-finance-7/512/039-portfolio-icon.png"
           alt="portfolio"
-          height="38"
-          width="38"
+          height="35"
+          width="35"
         />
       </a>
     </section>
 
     <section id="footer-right">
       <p>
-        <span>💓 </span>2019 Diane
+        <span />2019 Diane
       </p>
     </section>
   </div>

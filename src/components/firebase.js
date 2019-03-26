@@ -11,5 +11,11 @@ if (!firebase.apps.length) {
   firebase.initializeApp(config);
 }
 export const provider = new firebase.auth.GoogleAuthProvider();
+
+export const githubProvider = new firebase.auth.GithubAuthProvider();
+
+// Sign Out
+export const doSignOut = () => firebase.auth.signOut();
+
 export const auth = firebase.auth();
 export default firebase;

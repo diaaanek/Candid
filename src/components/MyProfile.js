@@ -6,8 +6,9 @@ import AuthUserContext from "./AuthUserContext";
 import withAuthorization from "./withAuthorization";
 import MyProfileEnhanced from "./MyProfileEnhanced";
 
-import AllBooks from "./AllBooks";
+import AllQuestions from "./AllQuestions";
 
+import Profile from "./Profile.css";
 class MyProfile extends Component {
   constructor() {
     super();
@@ -26,7 +27,7 @@ class MyProfile extends Component {
 
   refactorFetch = () => {
     const { userId } = this.state;
-    db.getUserBooks(userId).on("value", snapshot =>
+    db.getUserQuestions(userId).on("value", snapshot =>
       this.setState(() => ({ items: snapshot.val(), loading: false }))
     );
   };
@@ -61,7 +62,7 @@ class MyProfile extends Component {
       .push().key;
     const postData = {
       key: newPostKey,
-      title: this.state.currentItem,
+      question: this.state.currentItem,
       user: this.state.username,
       createdBy: this.state.user.email,
       createdById: this.state.userId,
@@ -84,18 +85,18 @@ class MyProfile extends Component {
   };
 
   removeItem = (itemId, userId) => {
-    db.delAllBooks(itemId);
-    db.delUserBooks(itemId, userId);
+    db.delAllQuestions(itemId);
+    db.delUserQuestions(itemId, userId);
   };
 
   updItem = (itemId, userId) => {
     const { updItem, updName } = this.state;
     const item = {
-      title: updItem,
+      question: updItem,
       user: updName
     };
-    db.updAllBooks(itemId, item);
-    db.updUserBooks(itemId, userId, item);
+    db.updAllQuestions(itemId, item);
+    db.updUserQuestions(itemId, userId, item);
     this.setState({
       updItem: "",
       updName: "",
@@ -118,8 +119,8 @@ class MyProfile extends Component {
   render() {
     const { updItem, updName, currentItem, username, items } = this.state;
     return (
-      <div className="app">
-        <aside class="sidebar">
+      <div>
+        <aside>
           <h1>My profile</h1>
 
           {this.state.user ? (
@@ -145,8 +146,8 @@ class MyProfile extends Component {
             </section>
           ) : null}
 
-          <section className="display-item">
-            <div className="wrapper">
+          <section>
+            <div>
               <ul>
                 {this.state.loading ? <div>loading...</div> : null}
                 {this.state.user && this.state.items ? (
@@ -154,21 +155,19 @@ class MyProfile extends Component {
                     const requests = items[item].requests;
                     return (
                       <li key={items[item].key}>
-                        <h3>{items[item].title}</h3>
-                        <p> Requested by: </p>
+                        <h3>{items[item].question}</h3>
+                        <p> Answered by: </p>
 
                         {requests &&
                           Object.keys(requests).map(el => {
                             return (
                               <div>
-                                <h5 style={{ color: "green" }}>
-                                  {requests[el].name}
-                                </h5>
+                                <h5>{requests[el].name}</h5>
                               </div>
                             );
                           })}
 
-                        <p>brought by: {items[item].user}</p>
+                        <p>answered by: {items[item].user}</p>
                         {this.state.userId === items[item].createdById ? (
                           <div>
                             <button
@@ -179,12 +178,12 @@ class MyProfile extends Component {
                                 )
                               }
                             >
-                              Remove Item
+                              Remove Question
                             </button>
                             <button
                               onClick={() => this.updForm(items[item].key)}
                             >
-                              upd Item
+                              update Question
                             </button>
                           </div>
                         ) : null}
@@ -230,8 +229,9 @@ class MyProfile extends Component {
             </div>
           </section>
         </aside>
-
-        <AllBooks />
+        <div id="main">
+          <AllQuestions />
+        </div>
       </div>
     );
   }

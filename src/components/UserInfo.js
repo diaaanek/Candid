@@ -11,8 +11,8 @@ const UserInfo = () => (
 
 const UserData = ({ authUser }) => (
   <React.Fragment>
+    👋 Welcome, {authUser.displayName || authUser.email}!
     <img src={authUser.photoURL} className="avatar" />
-    <li> 👋 Welcome, {authUser.displayName || authUser.email}! </li>
   </React.Fragment>
 );
 

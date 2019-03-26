@@ -1,5 +1,3 @@
-
-
 .App {
   /* display: flex; */
   /* font-family: 'Nunito';
@@ -7,7 +5,7 @@
   /* min-height: 100vh; */
   /* text-align: center; */
   /* font-family: "Quicksand", sans-serif; */
-    font-family: 'circular-book';
+  font-family: "circular-book";
   font-style: normal;
   /* font-weight: 200; */
   /* position: relative;
@@ -17,6 +15,10 @@
   flex-direction: row; */
 }
 
-a {
+button,
+a,
+.button,
+.cursor-pointer {
   list-style-type: none;
+  cursor: pointer;
 }

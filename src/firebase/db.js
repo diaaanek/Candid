@@ -1,32 +1,32 @@
 import { db } from "./firebase";
 
-export const getAllBooks = () => db.ref("items");
-export const delAllBooks = itemId => db.ref(`/items/${itemId}`).remove();
-export const updAllBooks = (itemId, item) =>
+export const getAllQuestions = () => db.ref("items");
+export const delAllQuestions = itemId => db.ref(`/items/${itemId}`).remove();
+export const updAllQuestions = (itemId, item) =>
   db.ref(`/items/${itemId}`).update(item);
-export const appendRequestsToAllBooks = (itemId, item, key) =>
+export const appendRequestsToAllQuestions = (itemId, item, key) =>
   db
     .ref(`/items/${itemId}`)
     .child("requests")
     .push(item);
-export const removeBookRequest = (itemId, bookId) =>
+export const removeQuestionRequest = (itemId, questionId) =>
   db
     .ref(`/items/${itemId}`)
-    .child(`requests/${bookId}`)
+    .child(`requests/${questionId}`)
     .remove();
 
-export const getUserBooks = userId => db.ref(`users/${userId}`);
-export const delUserBooks = (itemId, userId) =>
+export const getUserQuestions = userId => db.ref(`users/${userId}`);
+export const delUserQuestions = (itemId, userId) =>
   db.ref(`/users/${userId}/${itemId}`).remove();
-export const updUserBooks = (itemId, userId, item) =>
+export const updUserQuestions = (itemId, userId, item) =>
   db.ref(`/users/${userId}/${itemId}`).update(item);
-export const requestUserBooks = (itemId, userId, item, key) =>
+export const requestUserQuestions = (itemId, userId, item, key) =>
   db
     .ref(`/users/${userId}/${itemId}`)
     .child("requests")
     .push(item);
-export const removeUserBookRequest = (userId, itemId, userBookId) =>
+export const removeUserQuestionRequest = (userId, itemId, userQuestionId) =>
   db
     .ref(`/users/${userId}/${itemId}`)
-    .child(`requests/${userBookId}`)
+    .child(`requests/${userQuestionId}`)
     .remove();

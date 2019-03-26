@@ -6,7 +6,7 @@ import * as routes from "../constants/routes";
 
 // import AuthUserContext from "./AuthUserContext";
 // import SignOutButton from "./user/SignOut";
-
+// NOT USING ANYMORE
 // ****** is user logged in ??? ****** //
 
 // basic av

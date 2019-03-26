@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Cereal";
+  font-style: normal;
+  font-weight: 300;
+  src: local("cereal"), local("cereal-300"),
+    url(./fonts/cereal-300.ttf) format("ttf");
+}
+
+/* @font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url(./fonts/Roboto-Bold.woff2) format("woff2"),
+    url(./fonts/Roboto-Bold.woff) format("woff");
+} */
+
+html {
+  font-family: "Cereal", sans-serif;
+}

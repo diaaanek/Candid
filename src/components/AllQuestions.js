@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import withAuthorization from "./withAuthorization";
 import AuthUserContext from "./AuthUserContext";
 
-class AllBooks extends Component {
+class AllQuestions extends Component {
   constructor() {
     super();
     this.state = {
@@ -23,7 +23,7 @@ class AllBooks extends Component {
   }
 
   fetchData = () => {
-    db.getAllBooks().on("value", snapshot =>
+    db.getAllQuestions().on("value", snapshot =>
       this.setState(() => ({
         items: snapshot.val(),
         loading: false
@@ -50,18 +50,18 @@ class AllBooks extends Component {
   };
 
   removeItem = (itemId, userId) => {
-    db.delAllBooks(itemId);
-    db.delUserBooks(itemId, userId);
+    db.delAllQuestions(itemId);
+    db.delUserQuestions(itemId, userId);
   };
 
   updItem = (itemId, userId) => {
     const { updItem, updName } = this.state;
     const item = {
-      title: updItem,
+      question: updItem,
       user: updName
     };
-    db.updAllBooks(itemId, item);
-    db.updUserBooks(itemId, userId, item);
+    db.updAllQuestions(itemId, item);
+    db.updUserQuestions(itemId, userId, item);
     this.setState({
       updItem: "",
       updName: "",
@@ -88,13 +88,6 @@ class AllBooks extends Component {
       .child("requests")
       .push().key;
 
-    /* const item = {
-      key: newPostRef.key,
-      name: user.displayName || user.email,
-      photoUrl: user.photoURL,
-      userId: user.uid
-    };*/
-
     const postsRef = firebase
       .database()
       .ref(`/users/${userId}/${itemId}`)
@@ -111,8 +104,8 @@ class AllBooks extends Component {
       name: user.displayName || user.email,
       photoUrl: user.photoURL,
       userId: user.uid,
-      keyAtBooks: newPostRef2.key,
-      bookBelongToUserKey: itemId
+      keyAtQuestions: newPostRef2.key,
+      questionBelongToUserKey: itemId
     });
 
     newPostRef2.set({
@@ -120,8 +113,8 @@ class AllBooks extends Component {
       name: user.displayName || user.email,
       photoUrl: user.photoURL,
       userId: user.uid,
-      keyAtBooks: newPostRef2.key,
-      bookBelongToUserKey: itemId
+      keyAtQuestions: newPostRef2.key,
+      questionBelongToUserKey: itemId
     });
 
     /*
@@ -129,14 +122,18 @@ class AllBooks extends Component {
     db.appendRequestsToAllBooks(itemId, item, key);*/
   };
 
-  removeBookRequest = (
-    bookBelongToUserKey,
-    bookCreatedById,
-    bookKey,
+  removeQuestionRequest = (
+    questionBelongToUserKey,
+    questionCreatedById,
+    questionKey,
     userKey
   ) => {
-    db.removeBookRequest(bookBelongToUserKey, bookKey);
-    db.removeUserBookRequest(bookCreatedById, bookBelongToUserKey, userKey);
+    db.removequestionRequest(questionBelongToUserKey, questionKey);
+    db.removeUserQuestionRequest(
+      questionCreatedById,
+      questionBelongToUserKey,
+      userKey
+    );
   };
   render() {
     const {
@@ -184,7 +181,7 @@ class AllBooks extends Component {
                     const requests = items[item].requests;
                     return (
                       <li key={items[item].key}>
-                        <h3>{items[item].title}</h3>
+                        <h3>{items[item].question}</h3>
                         {this.state.userId !== items[item].createdById ? (
                           <button
                             style={{ border: "2px solid green" }}
@@ -212,11 +209,11 @@ class AllBooks extends Component {
                           {requests &&
                             Object.keys(requests).map(el => {
                               if (requests[el].userId === userId) {
-                                //only auth user book requests
+                                //only auth user question requests
                                 return (
                                   <p
                                     onClick={() =>
-                                      this.removeBookRequest(
+                                      this.removeQuestionRequest(
                                         requests[el].bookBelongToUserKey,
                                         items[item].createdById,
                                         requests[el].keyAtBooks,
@@ -236,7 +233,7 @@ class AllBooks extends Component {
                           <Link
                             to={{
                               pathname: `/user/${items[item].createdById}`,
-                              // this is the trick!
+
                               createdById: `${items[item].createdById}`,
                               createdBy: `${items[item].createdBy}`
                             }}
@@ -257,12 +254,12 @@ class AllBooks extends Component {
                                 )
                               }
                             >
-                              Remove Item
+                              Remove Question
                             </button>
                             <button
                               onClick={() => this.updForm(items[item].key)}
                             >
-                              upd Item
+                              Update Question
                             </button>
                           </div>
                         )}
@@ -284,7 +281,7 @@ class AllBooks extends Component {
                               <input
                                 type="text"
                                 name="updItem"
-                                placeholder="What are you bringing ?"
+                                placeholder="What is your question ?"
                                 onChange={this.handleChange}
                                 value={this.state.updItem}
                               />
@@ -294,7 +291,7 @@ class AllBooks extends Component {
                                   updItem && updName !== "" ? false : true
                                 }
                               >
-                                upd
+                                Update
                               </button>
                             </form>
                           </div>
@@ -316,4 +313,4 @@ class AllBooks extends Component {
 
 const authCondition = authUser => !!authUser;
 
-export default withAuthorization(authCondition)(AllBooks);
+export default withAuthorization(authCondition)(AllQuestions);

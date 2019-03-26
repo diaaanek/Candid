@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Splash.scss";
+import "./landing.css";
 import SignIn from "./SignIn";
 
 import ChatBot from "react-simple-chatbot";
@@ -60,13 +61,8 @@ export default ({ user }) => (
             A social interview prep community for aspiring and bad ass web
             developers.
           </p>
-          <Link to="/SignUp">
-            <button type="button" className="signup button mainbutton">
-              Get started
-            </button>
-          </Link>
-          // GOOGLE OAUTH
-          <span>or </span>
+
+          <span> </span>
           <SignIn />
         </section>
 
@@ -77,7 +73,7 @@ export default ({ user }) => (
 
       <ThemeProvider theme={theme}>
         <ChatBot
-          speechSynthesis={{ enable: true, lang: "en" }}
+          speechSynthesis={{ enable: false, lang: "en" }}
           floating={true}
           headerTitle="Candid"
           botAvatar="http://icons.iconarchive.com/icons/google/noto-emoji-people-profession/1024/10308-woman-office-worker-icon.png"
@@ -142,7 +138,6 @@ export default ({ user }) => (
           ]}
         />
       </ThemeProvider>
-      <Footer />
     </div>
   </div>
 );

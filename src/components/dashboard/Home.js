@@ -4,7 +4,7 @@ import "../Splash.scss";
 import QuizList from "./QuizList";
 import QuizInfo from "./QuizInfo";
 import StartQuiz from "./StartQuiz";
-import Sidebar from "../Sidebar";
+
 import Footer from "../Footer";
 
 import "./Dashboard.css";
@@ -639,17 +639,16 @@ export default class Home extends Component {
       started,
       qstnNo,
       quizName,
-      subQuizName,
-      user
+      subQuizName
     } = this.state;
     return (
       <div className="dashboard">
-        <Sidebar />
-        <center>
-          <div>
+        <div>
+          <center>
             {!quiz && !started && (
               <QuizList list={quizzes} onPress={this.joinQuiz} />
             )}
+
             {quiz && !started && (
               <QuizInfo
                 quiz={quiz}
@@ -668,8 +667,9 @@ export default class Home extends Component {
                 back={this.back}
               />
             )}
-          </div>
-        </center>
+          </center>
+        </div>
+
         <Footer />
       </div>
     );

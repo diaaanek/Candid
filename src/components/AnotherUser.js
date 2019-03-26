@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { db } from "../firebase/index";
-import firebase, { auth, provider } from "./firebase.js"; // <--- add this line
-import withAuthorization from "./withAuthorization";
+import { auth } from "./firebase.js";
 
 export default class AnotherUser extends Component {
   constructor() {
@@ -14,7 +13,7 @@ export default class AnotherUser extends Component {
   }
   refactorFetch = () => {
     const { createdById } = this.props.location;
-    db.getUserBooks(createdById).on("value", snapshot =>
+    db.getUserQuestions(createdById).on("value", snapshot =>
       this.setState(() => ({ items: snapshot.val(), loading: false }))
     );
   };
@@ -43,7 +42,7 @@ export default class AnotherUser extends Component {
                 Object.keys(items).map(item => {
                   return (
                     <li key={items[item].key}>
-                      <h3>{items[item].title}</h3>
+                      <h3>{items[item].question}</h3>
                       <p>Answered by: {items[item].user}</p>
                     </li>
                   );

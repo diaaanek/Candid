@@ -1,8 +1,8 @@
 import React from "react";
 import { auth } from "./firebase.js"; // <--- add this line
 import AuthUserContext from "./AuthUserContext";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { withRouter, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import * as routes from "../constants/routes";
 
 // ****** set authenticated user ****** //

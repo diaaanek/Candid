@@ -17,8 +17,6 @@ class QuizInfo extends Component {
     const { quiz, onBack, onPress } = this.props;
     return (
       <div>
-        {/* <h1>{quiz.name}</h1> */}
-
         <h1> Take Quizzes </h1>
         <img
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589874/calendar.svg"
@@ -97,10 +95,7 @@ class QuizInfo extends Component {
                       This Quiz is based on the following criteria:
                     </div>
                     <br />
-                    <div
-                      variant="body2"
-                      style={{ textAlign: "left", fontFamily: "Quicksand" }}
-                    >
+                    <div variant="body2" style={{ textAlign: "left" }}>
                       Total Questions: {subQuiz.questions}
                       <br />
                       Total Time: {subQuiz.time}
@@ -136,6 +131,73 @@ class QuizInfo extends Component {
             width: "100px"
           }}
         />
+        <div class="card__container">
+          <div class="card__inner">
+            <div class="search-course-card--card--left-col--3kKip">
+              <a href="/the-web-developer-bootcamp/">
+                <img
+                  src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg"
+                  alt="course image"
+                  width="354"
+                  height="171"
+                  class="card__image"
+                />
+              </a>
+            </div>
+
+            <div class="fx">
+              <div class="card__head">
+                <a href="/the-web-developer-bootcamp/" class="card__title">
+                  Basics of HTML
+                </a>
+              </div>
+              <div class="middle-col">
+                <p class="card__instructor" />
+                <a
+                  href="/the-web-developer-bootcamp/#instructor"
+                  class="card__instructor"
+                >
+                  <span> </span>
+                  <span> • </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__container">
+          <div class="card__inner">
+            <div class="search-course-card--card--left-col--3kKip">
+              <a href="/the-web-developer-bootcamp/">
+                <img
+                  src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg"
+                  alt="course image"
+                  width="354"
+                  height="171"
+                  class="card__image"
+                />
+              </a>
+            </div>
+
+            <div class="fx">
+              <div class="card__head">
+                <a href="/the-web-developer-bootcamp/" class="card__title">
+                  Basics of HTML
+                </a>
+              </div>
+            </div>
+            <div class="middle-col">
+              <p class="card__instructor" />
+              <a
+                href="/the-web-developer-bootcamp/#instructor"
+                class="card__instructor"
+              >
+                <span> </span>
+                <span> • </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

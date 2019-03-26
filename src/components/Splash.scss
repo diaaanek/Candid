@@ -3,6 +3,16 @@
 //  + nav-bar
 //  + splash
 //  + footer
+//
+// @font-face {
+//   font-family: "Cereal";
+//   src: local("Cereal"), url(../fonts/cereal-200.ttf) format("ttf");
+// }
+//
+// @font-face {
+//   font-family: "Cereal";
+//   src: local("cereal-300"), url(../fonts/cereal-300.ttf) format("ttf");
+// }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 }
@@ -11,46 +21,38 @@
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
 
-html {
-  // height: 100vhm;
-}
-
 a {
   text-decoration: none;
 }
 
 // Nav bar main page
 .nav-bar {
-  height: 50px;
+  height: 65px;
   // position: sticky;
-  font-family: "Quicksand";
+  font-family: "Avenir";
   position: fixed;
   top: 0;
   padding: 8px 45px;
   width: 100%;
-  // min-width: 750px;
-  // background-color: #aadd32;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   box-sizing: border-box;
-  // box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2);
-
-  // overflow: hidden;
+  box-shadow: 0 0 2px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
   z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   .logo {
-    display: inline-block;
-    width: 225px;
+    width: 150px;
   }
 
   // # profile pic in nav bar
   .avatar {
-    display: flex;
-    width: 50px;
-    height: 50px;
+    // display: flex;
+    padding-top: 2px;
+    float: right;
+    width: 47px;
+    height: 47px;
     border-radius: 50%;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
@@ -62,31 +64,68 @@ a {
     transform: translateY(-2px);
     cursor: pointer;
   }
+}
 
-  .nav-links {
-    ul {
-      display: flex;
-
-      margin: 0 2px;
-      padding: 0;
-      // display: flex;
-      //
-    }
-    li {
-      display: inline-block;
-      padding: 5px 5px;
-    }
-    a {
-      font-weight: bold;
-      padding: 10px 5px;
-    }
-
-    a: hover {
-      color: red;
-    }
+.nav-links {
+  ul {
+    // display: flex;
+    margin: 0 2px;
+    padding: 0;
+    float: left;
+    // display: flex;
+    //
+  }
+  li {
+    display: inline-block;
+    padding: 8px 8px;
+    float: right;
+  }
+  a {
+    font-weight: bold;
+    padding: 10px 5px;
   }
 }
+
 // end nav bar
+
+/* DROP DOWN MODAL ***** The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 
 // before log in
 .splash {
@@ -99,25 +138,25 @@ a {
 
   .first-page {
     min-height: 100vh;
-    font-family: "Quicksand";
+    font-family: "Avenir";
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
-    // height: 100vh;
+    height: 100vh;
     overflow: hidden;
-    height: 100%;
+    // height: 100%;
     width: 100%;
     // match the viewport height of the browser window
   }
 
   // computer image
-  img {
-    display: inline-block;
-    margin-right: 16px;
-    vertical-align: bottom;
-    margin-bottom: 10px;
-  }
+  // img {
+  //   display: inline-block;
+  //   margin-right: 16px;
+  //   vertical-align: bottom;
+  //   margin-bottom: 10px;
+  // }
 
   #manage {
     margin-left: 25px;
@@ -125,7 +164,7 @@ a {
 
   p {
     font-size: 16px;
-    font-family: "Quicksand";
+    font-family: "Avenir";
     margin-left: 20px;
   }
 
@@ -138,11 +177,11 @@ a {
     p {
       padding-top: 10px;
     }
-    img {
-      margin-left: 20px;
-      width: 40px;
-      height: 40px;
-    }
+    // img {
+    //   margin-left: 20px;
+    //   width: 40px;
+    //   height: 40px;
+    // }
   }
 
   .mainbutton {
@@ -151,7 +190,7 @@ a {
   }
 
   .splash-left {
-    margin-top: 37px;
+    // margin-top: 37px;
   }
 
   .splash-right {
@@ -160,7 +199,7 @@ a {
 
   #laptop {
     padding: 10px;
-    background-image: url("https://cdn.pixabay.com/photo/2019/03/01/05/04/developer-4027337__340.png");
+    background-image: url("https://www.intelivita.co.uk/assets/frameworks/public/image/company/how-we-work/how-we-work.png");
     width: 450px;
     height: 400px;
     background-size: 100%;
@@ -173,6 +212,7 @@ a {
   bottom: 0;
   padding: 15px 45px 15px 45px;
   width: 100%;
+  height: 100vhm;
 
   // background-color: darken( $backgroundgray, 2% );
 

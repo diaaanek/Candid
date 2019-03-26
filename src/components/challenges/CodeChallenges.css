@@ -1,40 +1,6 @@
 .app {
-  margin-top: 78px;
-}
-
-.whiteboard {
-  /* margin-top: 78px;
-  background-color: #f8f8f8;
-  /* box-shadow: inset -1px 2px 2px #404040; */
-  box-sizing: border-box;
-  font-family: monospace;
-  padding: 16px;
-  /* width: 100%; */
-}
-
-.whiteboard h1 {
-  font-family: "Quicksand";
-  font-size: 2em;
-  text-align: center;
-}
-
-.whiteboard p {
-  font-size: 1em;
-  text-align: center;
-}
-
-.whiteboard pre {
-  display: flex;
-  font-family: inherit;
-  font-size: 1.5em;
-  justify-content: center;
-  width: 100%;
-}
-
-.whiteboard code {
-  box-sizing: border-box;
-  font-family: inherit;
-  max-width: 95%;
+  margin-top: 65px;
+  max-height: 100vhm;
 }
 
 .info-panel {
@@ -65,6 +31,7 @@
 
 .Main {
   display: flex;
+  max-width: 85px;
   flex-direction: column;
   flex: 1;
 }

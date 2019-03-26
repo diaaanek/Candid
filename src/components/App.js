@@ -6,12 +6,9 @@ import Main from "./Main";
 
 import withAuth from "./withAuth";
 
-// import LandingPage from "./Landing";
-// import SignUpPage from "./user/SignUp";
-
-// import HomePage from "./dashboard/Home";
-// import CodeChallenges from "./challenges/CodeChallenges";
-// import Study from "./study/Study";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIgloo } from "@fortawesome/free-solid-svg-icons";
 
 import * as routes from "../constants/routes";
 
@@ -20,6 +17,7 @@ import * as routes from "../constants/routes";
 //    ++ Private routes
 //    <AuthUserContext.Provider value={authUser}>
 
+library.add(faIgloo);
 const App = () => (
   <div>
     <Nav />
