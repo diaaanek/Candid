@@ -17,7 +17,6 @@ import * as routes from "../constants/routes";
 //    ++ Private routes
 //    <AuthUserContext.Provider value={authUser}>
 
-library.add(faIgloo);
 const App = () => (
   <div>
     <Nav />

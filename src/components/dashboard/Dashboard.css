@@ -119,46 +119,13 @@ h1 {
   line-height: 18px;
 }
 
-.badge {
-  background: #f4c150;
-  color: #29303b;
-  float: left;
-  margin: 0 18px 0 0;
-  border-radius: 6px;
-  font-size: 15px;
-  padding: 1px 8px;
-  border: none;
-  min-width: inherit;
-  display: inline-block;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  top: -3px;
-  z-index: 2;
-  vertical-align: baseline;
-}
-.badge:after {
-  border-radius: 3px;
-  right: -4px;
-  background: inherit;
-  content: "";
-  height: 11px;
-  position: absolute;
-  top: 2px;
-  transform: rotate(45deg);
-  width: 11px;
-  z-index: 1;
-  display: block;
-}
 .middle-col {
   flex: 1;
   min-width: 1px;
   padding: 0 30px 0 0;
 }
 .card__instructor {
-  font-size: 11px;
+  font-size: 15px;
   padding: 0;
   margin: 4px 0 0;
   overflow: visible;
@@ -253,78 +220,4 @@ h1 {
   font-size: 15px;
   letter-spacing: -0.5px;
   line-height: 1;
-}
-
-.home-container {
-  display: grid;
-  box-sizing: border-box;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  grid-gap: 1em;
-  padding: 50px;
-}
-
-.home-card {
-  background-size: cover;
-  background: #fff 50%;
-  border-radius: 8px;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-    1px 3px 8px rgba(39, 44, 49, 0.03);
-  transition: all 0.5s ease;
-
-  &:hover {
-    box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
-    transition: all 0.3s ease;
-    transform: translate3D(0, -1px, 0);
-  }
-}
-.content {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 300px;
-  padding: 20px;
-  a {
-    display: block;
-    color: black;
-    header {
-      span {
-        display: block;
-        margin-bottom: 4px;
-        color: #738a94;
-
-        font-size: 12px;
-        line-height: 1.15em;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-      }
-      h2 {
-        margin: 0 0 0.5em;
-        font-size: 20px;
-      }
-    }
-    section {
-      p {
-        color: #15171a;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        font-size: 15px;
-        font-weight: 300;
-      }
-    }
-  }
-  footer {
-    .author a {
-      color: #26a8ed;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      font-size: 14px;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
 }

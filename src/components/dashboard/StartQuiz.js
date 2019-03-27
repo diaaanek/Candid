@@ -158,14 +158,14 @@ class QuizList extends Component {
           <h1>
             {" "}
             Learning
-            {quizName}
+            {" " + quizName}
           </h1>
           <img
             src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553652549/picc.png"
             style={{ height: "190px", width: "225px" }}
           />
           <h2>
-            {min} : {sec}
+            Time Remaining: {min} : {sec}
           </h2>
 
           <CircularProgress

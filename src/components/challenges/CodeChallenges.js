@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Sidebar from "./Sidebar";
 import InfoPanel from "./InfoPanel";
-import CodeBox from "./CodeBox";
+// import CodeBox from "./CodeBox";
 // import Whiteboard from './Whiteboard';
 import "./CodeChallenges.css";
 // import AuthUserContext from './AuthUserContext'

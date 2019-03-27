@@ -30,37 +30,6 @@ export const fetchDecks = () => (
 )
 
 
-// 
-// fetch('/api/v1/people.json', {
-//   method: 'post',
-//   body: JSON.stringify({first_name: "Ricky", last_name: "Bobby"}),
-//   headers: {
-//     'Content-Type': 'application/json',
-//     'X-CSRF-Token': Rails.csrfToken()
-//   },
-//   credentials: 'same-origin'
-// }).then(function(response) {
-//   return response.json();
-// }).then(function(data) {
-//   console.log(data);
-// });
-// export const SET_FILTER = 'SET_FILTER';
-//
-// export const NEXT_QUESTION = 'NEXT_QUESTION';
-// export const PREV_QUESTION = 'PREV_QUESTION';
-// export const FLIP_CARD = 'FLIP_CARD';
-//
-// export const LOAD_QUIZ = 'LOAD_QUIZ';
-// export const LOAD_QUIZ_SUCCESS = 'LOAD_QUIZ_SUCCESS';
-// export const LOAD_QUIZ_ERROR = 'LOAD_QUIZ_ERROR';
-//
-// export const SET_VERBSET = 'SET_VERBSET';
-//
-// export const SUBMIT_ANSWER = 'SUBMIT_ANSWER';
-//
-// export const TOGGLE_FOCUS = 'TOGGLE_FOCUS';
-//
-// /*
 //  * action creators
 //  */
 // export function setFilter(filter, status) {

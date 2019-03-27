@@ -23,9 +23,12 @@ $red: #ea0000;
 $arrow-size: 7px;
 $border-left-size: 4px;
 
-.ques-wrapper {
-  text-align: center;
+form {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+}
 
+.ques-wrapper {
   #question {
     margin: 0 auto;
     width: 100%;

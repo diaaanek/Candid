@@ -8,4 +8,3 @@ export const ANOTHERUSER = "/user/:id";
 
 export const HOME = "/dashboard";
 export const CODE = "/challenges";
-export const STUDY = "/study";

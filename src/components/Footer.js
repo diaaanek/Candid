@@ -33,9 +33,8 @@ export default () => (
     </section>
 
     <section id="footer-right">
-      <p>
-        <span />2019 Diane
-      </p>
+      <span />
+      2019 Diane
     </section>
   </div>
 );

@@ -1,6 +1,8 @@
 import React from "react";
 import AuthUserContext from "./AuthUserContext";
 
+import SignIn from "./SignIn";
+
 const UserInfo = () => (
   <AuthUserContext.Consumer>
     {authUser =>
@@ -10,10 +12,19 @@ const UserInfo = () => (
 );
 
 const UserData = ({ authUser }) => (
-  <React.Fragment>
-    👋 Welcome, {authUser.displayName || authUser.email}!
-    <img src={authUser.photoURL} className="avatar" />
-  </React.Fragment>
+  <div>
+    <div className="dropdown">
+      <img src={authUser.photoURL} className="avatar" />
+      <div className="dropdown-content">
+        <SignIn />
+      </div>
+
+      <span style={{ paddingTop: "25px" }}>
+        {" "}
+        👋 Welcome, {authUser.displayName || authUser.email}!
+      </span>
+    </div>
+  </div>
 );
 
 export default UserInfo;

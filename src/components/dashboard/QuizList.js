@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+import { withRouter, Redirect } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
+import * as routes from "../../constants/routes";
 
+import CodeChallenges from ".././challenges/CodeChallenges";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -7,6 +11,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 
 import "./Dashboard.css";
+
 // map through quiz
 // render image, name, description
 // button to onclick start
@@ -16,16 +21,13 @@ class QuizList extends Component {
     const { list, onPress } = this.props;
     return (
       <div>
-        <div className="quizContainer" style={{ margin: "20px 10% 10% 10%" }}>
+        <div className="quizContainer" style={{ margin: "20px 20% 20% 20%" }}>
           <div id="quix-title">
-            <h1>New & Noteworthy</h1>
+            <h1>⭐ New & Noteworthy</h1>
           </div>{" "}
-          <img
-            src="https://image.flaticon.com/icons/png/512/1335/1335734.png"
-            style={{ height: "80px", width: "80px" }}
-          />
-          <hr />
-          <p />
+          <br />
+          <hr style={{ marginBottom: "20px" }} />
+          <br />
           <div class="card__container">
             <div class="card__inner">
               <div class="search-course-card--card--left-col--3kKip">
@@ -42,25 +44,33 @@ class QuizList extends Component {
 
               <div class="fx">
                 <div class="card__head">
-                  <a href="/the-web-developer-bootcamp/" class="card__title">
-                    Basics of HTML
+                  <a href="" class="card__title" style={{ float: "left" }}>
+                    Fullstack Coding Challenges
                   </a>
                 </div>
                 <div class="middle-col">
-                  <p class="card__instructor" />
-                  <a
-                    href="/the-web-developer-bootcamp/#instructor"
-                    class="card__instructor"
-                  >
-                    <span> </span>
-                    <span> • </span>
-                  </a>
+                  <br />
+                  <p class="card__instructor" style={{ float: "left" }}>
+                    {" "}
+                    5 hour full length course that encompasses Ruby, Rails,
+                    Javascript, React/Redux
+                  </p>
+
+                  <span className="card__subtitle"> Blah blah blah </span>
+                  <span> </span>
+                </div>
+                <div className="right-col">
+                  {" "}
+                  <div className="card__price"> 5,025 students enrolled </div>
+                  <Link to={routes.CODE}>
+                    <button className="start">Enroll Now</button>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
           <div id="quix-title">
-            <h1>Test Your Technical Chops</h1>
+            <h1>🔥 Test Your Technical Chops</h1>
           </div>{" "}
           <img
             src="https://image.flaticon.com/icons/png/512/1335/1335734.png"
@@ -123,38 +133,46 @@ class QuizList extends Component {
               </Card>
             );
           })}
-        </div>
+          <br />
+          <div class="card__container">
+            <div class="card__inner">
+              <div class="search-course-card--card--left-col--3kKip">
+                <a href="/the-web-developer-bootcamp/">
+                  <img
+                    src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg"
+                    alt="course image"
+                    width="354"
+                    height="171"
+                    class="card__image"
+                  />
+                </a>
+              </div>
 
-        <div class="home-container">
-          <div class="home-card">
-            <div class="content">
-              <header>
-                <span>Programming, Code</span>
-                <h2>HTML</h2>
-              </header>
-              <section>
-                <p>The core unit of git is the commit.</p>
-              </section>
+              <div class="fx">
+                <div class="card__head">
+                  <a href="" class="card__title" style={{ float: "left" }}>
+                    Fullstack Coding Challenges
+                  </a>
+                </div>
+                <div class="middle-col">
+                  <br />
+                  <p class="card__instructor" style={{ float: "left" }}>
+                    {" "}
+                    5 hour full length course that encompasses Ruby, Rails,
+                    Javascript, React/Redux
+                  </p>
 
-              <footer>
-                <div class="author">Hiiiii</div>
-              </footer>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="content">
-              <header>
-                <span>Category</span>
-                <h2>Card Title Here</h2>
-              </header>
-              <section>
-                <p>The core unit of git is the commit.</p>
-              </section>
-
-              <footer>
-                <div class="author">Hiiii</div>
-              </footer>
+                  <span className="card__subtitle"> Blah blah blah </span>
+                  <span> </span>
+                </div>
+                <div className="right-col">
+                  {" "}
+                  <div className="card__price"> 5,025 students enrolled </div>
+                  <Link to={routes.CODE}>
+                    <button className="start">Enroll Now</button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -9,6 +9,8 @@ import MyProfileEnhanced from "./MyProfileEnhanced";
 import Test from "./Test.scss";
 import AllQuestions from "./AllQuestions";
 
+import QuestionCard from "./QuestionCard";
+
 class MyProfile extends Component {
   constructor() {
     super();
@@ -121,41 +123,33 @@ class MyProfile extends Component {
     return (
       <div>
         <div class="ques-wrapper">
-          <img
-            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589882/check-box.svg"
-            style={{
-              height: "100px",
-              width: "100px",
-              verticalAlign: "middle"
-            }}
-          />
           <div id="question">
-            <div class="search-area">
-              <h1>Have a question?</h1>
-              <div class="input-wrapper">
-                <i class="fa fa-search" />
+            <div class="search-area" />
+            <h1>Have a question?</h1>
 
-                {this.state.user ? (
-                  <section className="add-item">
-                    <form onSubmit={this.handleSubmit}>
-                      <input
-                        name="currentItem"
-                        placeholder="Have a question? Search for answers with keywords"
-                        onChange={this.handleChange}
-                        value={this.state.currentItem}
-                      />
+            <div class="input-wrapper">
+              <i class="fa fa-search" />
 
-                      <button
-                        disabled={currentItem && username !== "" ? false : true}
-                      >
-                        Add Question
-                      </button>
-                    </form>
-                  </section>
-                ) : null}
-              </div>
+              {this.state.user ? (
+                <section className="add-item">
+                  <form onSubmit={this.handleSubmit}>
+                    <input
+                      name="currentItem"
+                      placeholder="Have a question? Search for answers with keywords"
+                      onChange={this.handleChange}
+                      value={this.state.currentItem}
+                    />
+                  </form>
+                  <button
+                    disabled={currentItem && username !== "" ? false : true}
+                  >
+                    +
+                  </button>
+                </section>
+              ) : null}
             </div>
 
+            {/* QUESTION FEEED  */}
             <div class="question">
               <div class="votes">
                 <div class="upvote" />
@@ -173,6 +167,7 @@ class MyProfile extends Component {
 
         <aside>
           <section>
+            <QuestionCard />
             <div>
               <ul>
                 {this.state.loading ? <div>loading...</div> : null}

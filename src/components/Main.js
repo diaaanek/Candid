@@ -10,7 +10,6 @@ import LandingPage from "./Landing";
 
 import HomePage from "./dashboard/Home";
 import CodeChallenges from "./challenges/CodeChallenges";
-import Study from "./study/Study";
 
 import * as routes from "../constants/routes";
 
@@ -22,7 +21,6 @@ const Main = () => (
     <Route exact path={routes.ANOTHERUSER} component={AnotherUser} />
     <Route exact path={routes.HOME} component={HomePage} />
     <Route exact path={routes.CODE} component={CodeChallenges} />
-    <Route exact path={routes.STUDY} component={Study} />
   </div>
 );
 
