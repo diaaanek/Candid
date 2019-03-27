@@ -126,13 +126,15 @@ class SignUpForm extends Component {
                   type="password"
                   placeholder="Confirm Password"
                 />
-                <button
-                  disabled={isInvalid}
-                  type="submit"
-                  className="submit-btn session-inputs-and-bts"
-                >
-                  Sign Up
-                </button>
+                <center>
+                  <button
+                    disabled={isInvalid}
+                    type="submit"
+                    className="submit-btn session-inputs-and-bts"
+                  >
+                    Sign Up
+                  </button>
+                </center>
               </div>
 
               {error && <p>{error.message}</p>}

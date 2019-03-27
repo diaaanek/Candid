@@ -57,12 +57,16 @@ class SignIn extends React.Component {
             {redirect && <Redirect to={routes.MYPROFILE} />}
             <button className="signup button mainbutton" onClick={this.logout}>
               {" "}
-              sign Out
+              Sign Out
             </button>
           </div>
         ) : (
           <button className="signup button mainbutton" onClick={this.login}>
-            Sign in with Google
+            Sign in with{" "}
+            <img
+              src="http://www.stickpng.com/assets/images/5847f9cbcef1014c0b5e48c8.png"
+              style={{ height: "25px", width: "25px", display: "inline-block" }}
+            />
           </button>
         )}
       </div>

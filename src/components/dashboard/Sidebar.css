@@ -1,10 +1,91 @@
+html {
+  height: 100%;
+}
+
+aside.sidebar {
+  width: 17%;
+  min-width: 150px;
+  max-width: 300px;
+  height: 85%;
+  background-color: white;
+  position: fixed;
+  top: 50px;
+  color: grey;
+  border-radius: 8px;
+  margin: 35px 45px 50px 50px;
+  float: left;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  padding: 25px 0 0 0;
+}
+
+aside a {
+  display: block;
+  line-height: 50px;
+  border-right: 4px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s linear, border-right-color 0.3s linear,
+    color 0.3s linear;
+
+  color: grey;
+  padding: 0 0 0 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+aside a:hover,
+aside a.current {
+  background-color: lighten(black, 2%);
+  border-right-color: gold;
+
+  color: white;
+}
+
+#main {
+  width: 100%;
+  min-width: 600px;
+
+  overflow-x: hidden;
+}
+.sub {
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+  width: 65%;
+  padding-left: 50px;
+}
+.sub a {
+  display: inline-block;
+  min-width: 110px;
+  background-color: darken(white, 5%);
+  cursor: pointer;
+  border-radius: 3px 3px 0 0;
+  transition: background-color 0.5s, color 0.5s;
+
+  color: lighten(grey, 30%);
+  padding: 2px 0 0 0;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.sub a:hover,
+.sub a.current {
+  color: grey;
+  background-color: white;
+}
+
+/*
 aside.sidebar {
   background: white;
   display: flex;
   flex-direction: column;
   width: 550px;
   font-size: 16px;
-  color: $gray;
+  color: gray;
   z-index: 100;
   box-shadow: 1px 0 15px -2px gray;
   min-height: 100%;
@@ -12,7 +93,7 @@ aside.sidebar {
 
   i {
     margin-right: 5px;
-    color: $turquoise;
+    color: turquoise;
   }
 }
 
@@ -44,4 +125,4 @@ div.sidebar-header {
   &:hover {
     color: blue;
   }
-}
+} */

@@ -6,9 +6,9 @@ import AuthUserContext from "./AuthUserContext";
 import withAuthorization from "./withAuthorization";
 import MyProfileEnhanced from "./MyProfileEnhanced";
 
+import Test from "./Test.scss";
 import AllQuestions from "./AllQuestions";
 
-import Profile from "./Profile.css";
 class MyProfile extends Component {
   constructor() {
     super();
@@ -120,32 +120,58 @@ class MyProfile extends Component {
     const { updItem, updName, currentItem, username, items } = this.state;
     return (
       <div>
+        <div class="ques-wrapper">
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589882/check-box.svg"
+            style={{
+              height: "100px",
+              width: "100px",
+              verticalAlign: "middle"
+            }}
+          />
+          <div id="question">
+            <div class="search-area">
+              <h1>Have a question?</h1>
+              <div class="input-wrapper">
+                <i class="fa fa-search" />
+
+                {this.state.user ? (
+                  <section className="add-item">
+                    <form onSubmit={this.handleSubmit}>
+                      <input
+                        name="currentItem"
+                        placeholder="Have a question? Search for answers with keywords"
+                        onChange={this.handleChange}
+                        value={this.state.currentItem}
+                      />
+
+                      <button
+                        disabled={currentItem && username !== "" ? false : true}
+                      >
+                        Add Question
+                      </button>
+                    </form>
+                  </section>
+                ) : null}
+              </div>
+            </div>
+
+            <div class="question">
+              <div class="votes">
+                <div class="upvote" />
+                <div class="number-of-votes">5</div>
+                <div class="downvote" />
+              </div>
+
+              <div class="question-and-answer">
+                <h2>QUESTION: </h2>
+                <p>Answer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <aside>
-          <h1>My profile</h1>
-
-          {this.state.user ? (
-            <section className="add-item">
-              <form onSubmit={this.handleSubmit}>
-                <input
-                  id="front"
-                  type="text"
-                  name="currentItem"
-                  placeholder="Question Here"
-                  onChange={this.handleChange}
-                  value={this.state.currentItem}
-                />
-
-                <input type="text" id="back" />
-
-                <button
-                  disabled={currentItem && username !== "" ? false : true}
-                >
-                  Add Question
-                </button>
-              </form>
-            </section>
-          ) : null}
-
           <section>
             <div>
               <ul>
