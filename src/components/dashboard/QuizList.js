@@ -42,16 +42,27 @@ class QuizList extends Component {
 
               <div class="fx">
                 <div class="card__head">
-                  <span
+                  <div
                     class="card__title"
-                    style={{ float: "left", fontSize: "25" }}
+                    style={{
+                      float: "left",
+                      fontSize: "25px",
+                      fontWeight: "700"
+                    }}
                   >
                     Javascript Coding Challenges
-                  </span>
+                  </div>
                   <br />
                   <div class="middle-col">
+                    <p class="card__instructor" />
                     <p class="card__instructor">
-                      <span>Blah blah blah </span>
+                      <span
+                        style={{
+                          float: "left"
+                        }}
+                      >
+                        Blah blah blah{" "}
+                      </span>
                       <span>• Developer and Bootcamp </span>
                     </p>
                   </div>
@@ -61,7 +72,10 @@ class QuizList extends Component {
                       <strong>development</strong> - HTML, CSS, JS, Node, and
                       More!
                     </div>
-                    <div class="card__metadata">
+                    <div
+                      class="card__metadata"
+                      style={{ float: "left", fontSize: "8" }}
+                    >
                       <span class="card__meta-item">
                         <span class="card__icon fa fa-play-circle" />
                         346 lectures

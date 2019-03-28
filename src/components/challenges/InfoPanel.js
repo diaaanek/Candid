@@ -30,3 +30,15 @@ function InfoPanel(props) {
 }
 
 export default InfoPanel;
+//
+//
+// {props.problemSelected ? (
+//   <pre>
+//     <code id="codeArea" className="javascript">
+//       {props.description}
+//     </code>
+//   </pre>
+// ) : (
+//   <p>Please select a problem from list below</p>
+//
+// )}

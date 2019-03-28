@@ -12,8 +12,6 @@ h1 {
   font-size: 25px;
   align-self: center;
 
-  /* font-family: menco, sans-serif; */
-
   font-weight: 800;
 
   font-style: normal;
@@ -153,74 +151,4 @@ h1 {
   bottom: 15px;
   display: flex;
   flex-direction: column;
-}
-.card__price {
-  font-size: 18px;
-  font-weight: 700;
-  color: #29303b;
-}
-.card__price--old {
-  color: #686f7a;
-  font-size: 15px;
-  font-weight: 400;
-  margin-left: 5px;
-  text-decoration: line-through;
-}
-.review-count {
-  float: right;
-  text-decoration: none;
-  font-size: 13px;
-  line-height: 1.2;
-  color: #686f7a;
-}
-.card__metadata {
-  color: #686f7a;
-  font-size: 13px;
-  line-height: 1;
-  position: absolute;
-  bottom: 15px;
-  margin-top: 15px;
-  margin-right: 140px;
-}
-.card__meta-item {
-  margin-right: 10px;
-}
-.card__icon {
-  color: #a1a7b3;
-  font-size: 15px;
-  padding: 0 1px;
-  margin: 0 3px 0 0;
-}
-.card__a {
-  color: #686f7a;
-}
-.star-rating {
-  color: #dedfe0;
-  display: inline-block;
-  position: relative;
-  white-space: nowrap;
-  margin-left: -2px;
-}
-.star-rating:before {
-  font-family: UdemyIcons;
-  content: "\2009\F005\2009\2009\F005\2009\2009\F005\2009\2009\F005\2009\2009\F005\2009";
-  font-size: 15px;
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-.star-rating span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  z-index: 2;
-}
-.star-rating span:before {
-  color: #f4c150;
-  font-family: UdemyIcons;
-  content: "\2009\F005\2009\2009\F005\2009\2009\F005\2009\2009\F005\2009\2009\F005\2009";
-  font-size: 15px;
-  letter-spacing: -0.5px;
-  line-height: 1;
 }

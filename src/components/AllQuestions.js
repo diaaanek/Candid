@@ -195,15 +195,21 @@ class AllQuestions extends Component {
                                       <p
                                         onClick={() =>
                                           this.removeQuestionRequest(
-                                            requests[el].bookBelongToUserKey,
+                                            requests[el]
+                                              .questionBelongToUserKey,
                                             items[item].createdById,
-                                            requests[el].keyAtBooks,
+                                            requests[el].keyAtQuestions,
                                             requests[el].keyAtUsers
                                           )
                                         }
-                                        d
                                       >
-                                        <button> cancel </button>
+                                        <img
+                                          src="http://cdn.onlinewebfonts.com/svg/img_309151.png"
+                                          style={{
+                                            height: "25px",
+                                            width: "25px"
+                                          }}
+                                        />
                                       </p>
                                     );
                                   }

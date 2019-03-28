@@ -22,18 +22,6 @@
   top: 100px;
 }
 
-// /* hide back of pane during swap */
-// .front,
-// .back {
-//   backface-visibility: hidden;
-//   background: white;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   display: flex;
-//   justify-content: center;
-//   color: gray;
-
 h1 {
   font-size: 25px;
   align-self: center;
@@ -50,32 +38,6 @@ h1 {
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-}
-
-ul.prev-next-buttons {
-  align-self: center;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 48px;
-  width: 200px;
-  color: turquoise;
-
-  li:nth-child(2) {
-    font-size: 20px;
-    font-family: "Quicksand";
-    align-self: center;
-  }
-}
-
-div.inactive {
-  opacity: 0.4;
-}
-
-button.active {
-  &:hover {
-    color: yellow;
-  }
 }
 
 div.instructions {
@@ -129,13 +91,6 @@ div.instructions {
   background-color: #3ec4ff;
   color: white;
 }
-
-// HOVER OVER TO CHANGE BUTTONS
-// .test:hover {
-//   background-color: blue;
-//   border: 2px solid blue;
-// }
-
 .buttonContainer {
   padding-top: 25px;
   display: flex;

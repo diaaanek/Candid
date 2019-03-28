@@ -134,7 +134,7 @@ class MyProfile extends Component {
                   <form onSubmit={this.handleSubmit}>
                     <input
                       name="currentItem"
-                      placeholder="Have a question? Search for answers with keywords"
+                      placeholder="Have a question?"
                       onChange={this.handleChange}
                       value={this.state.currentItem}
                     />{" "}
@@ -148,6 +148,10 @@ class MyProfile extends Component {
                 </section>
               ) : null}
             </div>
+
+            <section>
+              <QuestionCard />
+            </section>
 
             {/* QUESTION FEEED  */}
             <div class="question">
@@ -248,10 +252,6 @@ class MyProfile extends Component {
             </div>
           </div>
         </div>
-
-        <section>
-          <QuestionCard />
-        </section>
 
         <div id="main">
           <AllQuestions />

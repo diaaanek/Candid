@@ -18,11 +18,6 @@
   padding-bottom: 1em;
 }
 
-/* @media (min-width: 768px) {
-  .info-panel {
-    align-items: center;
-  } */
-
 .info-panel p {
   border-bottom: none;
   /* max-width: 60%; */

@@ -4,11 +4,6 @@ import swal from "sweetalert";
 import Sidebar from "./Sidebar.css";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 
-import SentimentSatisfied from "@material-ui/icons/SentimentSatisfiedRounded";
-import SentimentVerySatisfied from "@material-ui/icons/SentimentVerySatisfiedRounded";
-import SentimentDissatisfied from "@material-ui/icons/SentimentDissatisfiedRounded";
-import SentimentVeryDissatisfied from "@material-ui/icons/SentimentVeryDissatisfiedRounded";
-
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -106,21 +101,39 @@ class QuizList extends Component {
 
     if (scored === 100) {
       this.setState({
-        similey: <SentimentVerySatisfied className="similey" color="disabled" />
+        similey: (
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/4.png"
+            className="similey"
+          />
+        )
       });
     } else if (scored === 0) {
       this.setState({
         similey: (
-          <SentimentVeryDissatisfied className="similey" color="disabled" />
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/1.png"
+            className="similey"
+          />
         )
       });
     } else if (scored >= 60) {
       this.setState({
-        similey: <SentimentSatisfied className="similey" color="disabled" />
+        similey: (
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/1.png"
+            className="similey"
+          />
+        )
       });
     } else if (scored < 60 && scored > 0) {
       this.setState({
-        similey: <SentimentDissatisfied className="similey" color="disabled" />
+        similey: (
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/1.png"
+            className="similey"
+          />
+        )
       });
     }
   }
