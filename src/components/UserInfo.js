@@ -19,7 +19,7 @@ const UserData = ({ authUser }) => (
         <SignIn />
       </div>
 
-      <span style={{ paddingTop: "25px" }}>
+      <span style={{ paddingTop: "45px" }}>
         {" "}
         👋 Welcome, {authUser.displayName || authUser.email}!
       </span>

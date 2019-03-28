@@ -30,8 +30,10 @@ function CodeBox(props) {
           />
           <div className="buttonContainer">
             <button className="test button">Test </button>
-            <button className="submit button">Submit </button>
-            <SaveButton />
+            <button className="submit button">Reset </button>
+            <button className="save button" onClick={props.body}>
+              Show Solution{" "}
+            </button>
           </div>
         </div>
       </div>

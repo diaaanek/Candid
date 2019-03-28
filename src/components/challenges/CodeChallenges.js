@@ -18,6 +18,7 @@ export default class CodeChallenges extends Component {
     problemIndex: [],
     problemSelected: false,
     selectedProblem: "default",
+    codeBoxvalue: null,
     currentProblem: {
       title: "",
       body: "",
@@ -94,7 +95,15 @@ export default class CodeChallenges extends Component {
             description={this.state.currentProblem.description}
           />
 
-          <CodeBox />
+          <CodeBox
+            title={this.state.currentProblem.title}
+            handleSelectionChange={event => this.fetchProblemHandler(event)}
+            problemIndex={this.state.problemIndex}
+            problemSelected={this.state.problemSelected}
+            selectedProblem={this.state.selectedProblem}
+            body={this.state.currentProblem.body}
+            description={this.state.currentProblem.description}
+          />
         </div>
       </div>
     );

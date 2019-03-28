@@ -6,10 +6,6 @@ import Main from "./Main";
 
 import withAuth from "./withAuth";
 
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faIgloo } from "@fortawesome/free-solid-svg-icons";
-
 import * as routes from "../constants/routes";
 
 // ****** sets routes ****** //
