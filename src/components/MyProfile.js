@@ -138,13 +138,14 @@ class MyProfile extends Component {
                       placeholder="Have a question? Search for answers with keywords"
                       onChange={this.handleChange}
                       value={this.state.currentItem}
-                    />
+                    />{" "}
+                    <button
+                      style={{ display: "inlineBlock", position: "relative" }}
+                      disabled={currentItem && username !== "" ? false : true}
+                    >
+                      Post
+                    </button>
                   </form>
-                  <button
-                    disabled={currentItem && username !== "" ? false : true}
-                  >
-                    +
-                  </button>
                 </section>
               ) : null}
             </div>
@@ -156,100 +157,103 @@ class MyProfile extends Component {
                 <div class="number-of-votes">5</div>
                 <div class="downvote" />
               </div>
-
               <div class="question-and-answer">
-                <h2>QUESTION: </h2>
-                <p>Answer</p>
+                <ul>
+                  {this.state.loading ? <div>loading...</div> : null}
+                  {this.state.user && this.state.items ? (
+                    Object.keys(items).map(item => {
+                      const requests = items[item].requests;
+                      return (
+                        <li key={items[item].key}>
+                          <h3>{items[item].question}</h3>
+                          <p> Answered by: </p>
+
+                          {requests &&
+                            Object.keys(requests).map(el => {
+                              return (
+                                <div>
+                                  <h5>{requests[el].name}</h5>
+                                </div>
+                              );
+                            })}
+
+                          <p>answered by: {items[item].user}</p>
+                          {this.state.userId === items[item].createdById ? (
+                            <div>
+                              <button
+                                onClick={() =>
+                                  this.removeItem(
+                                    items[item].key,
+                                    this.state.userId
+                                  )
+                                }
+                              >
+                                <img
+                                  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png"
+                                  style={{ height: "25px", width: "25px" }}
+                                />
+                              </button>
+                              <button
+                                onClick={() => this.updForm(items[item].key)}
+                              >
+                                <img
+                                  src="http://simpleicon.com/wp-content/uploads/pencil.png"
+                                  style={{ height: "25px", width: "25px" }}
+                                />
+                              </button>
+                            </div>
+                          ) : null}
+
+                          {this.state.updId === items[item].key ? (
+                            <div>
+                              <form
+                                onSubmit={() =>
+                                  this.updItem(
+                                    items[item].key,
+                                    this.state.userId
+                                  )
+                                }
+                              >
+                                <input
+                                  type="text"
+                                  name="updName"
+                                  placeholder="What's your name?"
+                                  onChange={this.handleChange}
+                                  value={this.state.updName}
+                                />
+                                <input
+                                  type="text"
+                                  name="updItem"
+                                  placeholder="What is your interview question?"
+                                  onChange={this.handleChange}
+                                  value={this.state.updItem}
+                                />
+                                <button
+                                  disabled={
+                                    updItem && updName !== "" ? false : true
+                                  }
+                                >
+                                  upd
+                                </button>
+                              </form>
+                            </div>
+                          ) : null}
+                        </li>
+                      );
+                    })
+                  ) : (
+                    <p>nothing to show</p>
+                  )}
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <aside>
-          <section>
-            <QuestionCard />
-            <div>
-              <ul>
-                {this.state.loading ? <div>loading...</div> : null}
-                {this.state.user && this.state.items ? (
-                  Object.keys(items).map(item => {
-                    const requests = items[item].requests;
-                    return (
-                      <li key={items[item].key}>
-                        <h3>{items[item].question}</h3>
-                        <p> Answered by: </p>
+        <section>
+          <QuestionCard />
+        </section>
 
-                        {requests &&
-                          Object.keys(requests).map(el => {
-                            return (
-                              <div>
-                                <h5>{requests[el].name}</h5>
-                              </div>
-                            );
-                          })}
-
-                        <p>answered by: {items[item].user}</p>
-                        {this.state.userId === items[item].createdById ? (
-                          <div>
-                            <button
-                              onClick={() =>
-                                this.removeItem(
-                                  items[item].key,
-                                  this.state.userId
-                                )
-                              }
-                            >
-                              Remove Question
-                            </button>
-                            <button
-                              onClick={() => this.updForm(items[item].key)}
-                            >
-                              update Question
-                            </button>
-                          </div>
-                        ) : null}
-
-                        {this.state.updId === items[item].key ? (
-                          <div>
-                            <form
-                              onSubmit={() =>
-                                this.updItem(items[item].key, this.state.userId)
-                              }
-                            >
-                              <input
-                                type="text"
-                                name="updName"
-                                placeholder="What's your name?"
-                                onChange={this.handleChange}
-                                value={this.state.updName}
-                              />
-                              <input
-                                type="text"
-                                name="updItem"
-                                placeholder="What is your interview question?"
-                                onChange={this.handleChange}
-                                value={this.state.updItem}
-                              />
-                              <button
-                                disabled={
-                                  updItem && updName !== "" ? false : true
-                                }
-                              >
-                                upd
-                              </button>
-                            </form>
-                          </div>
-                        ) : null}
-                      </li>
-                    );
-                  })
-                ) : (
-                  <p>nothing to show</p>
-                )}
-              </ul>
-            </div>
-          </section>
-        </aside>
         <div id="main">
           <AllQuestions />
         </div>

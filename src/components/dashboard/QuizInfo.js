@@ -107,7 +107,12 @@ class QuizInfo extends Component {
               </CardActionArea>
 
               <CardActions>
-                <button onClick={onBack} size="small" color="secondary">
+                <button
+                  onClick={onBack}
+                  size="small"
+                  color="secondary"
+                  className="start"
+                >
                   back
                 </button>
                 {!subQuiz.score ? (
@@ -115,6 +120,7 @@ class QuizInfo extends Component {
                     onClick={() => onPress(index)}
                     size="small"
                     color="primary"
+                    className="start"
                   >
                     start
                   </button>

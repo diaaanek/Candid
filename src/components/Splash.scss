@@ -34,10 +34,15 @@
     text-decoration: none;
     font-weight: bold;
     display: inline;
+    color: grey;
+    box-shado: 3px;
     padding: 0 1em;
     margin-bottom: 1em;
     cursor: pointer;
     margin-top: 20px;
+  }
+  a:hover {
+    text-transform: uppercase;
   }
 }
 .float {
@@ -202,6 +207,7 @@
 .footer {
   // position: sticky;
   font-family: "Quicksand";
+  position: relative;
   bottom: 0;
   padding: 15px 40px 15px 40px;
   width: 100%;
@@ -255,10 +261,6 @@
 
 .splash .signup {
   margin-top: 20px;
-}
-
-.footer a:hover {
-  color: blue;
 }
 
 input.rsc-input.sc-kAzzGY.fCeMBp {

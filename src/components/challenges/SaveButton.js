@@ -42,6 +42,6 @@ export default class SaveButton extends Component {
   // }
   // onClick={this.saveCode.bind(this)
   render() {
-    return <button className="save button">Save </button>;
+    return <button className="save button">Show Solution </button>;
   }
 }

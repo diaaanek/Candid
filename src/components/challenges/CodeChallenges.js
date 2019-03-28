@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import Sidebar from "./Sidebar";
 import InfoPanel from "./InfoPanel";
-// import CodeBox from "./CodeBox";
-// import Whiteboard from './Whiteboard';
+import CodeBox from "./CodeBox";
+
 import "./CodeChallenges.css";
 // import AuthUserContext from './AuthUserContext'
 
@@ -27,6 +27,14 @@ export default class CodeChallenges extends Component {
 
   // fetching data via json
 
+  // fetch(`./problems/${target}`)
+  // .then((response) => response.json())
+  // .then((findresponse)=> {
+  //   this.setState({
+  //     data:findresponse
+  //   })
+  // })
+  //
   fetchJSON = (path, callback) => {
     const httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = () => {
@@ -85,6 +93,8 @@ export default class CodeChallenges extends Component {
             body={this.state.currentProblem.body}
             description={this.state.currentProblem.description}
           />
+
+          <CodeBox />
         </div>
       </div>
     );

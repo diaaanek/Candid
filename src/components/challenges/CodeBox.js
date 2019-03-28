@@ -16,10 +16,9 @@ function CodeBox(props) {
   return (
     <div className="CodeBox">
       <div className="flashcards-page">
-        <div className="instructions">
-          <h1> Code </h1>
-        </div>
         <div className="flip-container">
+          <br />
+          <br />
           <CodeMirror
             value={props.body}
             options={{

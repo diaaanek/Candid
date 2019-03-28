@@ -53,15 +53,14 @@ export default ({ user }) => (
         <section className="splash-left">
           <div />
           <h2 id="manage">
-            <h2> Learn from the best tools</h2>{" "}
-            <h2> practice stuff and landing page.</h2>{" "}
+            <h2> Learn from the best, and </h2>{" "}
+            <h2>practice your dev skillz with the rest.</h2>{" "}
           </h2>
           <p id="first-line">
             {" "}
-            A social interview prep community for aspiring and bad ass web
+            A social interview prep community for aspiring and bad-ass web
             developers.
           </p>
-
           <span> </span>
           <SignIn />
         </section>
@@ -107,7 +106,7 @@ export default ({ user }) => (
             {
               id: "5",
               message:
-                "Candid is a technical interview prep app made with React/Redux, Rails, and love. Sign up or sign in to get started!",
+                "Candid is a technical interview prep app made with React, Firebase, and love. Sign up or sign in to get started!",
               trigger: "8"
             },
             {

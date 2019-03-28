@@ -15,14 +15,13 @@ function InfoPanel(props) {
         </div>
       )}
       {props.description ? <p>{props.description}</p> : null}
-      <Controls
+      {/*    <Controls
         handleSelectionChange={props.handleSelectionChange}
         problemIndex={props.problemIndex}
         problemSelected={props.problemSelected}
         selectedProblem={props.selectedProblem}
       />
-
-      <CodeBox />
+*/}
     </div>
   );
 }

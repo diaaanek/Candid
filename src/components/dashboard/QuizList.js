@@ -21,12 +21,11 @@ class QuizList extends Component {
     const { list, onPress } = this.props;
     return (
       <div>
-        <div className="quizContainer" style={{ margin: "20px 20% 20% 20%" }}>
+        <div className="quizContainer" style={{ margin: "20px 10% 10% 10%" }}>
           <div id="quix-title">
             <h1>⭐ New & Noteworthy</h1>
           </div>{" "}
           <br />
-          <hr style={{ marginBottom: "20px" }} />
           <br />
           <div class="card__container">
             <div class="card__inner">
@@ -47,17 +46,33 @@ class QuizList extends Component {
                   <a href="" class="card__title" style={{ float: "left" }}>
                     Fullstack Coding Challenges
                   </a>
-                </div>
-                <div class="middle-col">
                   <br />
-                  <p class="card__instructor" style={{ float: "left" }}>
-                    {" "}
-                    5 hour full length course that encompasses Ruby, Rails,
-                    Javascript, React/Redux
-                  </p>
-
-                  <span className="card__subtitle"> Blah blah blah </span>
-                  <span> </span>
+                  <div class="middle-col">
+                    <p class="card__instructor">
+                      <span>Colt Steele</span>
+                      <span>• Developer and Bootcamp Instructor</span>
+                    </p>
+                  </div>
+                  <div>
+                    <div class="card__subtitle">
+                      The only course you need to learn <strong>web</strong>{" "}
+                      <strong>development</strong> - HTML, CSS, JS, Node, and
+                      More!
+                    </div>
+                    <div class="card__metadata">
+                      <span class="card__meta-item">
+                        <span class="card__icon fa fa-play-circle" />
+                        346 lectures
+                      </span>
+                      <span class="card__meta-item">
+                        <span class="card__icon fa fa-clock-o" />5 hours
+                      </span>
+                      <span class="card__meta-item">
+                        <span class="card__icon fa fa-sliders" />
+                        Beginner-Intermediate
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <div className="right-col">
                   {" "}
@@ -72,11 +87,7 @@ class QuizList extends Component {
           <div id="quix-title">
             <h1>🔥 Test Your Technical Chops</h1>
           </div>{" "}
-          <img
-            src="https://image.flaticon.com/icons/png/512/1335/1335734.png"
-            style={{ height: "80px", width: "80px" }}
-          />
-          <hr />
+          <br />
           {list.map((quiz, index) => {
             return (
               <Card

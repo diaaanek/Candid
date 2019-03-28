@@ -31,7 +31,7 @@ const Nav = () => (
 
 const NavAuth = () => (
   <nav className="nav-bar">
-    <div class="float">
+    <div className="float">
       {" "}
       <img
         className="logo"
@@ -50,8 +50,8 @@ const NavAuth = () => (
 // ****** when user is NOT LOGGED IN ****** //
 
 const NavNonAuth = () => (
-  <nav className="nav-bar">
-    <div className="pages">
+  <div className="nav-bar">
+    <div className="float">
       <Link to={routes.LANDING}>
         {" "}
         <img
@@ -64,7 +64,7 @@ const NavNonAuth = () => (
       <Link to={routes.SIGN_UP}>Sign Up</Link>{" "}
       <Link to={routes.SIGN_IN}>Sign In</Link>
     </div>
-  </nav>
+  </div>
 );
 
 export default Nav;

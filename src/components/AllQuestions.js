@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import withAuthorization from "./withAuthorization";
 import AuthUserContext from "./AuthUserContext";
 
+import Test from "./Test.scss";
+
 class AllQuestions extends Component {
   constructor() {
     super();
@@ -149,28 +151,6 @@ class AllQuestions extends Component {
     return (
       <div className="main">
         <div className="container">
-          {/* <section className="add-item">
-            <form onSubmit={this.handleSubmit}>
-              <input
-                type="text"
-                name="username"
-                placeholder="What's your name?"
-                onChange={this.handleChange}
-                value={this.state.username}
-              />
-              <input
-                type="text"
-                name="currentItem"
-                placeholder="What are you bringing ?"
-                onChange={this.handleChange}
-                value={this.state.currentItem}
-              />
-              <button disabled={currentItem && username !== "" ? false : true}>
-                Add Item
-              </button>
-            </form>
-          </section>
-*/}
           <section className="display-item">
             <div className="wrapper">
               <h1>All Interview Questions</h1>
@@ -180,123 +160,133 @@ class AllQuestions extends Component {
                   Object.keys(items).map(item => {
                     const requests = items[item].requests;
                     return (
-                      <li key={items[item].key}>
-                        <h3>{items[item].question}</h3>
-                        {this.state.userId !== items[item].createdById ? (
-                          <button
-                            style={{ border: "2px solid green" }}
-                            onClick={() =>
-                              this.sendRequest(
-                                items[item].key,
-                                items[item].createdById
-                              )
-                            }
-                            disabled={
-                              requests &&
-                              Object.keys(requests)
-                                .map(el => {
-                                  return requests[el].userId;
-                                })
-                                .includes(userId)
-                                ? true
-                                : false
-                            }
-                          >
-                            request interview
-                          </button>
-                        ) : null}
-                        <div>
-                          {requests &&
-                            Object.keys(requests).map(el => {
-                              if (requests[el].userId === userId) {
-                                //only auth user question requests
-                                return (
-                                  <p
-                                    onClick={() =>
-                                      this.removeQuestionRequest(
-                                        requests[el].bookBelongToUserKey,
-                                        items[item].createdById,
-                                        requests[el].keyAtBooks,
-                                        requests[el].keyAtUsers
-                                      )
-                                    }
-                                    d
-                                  >
-                                    <button> cancel </button>
-                                  </p>
-                                );
-                              }
-                            })}
-                        </div>
-
-                        {this.state.userId !== items[item].createdById ? (
-                          <Link
-                            to={{
-                              pathname: `/user/${items[item].createdById}`,
-
-                              createdById: `${items[item].createdById}`,
-                              createdBy: `${items[item].createdBy}`
-                            }}
-                          >
-                            <p>brought by: {items[item].user}</p>
-                          </Link>
-                        ) : (
-                          <div>
-                            <Link to="/myprofile">
-                              {items[item].user} (My Profile)
-                            </Link>
-
-                            <button
-                              onClick={() =>
-                                this.removeItem(
-                                  items[item].key,
-                                  this.state.userId
-                                )
-                              }
-                            >
-                              Remove Question
-                            </button>
-                            <button
-                              onClick={() => this.updForm(items[item].key)}
-                            >
-                              Update Question
-                            </button>
-                          </div>
-                        )}
-
-                        {this.state.updId === items[item].key ? (
-                          <div>
-                            <form
-                              onSubmit={() =>
-                                this.updItem(items[item].key, this.state.userId)
-                              }
-                            >
-                              <input
-                                type="text"
-                                name="updName"
-                                placeholder="What's your name?"
-                                onChange={this.handleChange}
-                                value={this.state.updName}
-                              />
-                              <input
-                                type="text"
-                                name="updItem"
-                                placeholder="What is your question ?"
-                                onChange={this.handleChange}
-                                value={this.state.updItem}
-                              />
-
+                      <div className="question">
+                        <li key={items[item].key}>
+                          <div className="question-and-answer">
+                            <h3>{items[item].question}</h3>
+                            {this.state.userId !== items[item].createdById ? (
                               <button
+                                style={{ border: "2px solid green" }}
+                                onClick={() =>
+                                  this.sendRequest(
+                                    items[item].key,
+                                    items[item].createdById
+                                  )
+                                }
                                 disabled={
-                                  updItem && updName !== "" ? false : true
+                                  requests &&
+                                  Object.keys(requests)
+                                    .map(el => {
+                                      return requests[el].userId;
+                                    })
+                                    .includes(userId)
+                                    ? true
+                                    : false
                                 }
                               >
-                                Update
+                                <img
+                                  src="https://image.flaticon.com/icons/png/512/39/39794.png"
+                                  style={{ height: "25px", width: "25px" }}
+                                />
                               </button>
-                            </form>
+                            ) : null}
+                            <div>
+                              {requests &&
+                                Object.keys(requests).map(el => {
+                                  if (requests[el].userId === userId) {
+                                    //only auth user question requests
+                                    return (
+                                      <p
+                                        onClick={() =>
+                                          this.removeQuestionRequest(
+                                            requests[el].bookBelongToUserKey,
+                                            items[item].createdById,
+                                            requests[el].keyAtBooks,
+                                            requests[el].keyAtUsers
+                                          )
+                                        }
+                                        d
+                                      >
+                                        <button> cancel </button>
+                                      </p>
+                                    );
+                                  }
+                                })}
+                            </div>
                           </div>
-                        ) : null}
-                      </li>
+
+                          {this.state.userId !== items[item].createdById ? (
+                            <Link
+                              to={{
+                                pathname: `/user/${items[item].createdById}`,
+
+                                createdById: `${items[item].createdById}`,
+                                createdBy: `${items[item].createdBy}`
+                              }}
+                            >
+                              <p>Asked by: {items[item].user}</p>
+                            </Link>
+                          ) : (
+                            <div>
+                              <Link to="/myprofile">
+                                {items[item].user} (My Profile)
+                              </Link>
+
+                              <button
+                                onClick={() =>
+                                  this.removeItem(
+                                    items[item].key,
+                                    this.state.userId
+                                  )
+                                }
+                              >
+                                Remove Question
+                              </button>
+                              <button
+                                onClick={() => this.updForm(items[item].key)}
+                              >
+                                Update Question
+                              </button>
+                            </div>
+                          )}
+
+                          {this.state.updId === items[item].key ? (
+                            <div>
+                              <form
+                                onSubmit={() =>
+                                  this.updItem(
+                                    items[item].key,
+                                    this.state.userId
+                                  )
+                                }
+                              >
+                                <input
+                                  type="text"
+                                  name="updName"
+                                  placeholder="What's your name?"
+                                  onChange={this.handleChange}
+                                  value={this.state.updName}
+                                />
+                                <input
+                                  type="text"
+                                  name="updItem"
+                                  placeholder="What is your question ?"
+                                  onChange={this.handleChange}
+                                  value={this.state.updItem}
+                                />
+
+                                <button
+                                  disabled={
+                                    updItem && updName !== "" ? false : true
+                                  }
+                                >
+                                  Update
+                                </button>
+                              </form>
+                            </div>
+                          ) : null}
+                        </li>
+                      </div>
                     );
                   })
                 ) : (

@@ -30,7 +30,7 @@ export default class Home extends Component {
             {
               name: "Basics",
               questions: "3",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -62,7 +62,7 @@ export default class Home extends Component {
             {
               name: "Advanced",
               questions: "3",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -168,7 +168,7 @@ export default class Home extends Component {
             {
               name: "Quiz 1",
               questions: "4",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -208,7 +208,7 @@ export default class Home extends Component {
             {
               name: "Quiz 2",
               questions: "6",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -314,7 +314,7 @@ export default class Home extends Component {
             {
               name: "Quiz 2",
               questions: "6",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {
@@ -381,7 +381,7 @@ export default class Home extends Component {
             {
               name: "Quiz 1",
               questions: "4",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {

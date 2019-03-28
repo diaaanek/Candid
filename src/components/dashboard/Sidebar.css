@@ -2,24 +2,64 @@ html {
   height: 100%;
 }
 
-aside.sidebar {
-  width: 17%;
-  min-width: 150px;
-  max-width: 300px;
-  height: 85%;
-  background-color: white;
-  position: fixed;
-  top: 50px;
-  color: grey;
-  border-radius: 8px;
-  margin: 35px 45px 50px 50px;
-  float: left;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-  padding: 25px 0 0 0;
+aside,
+.section {
+  margin: 1rem;
+  padding: 1rem;
 }
 
-aside a {
+main {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: -0.5rem; */
+  overflow-x: hidden;
+  width: 100vhm;
+}
+
+aside {
+  flex-basis: 18rem;
+  flex-grow: 1;
+
+  /* min-width: 150px;
+    max-width: 300px; */
+  height: 100%;
+  /* padding: 2em; */
+  background-color: white;
+  /* position: fixed; */
+  /* top: 50px; */
+  color: grey;
+  border-radius: 8px;
+  margin: 18px 25px 25px 25px;
+  /* float: left; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  padding: 0px 0 0 0;
+}
+
+.section {
+  min-width: 50%;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  flex-grow: 400;
+  flex-basis: 10;
+  position: relative;
+  border-radius: 6px;
+}
+
+#side {
+  background-color: #3ec4ff;
+  height: 100%;
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+  border-radius: 6px 6px 0px 0px;
+  margin: 0px;
+
+  padding: 0.5em;
+}
+
+/* aside a {
+   float: left;
   display: block;
   line-height: 50px;
   border-right: 4px solid transparent;
@@ -40,24 +80,20 @@ aside a.current {
   border-right-color: gold;
 
   color: white;
-}
+} */
 
-#main {
-  width: 100%;
-  min-width: 600px;
-
-  overflow-x: hidden;
+/* #main {
 }
 .sub {
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  display: inline-block;
-  float: right;
-  width: 65%;
-  padding-left: 50px;
-}
-.sub a {
+
+  grid-column: 2/4;
+  min-height: 100vh;
+  padding: 2rem;
+} */
+
+/* .sub a {
   display: inline-block;
   min-width: 110px;
   background-color: darken(white, 5%);
@@ -71,12 +107,12 @@ aside a.current {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}
-.sub a:hover,
+} */
+/* .sub a:hover,
 .sub a.current {
   color: grey;
   background-color: white;
-}
+} */
 
 /*
 aside.sidebar {
