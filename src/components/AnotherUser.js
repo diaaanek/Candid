@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { db } from "../firebase/index";
 import { auth } from "./firebase.js";
-
+// import UserInfo from "./UserInfo";
 export default class AnotherUser extends Component {
   constructor() {
     super();

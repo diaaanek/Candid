@@ -61,14 +61,17 @@ class SignUpForm extends Component {
               <img
                 src="https://cdn0.iconfinder.com/data/icons/some-avatars/200/sjobs-512.png"
                 className="signup-face"
+                alt="signup-face"
               />
               <img
                 src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/undraw_hiring.svg"
                 className="signup-face"
+                alt="signup-face"
               />
               <img
                 src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589874/chatting.svg"
                 className="signup-face"
+                alt="signup-face"
               />
             </div>
             <div className="quote">

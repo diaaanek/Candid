@@ -14,7 +14,7 @@ const UserInfo = () => (
 const UserData = ({ authUser }) => (
   <div>
     <div className="dropdown">
-      <img src={authUser.photoURL} className="avatar" />
+      <img src={authUser.photoURL} className="avatar" alt="user-face" />
       <div className="dropdown-content">
         <SignIn />
       </div>

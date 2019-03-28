@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import "./Splash.scss";
 import "./landing.css";
@@ -7,8 +7,6 @@ import SignIn from "./SignIn";
 
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-
-import Footer from "./Footer";
 
 // ****** chat bot feature ****** //
 const theme = {

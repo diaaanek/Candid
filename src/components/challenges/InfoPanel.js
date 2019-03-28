@@ -1,7 +1,7 @@
 import React from "react";
-import Controls from "./Controls";
+// import Controls from "./Controls";
 import "./CodeChallenges.css";
-import CodeBox from "./CodeBox";
+// import CodeBox from "./CodeBox";
 
 function InfoPanel(props) {
   return (
@@ -10,7 +10,10 @@ function InfoPanel(props) {
         <h1>{props.title}</h1>
       ) : (
         <div className="info-bx">
-          <img src="https://res.cloudinary.com/dxrvvjvpf/image/upload/c_scale,w_385/v1552589882/laptop.png" />
+          <img
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/c_scale,w_385/v1552589882/laptop.png"
+            alt="laptop"
+          />
           <h1>Click a problem on the left to get started!</h1>
         </div>
       )}

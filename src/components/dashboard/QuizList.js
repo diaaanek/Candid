@@ -3,7 +3,6 @@ import { withRouter, Redirect } from "react-router-dom";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
-import CodeChallenges from ".././challenges/CodeChallenges";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -23,17 +22,17 @@ class QuizList extends Component {
       <div>
         <div className="quizContainer" style={{ margin: "20px 10% 10% 10%" }}>
           <div id="quix-title">
-            <h1>⭐ New & Noteworthy</h1>
+            <h1> New & Noteworthy</h1>
           </div>{" "}
-          <br />
+          <hr />
           <br />
           <div class="card__container">
             <div class="card__inner">
               <div class="search-course-card--card--left-col--3kKip">
                 <a href="/the-web-developer-bootcamp/">
                   <img
-                    src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg"
-                    alt="course image"
+                    src="https://cdn.rswebsols.com/wp-content/uploads/2016/06/web-design-development-programming-coding-developer-programmer.jpg"
+                    alt="code-challenge"
                     width="354"
                     height="171"
                     class="card__image"
@@ -43,14 +42,17 @@ class QuizList extends Component {
 
               <div class="fx">
                 <div class="card__head">
-                  <a href="" class="card__title" style={{ float: "left" }}>
-                    Fullstack Coding Challenges
-                  </a>
+                  <span
+                    class="card__title"
+                    style={{ float: "left", fontSize: "25" }}
+                  >
+                    Javascript Coding Challenges
+                  </span>
                   <br />
                   <div class="middle-col">
                     <p class="card__instructor">
-                      <span>Colt Steele</span>
-                      <span>• Developer and Bootcamp Instructor</span>
+                      <span>Blah blah blah </span>
+                      <span>• Developer and Bootcamp </span>
                     </p>
                   </div>
                   <div>
@@ -151,7 +153,7 @@ class QuizList extends Component {
                 <a href="/the-web-developer-bootcamp/">
                   <img
                     src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg"
-                    alt="course image"
+                    alt="coursed"
                     width="354"
                     height="171"
                     class="card__image"
@@ -161,9 +163,9 @@ class QuizList extends Component {
 
               <div class="fx">
                 <div class="card__head">
-                  <a href="" class="card__title" style={{ float: "left" }}>
+                  <span class="card__title" style={{ float: "left" }}>
                     Fullstack Coding Challenges
-                  </a>
+                  </span>
                 </div>
                 <div class="middle-col">
                   <br />

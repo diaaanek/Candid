@@ -4,7 +4,6 @@ import firebase, { auth, provider } from "./firebase.js"; // <--- add this line
 import { db } from "../firebase/index";
 import AuthUserContext from "./AuthUserContext";
 import withAuthorization from "./withAuthorization";
-import MyProfileEnhanced from "./MyProfileEnhanced";
 
 import Test from "./Test.scss";
 import AllQuestions from "./AllQuestions";

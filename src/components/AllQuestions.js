@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
-import firebase, { auth, provider } from "./firebase.js"; // <--- add this line
+// import { render } from "react-dom";
+import firebase, { auth, provider } from "./firebase.js";
 import { db } from "../firebase/index";
 import { Link } from "react-router-dom";
 import withAuthorization from "./withAuthorization";
 import AuthUserContext from "./AuthUserContext";
 
-import Test from "./Test.scss";
+// import Test from "./Test.scss";
 
 class AllQuestions extends Component {
   constructor() {
@@ -118,10 +118,6 @@ class AllQuestions extends Component {
       keyAtQuestions: newPostRef2.key,
       questionBelongToUserKey: itemId
     });
-
-    /*
-    db.requestUserBooks(itemId, userId, item, key);
-    db.appendRequestsToAllBooks(itemId, item, key);*/
   };
 
   removeQuestionRequest = (

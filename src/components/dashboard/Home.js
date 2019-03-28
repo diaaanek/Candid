@@ -5,8 +5,6 @@ import QuizList from "./QuizList";
 import QuizInfo from "./QuizInfo";
 import StartQuiz from "./StartQuiz";
 
-import Footer from "../Footer";
-
 import "./Dashboard.css";
 
 // + Home --> state
@@ -669,8 +667,6 @@ export default class Home extends Component {
             )}
           </center>
         </div>
-
-        <Footer />
       </div>
     );
   }

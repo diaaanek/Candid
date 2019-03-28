@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import Sidebar from "./Sidebar.css";
 import swal from "sweetalert";
-
+import Sidebar from "./Sidebar.css";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 
 import SentimentSatisfied from "@material-ui/icons/SentimentSatisfiedRounded";
@@ -24,7 +23,7 @@ class QuizList extends Component {
       radioVal: null,
       sec: 60,
       min: 0,
-      correct: 0,
+      correct: null,
       scored: false,
       similey: null
     };
@@ -157,22 +156,32 @@ class QuizList extends Component {
         <main>
           <aside className="sidebar">
             <div id="side"> Learning {" " + quizName}</div>
-
-            <br />
             <img
               src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553652549/picc.png"
-              style={{ height: "190px", width: "225px" }}
+              alt="quiz"
+              style={{ height: "100px", width: "125px" }}
             />
-            <h2>
+            <h3>
               Time Remaining: {min} : {sec}
-            </h2>
+            </h3>
 
-            <CircularProgress
-              size={200}
-              thickness={5}
-              variant="static"
-              value={25}
-            />
+            <div>
+              <CircularProgress
+                size={100}
+                thickness={5}
+                variant="static"
+                value={scored}
+              />
+
+              <div variant="headline">{scored} % Score </div>
+              <br />
+              <div variant="subheading">
+                Total Questions: {started.qArr.length}
+              </div>
+              <p variant="subheading">Correct: {correct}</p>
+            </div>
+
+            <br />
           </aside>
 
           <div className="section">
@@ -181,45 +190,19 @@ class QuizList extends Component {
               <div style={{ margin: "80px 3% 3% 3%" }}>
                 {scored !== false ? (
                   <div>
-                    <h2>
-                      Learning {quizName}({subQuizName})
-                    </h2>
+                    <div className="resultDiv" />
+                    {this.state.similey}
                     <br />
-                    <div className="resultDiv">
-                      <div>
-                        <br />
-                        <br />
-                        <CircularProgress
-                          size={200}
-                          thickness={5}
-                          variant="static"
-                          value={scored}
-                        />
-                        {this.state.similey}
-                        <div variant="headline">{scored} %</div>
-                        <br />
-                        <div variant="subheading">
-                          Total Questions: {started.qArr.length}
-                        </div>
-                        <p variant="subheading">Correct: {correct}</p>
-                      </div>
-                      <button className="backBtn" onClick={() => back()}>
-                        back
-                      </button>
-                    </div>
+                    <button className="start" onClick={() => back()}>
+                      Go back
+                    </button>
                   </div>
                 ) : (
                   <div>
-                    <div variant="title">
-                      {min}:{sec}
-                    </div>
-                    <br />
-
                     <div className="qstnDiv">
                       <FormControl
                         component="fieldset"
                         style={{
-                          margin: "15px 15px 30px 15px",
                           fontFamily: "Avenir"
                         }}
                       >
@@ -262,7 +245,7 @@ class QuizList extends Component {
                     <br />
                     <button
                       className="nextBtn"
-                      onClick={this.updating.bind(this)}
+                      onClick={updating => this.updating()}
                     >
                       <NavigateNext />
                     </button>
