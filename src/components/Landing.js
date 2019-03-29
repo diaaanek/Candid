@@ -55,7 +55,7 @@ export default ({ user }) => (
           </h2>
           <p id="first-line">
             {" "}
-            A social interview prep community for aspiring and bad-ass web
+            A social interview prep application for aspiring and bad-ass web
             developers.
           </p>
           <span> </span>
