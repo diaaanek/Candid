@@ -124,7 +124,9 @@ class MyProfile extends Component {
         <div class="ques-wrapper">
           <div id="question">
             <div class="search-area" />
-            <h1>Have a question?</h1>
+            <h1 style={{ fontFamily: "Cereal-bold", color: "grey" }}>
+              Have a question?
+            </h1>
 
             <div class="input-wrapper">
               <i class="fa fa-search" />
@@ -168,7 +170,15 @@ class MyProfile extends Component {
                       const requests = items[item].requests;
                       return (
                         <li key={items[item].key}>
-                          <h3>{items[item].question}</h3>
+                          <h4
+                            style={{
+                              fontFamily: "Cereal-bold",
+                              color: "grey",
+                              fontSize: "18px"
+                            }}
+                          >
+                            {items[item].question}
+                          </h4>
                           <p> Answered by: </p>
 
                           {requests &&

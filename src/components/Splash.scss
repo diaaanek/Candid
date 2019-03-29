@@ -4,20 +4,46 @@
 //  + splash
 //  + footer
 //
-// @font-face {
-//   font-family: "Cereal";
-//   src: local("Cereal"), url(../fonts/cereal-200.ttf) format("ttf");
-// }
-//
-// @font-face {
-//   font-family: "Cereal";
-//   src: local("cereal-300"), url(../fonts/cereal-300.ttf) format("ttf");
-// }
 
+// src/components/circular-book.ttf
+@font-face {
+  font-family: "Cereal-light";
+  src: url("./cereal-200.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-reg";
+  src: url("./cereal-300.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-med";
+  src: url("./cereal-500.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-bold";
+  src: url("./cereal-700.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-super-bold";
+  src: url("./cereal-800.ttf") format("truetype");
+}
+
+.splash {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+h2 {
+  font-family: "Cereal-bold", "Avenir";
+  font-weight: 700;
+  color: #1d1d1d;
+}
 // Nav bar main page
 .nav-bar {
   height: 65px;
-  font-family: "Avenir";
+  font-family: "Cereal-light";
   position: fixed;
   top: 0;
   padding: 8px 45px;
@@ -35,14 +61,14 @@
     font-weight: bold;
     display: inline;
     color: grey;
-    box-shado: 3px;
+    box-shadow: 3px;
     padding: 0 1em;
     margin-bottom: 1em;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 13px;
   }
   a:hover {
-    text-transform: uppercase;
+    color: #ea555c;
   }
 }
 .float {
@@ -66,7 +92,6 @@
 
 // # profile pic in nav bar
 .avatar {
-  // display: flex;
   padding-top: 2px;
   float: right;
   width: 42px;
@@ -136,7 +161,8 @@
 
   .first-page {
     min-height: 100vh;
-    font-family: "Avenir";
+    font-family: "Cereal-bold";
+
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -148,13 +174,33 @@
     // match the viewport height of the browser window
   }
 
-  // computer image
-  // img {
-  //   display: inline-block;
-  //   margin-right: 16px;
-  //   vertical-align: bottom;
-  //   margin-bottom: 10px;
-  // }
+  #first-line {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    // border-right: 0.15em solid grey; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: grey;
+    }
+  }
 
   #manage {
     margin-left: 25px;
@@ -162,7 +208,7 @@
 
   p {
     font-size: 16px;
-    font-family: "Avenir";
+    font-family: "Cereal-reg";
     margin-left: 20px;
   }
 
@@ -175,24 +221,13 @@
     p {
       padding-top: 10px;
     }
-    // img {
-    //   margin-left: 20px;
-    //   width: 40px;
-    //   height: 40px;
-    // }
   }
 
   .mainbutton {
     margin-left: 20px;
     margin-bottom: 10px;
-  }
-
-  .splash-left {
-    // margin-top: 37px;
-  }
-
-  .splash-right {
-    // margin-right: 80px;
+    font-family: "Cereal-bold";
+    font-size: 17px;
   }
 
   #laptop {
@@ -206,27 +241,20 @@
 }
 .footer {
   // position: sticky;
-  font-family: "Quicksand";
+  font-family: "Cereal-light";
   position: relative;
   bottom: 0;
   padding: 15px 40px 15px 40px;
   width: 100%;
   height: 100vhm;
   padding-bottom: 70px;
-
-  a {
-    padding: 10px;
-    font-size: 15px;
-
-    // font-size: 32px;
-  }
 }
 
 // buttons
 
 .button {
   padding: 15px 20px;
-  font-family: "Quicksand";
+  font-family: "Cereal-reg";
   font-size: 15px;
   color: white;
   font-weight: bold;
@@ -264,20 +292,5 @@
 }
 
 input.rsc-input.sc-kAzzGY.fCeMBp {
-  font-family: "Quicksand";
+  font-family: "Cereal-reg";
 }
-
-// .signupform {
-//   font-family: "Quicksand";
-// }
-//
-//   .desk {
-//   background-image: url("desk.png");
-//   position: absolute;
-//   left: 868px;
-//   top: 213px;
-//   width: 466px;
-//   height: 541px;
-//   z-index: 16;
-// }
-//

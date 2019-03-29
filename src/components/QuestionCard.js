@@ -32,11 +32,20 @@ class QuestionCard extends Component {
             </div>
 
             <div class="question-and-answer">
-              <h1>{Object.keys(questions[this.state.number])}</h1>
+              <h1
+                style={{
+                  fontFamily: "Cereal-bold",
+                  color: "grey",
+                  fontSize: "15px"
+                }}
+              >
+                {Object.keys(questions[this.state.number])}
+              </h1>
               <p>{Object.values(questions[this.state.number])}</p>
             </div>
           </div>
         </div>
+
         <Button
           variant="contained"
           color="secondary"

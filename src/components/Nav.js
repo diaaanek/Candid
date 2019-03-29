@@ -56,6 +56,7 @@ const NavNonAuth = () => (
         {" "}
         <img
           className="logo"
+          style={{ verticalAlign: "middle" }}
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553635345/logo.png"
         />
       </Link>

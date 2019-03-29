@@ -2,7 +2,6 @@ import React from "react";
 // import { Link } from "react-router-dom";
 
 import "./Splash.scss";
-import "./landing.css";
 import SignIn from "./SignIn";
 
 import ChatBot from "react-simple-chatbot";
@@ -11,7 +10,7 @@ import { ThemeProvider } from "styled-components";
 // ****** chat bot feature ****** //
 const theme = {
   background: "#f5f8fb",
-  fontFamily: "Quicksand",
+  fontFamily: "Avenir",
   headerBgColor: "#aadd32 ",
   headerFontColor: "#fff",
   headerFontSize: "15px",

@@ -6,23 +6,21 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 
-// algo img = https://image.flaticon.com/icons/png/512/1335/1335734.png
-// html img https://freeiconshop.com/wp-content/uploads/edd/html-flat.png
-// css img https://freeiconshop.com/wp-content/uploads/edd/css-flat.png
-// code img https://freeiconshop.com/wp-content/uploads/edd/code-flat.png
-// javascript img https://freeiconshop.com/wp-content/uploads/edd/js-flat.png
-// http://www.itbodhi.com/images/itbodhi/programming9.png
 class QuizInfo extends Component {
   render() {
     const { quiz, onBack, onPress } = this.props;
     return (
       <div style={{ marginTop: "72px" }}>
-        <h1> Take Quizzes </h1>
+        <h1 style={{ fontWeight: "700", fontFamily: "Cereal-bold" }}>
+          {" "}
+          Take Quizzes{" "}
+        </h1>
         <img
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589874/archive.svg"
           style={{
             height: "100px",
-            width: "100px"
+            width: "100px",
+            maxWidth: 345
           }}
         />
 
@@ -30,7 +28,6 @@ class QuizInfo extends Component {
         {quiz.subQuiz.map((subQuiz, index) => {
           return (
             <Card
-              // className={classes.card}
               style={{ maxWidth: 345, display: "inline-block", margin: "1%" }}
             >
               <CardActionArea>
@@ -49,7 +46,7 @@ class QuizInfo extends Component {
                       gutterBottom
                       variant="headline"
                       component="h1"
-                      style={{ textAlign: "left", fontFamily: "Quicksand" }}
+                      style={{ textAlign: "left", fontFamily: "Cereal-bold" }}
                     >
                       {subQuiz.name}
                     </h1>
@@ -59,7 +56,7 @@ class QuizInfo extends Component {
                       style={{
                         textAlign: "left",
                         fontSize: "13px",
-                        fontFamily: "Quicksand"
+                        fontFamily: "Cereal-light"
                       }}
                     >
                       You have attempted this Quiz.
@@ -79,7 +76,11 @@ class QuizInfo extends Component {
                       gutterBottom
                       variant="headline"
                       component="h1"
-                      style={{ textAlign: "left", fontFamily: "Quicksand" }}
+                      style={{
+                        textAlign: "left",
+                        fontFamily: "Cereal-bold",
+                        fontWeight: "700"
+                      }}
                     >
                       {subQuiz.name}
                     </h1>
@@ -89,7 +90,7 @@ class QuizInfo extends Component {
                       style={{
                         textAlign: "left",
                         fontSize: "13px",
-                        fontFamily: "Quicksand"
+                        fontFamily: "Cereal-light"
                       }}
                     >
                       This Quiz is based on the following criteria:

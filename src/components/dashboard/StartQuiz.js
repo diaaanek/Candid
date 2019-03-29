@@ -216,7 +216,7 @@ class QuizList extends Component {
                       <FormControl
                         component="fieldset"
                         style={{
-                          fontFamily: "Avenir"
+                          fontFamily: "Cereal-reg"
                         }}
                       >
                         <h3>
@@ -232,24 +232,28 @@ class QuizList extends Component {
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option1}
+                            style={{ fontFamily: "Cereal-light" }}
                           />
                           <FormControlLabel
                             value="2"
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option2}
+                            style={{ fontFamily: "Cereal-light" }}
                           />
                           <FormControlLabel
                             value="3"
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option3}
+                            style={{ fontFamily: "Cereal-light" }}
                           />
                           <FormControlLabel
                             value="4"
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option4}
+                            style={{ fontFamily: "Cereal-light" }}
                           />
                         </RadioGroup>
                       </FormControl>

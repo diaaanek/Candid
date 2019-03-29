@@ -13,16 +13,17 @@ const UserInfo = () => (
 
 const UserData = ({ authUser }) => (
   <div>
-    <div className="dropdown">
-      <img src={authUser.photoURL} className="avatar" alt="user-face" />
-      <div className="dropdown-content">
-        <SignIn />
+    <div>
+      <div className="dropdown">
+        <img src={authUser.photoURL} className="avatar" alt="user-face" />
+        <a style={{ marginTop: "18px" }}>
+          {" "}
+          👋 Welcome, {authUser.displayName || authUser.email}!
+        </a>
+        <div className="dropdown-content">
+          <SignIn />
+        </div>
       </div>
-
-      <span style={{ paddingTop: "45px" }}>
-        {" "}
-        👋 Welcome, {authUser.displayName || authUser.email}!
-      </span>
     </div>
   </div>
 );

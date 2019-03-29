@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Avenir";
+  // font-family: "Cereal-light", "Avenir", sans-serif;
 }
 
 $background-gray: rgba(198, 198, 198, 0.1);
@@ -22,6 +22,73 @@ $red: #ea0000;
 
 $arrow-size: 7px;
 $border-left-size: 4px;
+
+body {
+  font-family: "Cereal-reg";
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card {
+  flex: 1;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff;
+  margin: 1em;
+  padding: 2em;
+}
+
+.card-css {
+  border-left: 10px solid orange;
+}
+
+.card-js {
+  border-left: 15px solid pink;
+}
+
+.card-html {
+  border-left: 15px solid green;
+}
+
+.card-question {
+  /*   text-align: center; */
+  flex: 1;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 3em;
+
+  font-size: 1.2em;
+}
+
+.card-actions {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-action-btn {
+  flex: 1;
+  color: grey;
+  text-align: center;
+  background: #fff;
+  border: none;
+  font-size: 1em;
+}
+
+.card-test-expanded {
+  flex: 1;
+  font-weight: normal;
+  background: grey;
+}
 
 form {
   display: flex;
@@ -105,7 +172,7 @@ form {
     .question {
       margin: 0.75em auto;
       padding: 0.5em;
-      font-family: "Avenir";
+      font-family: "Cereal-light";
       background: $background-gray;
       box-shadow: $large-box-shadow;
       transition: all 0.1s, border 0.25s ease-out;

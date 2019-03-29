@@ -65,7 +65,7 @@ class SignIn extends React.Component {
             Sign in with{" "}
             <img
               src="http://www.stickpng.com/assets/images/5847f9cbcef1014c0b5e48c8.png"
-              style={{ height: "25px", width: "25px", display: "inline-block" }}
+              style={{ height: "25px", width: "25px", verticalAlign: "middle" }}
             />
           </button>
         )}

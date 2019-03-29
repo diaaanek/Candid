@@ -22,9 +22,25 @@ class QuizList extends Component {
       <div>
         <div className="quizContainer" style={{ margin: "20px 10% 10% 10%" }}>
           <div id="quix-title">
-            <h1> New & Noteworthy</h1>
+            <h1
+              style={{
+                fontWeight: "700",
+                fontFamily: "Cereal-bold",
+                color: "# 111111"
+              }}
+            >
+              {" "}
+              New & Noteworthy
+            </h1>
+            <h4>
+              A selection of technical challenges based on your performance
+            </h4>
           </div>{" "}
-          <hr />
+          <div className="options__container">
+            <div className="options__card"> Coding </div>
+            <div className="options__card">Interview Prep </div>
+            <div className="options__card"> Learing Resources </div>
+          </div>
           <br />
           <div class="card__container">
             <div class="card__inner">
@@ -46,31 +62,18 @@ class QuizList extends Component {
                     class="card__title"
                     style={{
                       float: "left",
-                      fontSize: "25px",
-                      fontWeight: "700"
+                      fontSize: "20px",
+                      fontFamily: "Cereal-bold"
                     }}
                   >
                     Javascript Coding Challenges
                   </div>
                   <br />
-                  <div class="middle-col">
-                    <p class="card__instructor" />
-                    <p class="card__instructor">
-                      <span
-                        style={{
-                          float: "left"
-                        }}
-                      >
-                        Blah blah blah{" "}
-                      </span>
-                      <span>• Developer and Bootcamp </span>
-                    </p>
-                  </div>
+
                   <div>
                     <div class="card__subtitle">
-                      The only course you need to learn <strong>web</strong>{" "}
-                      <strong>development</strong> - HTML, CSS, JS, Node, and
-                      More!
+                      The only course you need to learn <strong>coding</strong>{" "}
+                      <strong>challenges</strong> -for top tech companies.
                     </div>
                     <div
                       class="card__metadata"
@@ -78,14 +81,14 @@ class QuizList extends Component {
                     >
                       <span class="card__meta-item">
                         <span class="card__icon fa fa-play-circle" />
-                        346 lectures
+                        Features: blah blah
                       </span>
                       <span class="card__meta-item">
                         <span class="card__icon fa fa-clock-o" />5 hours
                       </span>
                       <span class="card__meta-item">
                         <span class="card__icon fa fa-sliders" />
-                        Beginner-Intermediate
+                        Level: Beginner-Intermediate
                       </span>
                     </div>
                   </div>
@@ -101,7 +104,9 @@ class QuizList extends Component {
             </div>
           </div>
           <div id="quix-title">
-            <h1>🔥 Test Your Technical Chops</h1>
+            <h1 style={{ fontFamily: "Cereal-bold" }}>
+              Test Your Technical Chops
+            </h1>
           </div>{" "}
           <br />
           {list.map((quiz, index) => {
@@ -137,7 +142,7 @@ class QuizList extends Component {
                       style={{
                         textAlign: "left",
                         fontSize: "14px",
-                        fontFamily: "Avenir"
+                        fontFamily: "Cereal-reg"
                       }}
                     >
                       {quiz.description}

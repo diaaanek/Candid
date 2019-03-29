@@ -2,6 +2,14 @@ html {
   height: 100%;
 }
 
+.MuiTypography {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Cereal-light", "Helvetica", "Arial", sans-serif;
+  line-height: 1.46429em;
+}
+
 aside,
 .section {
   margin: 1rem;
@@ -9,6 +17,7 @@ aside,
 }
 
 main {
+  font-family: "Cereal-reg";
   display: flex;
   flex-wrap: wrap;
   /* margin: -0.5rem; */
@@ -18,21 +27,17 @@ main {
 
 aside {
   flex-basis: 18rem;
+  font-family: "Cereal-reg";
   flex-grow: 1;
-
-  /* min-width: 150px;
-    max-width: 300px; */
   height: 100%;
   /* padding: 2em; */
   background-color: white;
   /* position: fixed; */
-  /* top: 50px; */
   color: grey;
   border-radius: 8px;
   margin: 18px 25px 25px 25px;
   /* float: left; */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
   padding: 0px 0 0 0;
 }
 
@@ -57,108 +62,3 @@ aside {
 
   padding: 0.5em;
 }
-
-/* aside a {
-   float: left;
-  display: block;
-  line-height: 50px;
-  border-right: 4px solid transparent;
-  cursor: pointer;
-  transition: background-color 0.3s linear, border-right-color 0.3s linear,
-    color 0.3s linear;
-
-  color: grey;
-  padding: 0 0 0 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-aside a:hover,
-aside a.current {
-  background-color: lighten(black, 2%);
-  border-right-color: gold;
-
-  color: white;
-} */
-
-/* #main {
-}
-.sub {
-  background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
-  grid-column: 2/4;
-  min-height: 100vh;
-  padding: 2rem;
-} */
-
-/* .sub a {
-  display: inline-block;
-  min-width: 110px;
-  background-color: darken(white, 5%);
-  cursor: pointer;
-  border-radius: 3px 3px 0 0;
-  transition: background-color 0.5s, color 0.5s;
-
-  color: lighten(grey, 30%);
-  padding: 2px 0 0 0;
-  line-height: 35px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-} */
-/* .sub a:hover,
-.sub a.current {
-  color: grey;
-  background-color: white;
-} */
-
-/*
-aside.sidebar {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  width: 550px;
-  font-size: 16px;
-  color: gray;
-  z-index: 100;
-  box-shadow: 1px 0 15px -2px gray;
-  min-height: 100%;
-  border-radius: 8px;
-
-  i {
-    margin-right: 5px;
-    color: turquoise;
-  }
-}
-
-ul.top-sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  padding-top: 30px;
-  border-bottom: 1px solid light-gray;
-}
-
-div.link {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
-  &:hover {
-    background: yellow;
-    color: gray;
-  }
-}
-
-div.sidebar-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  font-size: 12px;
-  letter-spacing: 1px;
-
-  &:hover {
-    color: blue;
-  }
-} */

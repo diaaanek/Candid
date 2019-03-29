@@ -1,16 +1,32 @@
+/* // src/components/circular-book.ttf */
+@font-face {
+  font-family: "Cereal-light";
+  src: url("./cereal-200.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-reg";
+  src: url("./cereal-300.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-med";
+  src: url("./cereal-500.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-bold";
+  src: url("./cereal-700.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cereal-super-bold";
+  src: url("./cereal-800.ttf") format("truetype");
+}
+
 .App {
-  /* display: flex; */
-  /* min-height: 100vh; */
-  /* text-align: center; */
-  /* font-family: "Quicksand", sans-serif; */
-  font-family: "circular-book";
+  font-family: "Cereal-reg";
   font-style: normal;
-  /* font-weight: 200; */
-  /* position: relative;
-  width: 100%;
-  min-height: 100vh; */
-  /* display: flex;
-  flex-direction: row; */
+}
+
+h1 {
+  font-family: "Cereal-bold";
 }
 
 button,

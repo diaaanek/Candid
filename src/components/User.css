@@ -9,7 +9,7 @@ alt-session-link,
 input[type="submit"],
 /* textarea, */
 button {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Cereal-reg", sans-serif;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   /* font-size: 16px; */
@@ -164,7 +164,7 @@ input[type="submit"] {
   line-height: 40px;
   margin-bottom: 11px;
   width: 450px;
-  font-family: "Quicksand";
+  font-family: "Cereal-reg";
   opacity: 0.4;
 }
 
@@ -191,7 +191,7 @@ input[type="submit"] {
 .session-form-container > h3 {
   font-size: 25px;
   font-weight: 800;
-  font-family: "Quicksand";
+  font-family: "Cereal-bold";
 }
 
 .or-parent {
@@ -216,7 +216,6 @@ input[type="submit"] {
   padding: 10px 12px 10px;
   line-height: 1.3333;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  font-family: "MuseoSansRounded-300";
 }
 
 .session-form-container > form > div > input {
@@ -228,7 +227,7 @@ input[type="submit"] {
 }
 
 .exclamation {
-  font-family: "Quicksand";
+  font-family: "Cereal-reg";
   color: #ea5200;
   margin-right: 10px;
 }
@@ -256,7 +255,7 @@ input[type="submit"] {
   text-align: center;
   font-size: 20px;
   border-radius: 8px;
-  font-family: "Quicksand";
+  font-family: "Cereal-bold";
 }
 
 .submit-btn:active {
@@ -274,13 +273,13 @@ input[type="submit"] {
 
 .submit-btn:focus {
   color: #fff;
-  font-family: "Quicksand";
+  font-family: "Cereal-bold";
   background-color: #007ecc;
   border-color: transparent;
 }
 
 .switch-session-btn {
-  font-family: "Quicksand";
+  font-family: "Cereal-bold";
   grid-column-start: 2;
   justify-self: end;
   align-self: center;
@@ -293,7 +292,7 @@ input[type="submit"] {
 
 .switch-session-btn:active {
   color: rgba(0, 0, 0, 0.5);
-  font-family: "Quicksand";
+  font-family: "Cereal-bold";
   background-color: rgba(0, 70, 140, 0.1);
   border-color: transparent;
   box-shadow: 5 3px 5px rgba(0, 0, 0, 0.125);
