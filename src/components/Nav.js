@@ -33,12 +33,18 @@ const NavAuth = () => (
   <nav className="nav-bar">
     <div className="float">
       {" "}
-      <img
-        className="logo"
-        src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553635345/logo.png"
-      />
-      <Link to={routes.HOME}>Learn</Link>
-      <Link to={routes.MYPROFILE}>Study</Link>
+      <Link to={routes.LANDING}>
+        <img
+          className="logo"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553635345/logo.png"
+        />
+      </Link>
+      <Link to={routes.HOME} style={{ marginTop: "13px" }}>
+        Learn
+      </Link>
+      <Link to={routes.MYPROFILE} style={{ marginTop: "13px" }}>
+        Study
+      </Link>
     </div>
 
     <div>
@@ -62,7 +68,10 @@ const NavNonAuth = () => (
       </Link>
     </div>{" "}
     <div>
-      <Link to={routes.SIGN_UP}>Sign Up</Link>{" "}
+      <Link to={routes.SIGN_UP}>
+        {" "}
+        <button className="button signup">Sign Up </button>
+      </Link>{" "}
       <Link to={routes.SIGN_IN}>Sign In</Link>
     </div>
   </div>

@@ -33,14 +33,9 @@ class QuizList extends Component {
               New & Noteworthy
             </h1>
             <h4>
-              A selection of technical challenges based on your performance
+              A selection of technical challenges based on your skill set.
             </h4>
           </div>{" "}
-          <div className="options__container">
-            <div className="options__card"> Coding </div>
-            <div className="options__card">Interview Prep </div>
-            <div className="options__card"> Learing Resources </div>
-          </div>
           <br />
           <div class="card__container">
             <div class="card__inner">

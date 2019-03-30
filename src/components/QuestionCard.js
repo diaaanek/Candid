@@ -23,36 +23,24 @@ class QuestionCard extends Component {
       <div>
         <div>
           <div class="question">
-            <div class="votes">
-              <div class="upvote" />
-              <div class="number-of-votes" onClick={this.updateNumber}>
-                5
-              </div>
-              <div class="downvote" />
-            </div>
-
             <div class="question-and-answer">
-              <h1
+              <h3
                 style={{
                   fontFamily: "Cereal-bold",
                   color: "grey",
-                  fontSize: "15px"
+                  fontSize: "12x"
                 }}
               >
                 {Object.keys(questions[this.state.number])}
-              </h1>
+              </h3>
               <p>{Object.values(questions[this.state.number])}</p>
             </div>
           </div>
         </div>
 
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={this.updateNumber}
-        >
-          Next
-        </Button>
+        <button className="start" onClick={this.updateNumber}>
+          Next Question
+        </button>
       </div>
     );
   }

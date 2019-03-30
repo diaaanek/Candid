@@ -178,69 +178,137 @@ form {
       transition: all 0.1s, border 0.25s ease-out;
     }
 
-    .data-color {
-      border-left: $border-left-size solid $red;
-      box-shadow: $small-box-shadow;
-    }
-
-    .votes {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 0.5em 0 0;
-
-      .upvote {
-        position: relative;
-        padding: 1em;
-        cursor: pointer;
-
-        &:after {
-          content: "";
-          width: 0;
-          height: 0;
-          margin: 0 auto;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-align: center;
-          border-left: $arrow-size solid transparent;
-          border-right: $arrow-size solid transparent;
-          border-bottom: $arrow-size solid $dark-gray;
-        }
-      }
-
-      .number-of-votes {
-        margin: 0 auto;
-        text-align: center;
-        font-size: 1.25em;
-      }
-
-      .downvote {
-        position: relative;
-        padding: 1em;
-        cursor: pointer;
-
-        &:after {
-          content: "";
-          width: 0;
-          height: 0;
-          margin: 0 auto;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-align: center;
-          border-left: $arrow-size solid transparent;
-          border-right: $arrow-size solid transparent;
-          border-top: $arrow-size solid $dark-gray;
-        }
-      }
-    }
-
     .question-and-answer {
       display: inline-block;
       vertical-align: top;
       width: calc(100% - 5em);
     }
   }
+}
+
+*,
+*:before,
+*:after {
+}
+
+body {
+  margin: 0;
+  font-family: "Cereal-reg";
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.box {
+  color: grey;
+  padding: 1em;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid #f2f2f2;
+}
+
+.message-list {
+  margin: 0;
+  padding: 0;
+}
+
+.message-list li {
+  padding: 0.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #f2f2f2;
+}
+
+/* Our Grid Code */
+
+.app-layout {
+  margin-top: 68px;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100px 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background-color: #ffffff;
+}
+.teams {
+  background-color: #f1f1f1;
+}
+.channels {
+  background-color: #f1f1f1;
+}
+.messages {
+  background-color: #ffffff;
+}
+.write {
+  background-color: #f2f2f2;
+}
+
+.teams {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+.channels {
+  grid-column: 2;
+  grid-row: 1 / 4;
+}
+
+.header {
+  grid-column: 3;
+  grid-row: 1;
+  color: #333;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.messages {
+  grid-column: 3;
+  grid-row: 2;
+  padding: 0 1em;
+  overflow-y: scroll;
+}
+
+.input {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+//
+// Messages
+
+.avatar1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+.messages {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.message-container {
+  display: flex;
+  margin: 30px;
+}
+.message-text {
+  padding-left: 10px;
+}
+.message-text h3 {
+  font-size: 15px;
+  margin: 0;
+  text-transform: capitalize;
+}
+.message-text p {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.message-text span {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: lighter;
 }

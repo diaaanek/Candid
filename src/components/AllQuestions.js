@@ -145,160 +145,150 @@ class AllQuestions extends Component {
     } = this.state;
 
     return (
-      <div className="main">
-        <div className="container">
-          <section className="display-item">
-            <div className="wrapper">
-              <h1>All Interview Questions</h1>
-              <ul>
-                {this.state.loading ? <div>loading...</div> : null}
-                {this.state.user && items ? (
-                  Object.keys(items).map(item => {
-                    const requests = items[item].requests;
-                    return (
-                      <div className="question">
-                        <li key={items[item].key}>
-                          <div className="question-and-answer">
-                            <h3>{items[item].question}</h3>
-                            {this.state.userId !== items[item].createdById ? (
-                              <button
-                                style={{ border: "2px solid green" }}
-                                onClick={() =>
-                                  this.sendRequest(
-                                    items[item].key,
-                                    items[item].createdById
-                                  )
-                                }
-                                disabled={
-                                  requests &&
-                                  Object.keys(requests)
-                                    .map(el => {
-                                      return requests[el].userId;
-                                    })
-                                    .includes(userId)
-                                    ? true
-                                    : false
-                                }
-                              >
-                                <img
-                                  src="https://image.flaticon.com/icons/png/512/39/39794.png"
-                                  style={{ height: "25px", width: "25px" }}
-                                />
-                              </button>
-                            ) : null}
-                            <div>
-                              {requests &&
-                                Object.keys(requests).map(el => {
-                                  if (requests[el].userId === userId) {
-                                    //only auth user question requests
-                                    return (
-                                      <p
-                                        onClick={() =>
-                                          this.removeQuestionRequest(
-                                            requests[el]
-                                              .questionBelongToUserKey,
-                                            items[item].createdById,
-                                            requests[el].keyAtQuestions,
-                                            requests[el].keyAtUsers
-                                          )
-                                        }
-                                      >
-                                        <img
-                                          src="http://cdn.onlinewebfonts.com/svg/img_309151.png"
-                                          style={{
-                                            height: "25px",
-                                            width: "25px"
-                                          }}
-                                        />
-                                      </p>
-                                    );
-                                  }
-                                })}
-                            </div>
-                          </div>
+      <li>
+        <div class="message-container">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqkNgqpXwxINSvtSflLYfSSQylL3PAA8fUymskbcPOb9sG3k"
+            class="avatar"
+          />
+          <div class="message-text">
+            <h3 style={{ textAlign: "left" }}>
+              carl carlson <span>10:30 AM</span>
+            </h3>
+            <p>
+              Nemo temporibus autem officia quae ullam pariatur blanditiis velit
+              eveniet, alias at fuga maxime.{" "}
+            </p>{" "}
+          </div>
 
-                          {this.state.userId !== items[item].createdById ? (
-                            <Link
-                              to={{
-                                pathname: `/user/${items[item].createdById}`,
-
-                                createdById: `${items[item].createdById}`,
-                                createdBy: `${items[item].createdBy}`
-                              }}
+          {this.state.loading ? <div>loading...</div> : null}
+          {this.state.user && items ? (
+            Object.keys(items).map(item => {
+              const requests = items[item].requests;
+              return (
+                <li key={items[item].key}>
+                  <h3>{items[item].question}</h3>
+                  {this.state.userId !== items[item].createdById ? (
+                    // button 1
+                    <button
+                      onClick={() =>
+                        this.sendRequest(
+                          items[item].key,
+                          items[item].createdById
+                        )
+                      }
+                      disabled={
+                        requests &&
+                        Object.keys(requests)
+                          .map(el => {
+                            return requests[el].userId;
+                          })
+                          .includes(userId)
+                          ? true
+                          : false
+                      }
+                    >
+                      <img
+                        src="https://image.flaticon.com/icons/png/512/39/39794.png"
+                        style={{ height: "25px", width: "25px" }}
+                      />
+                    </button>
+                  ) : null}
+                  // button 2
+                  <div>
+                    {requests &&
+                      Object.keys(requests).map(el => {
+                        if (requests[el].userId === userId) {
+                          //only auth user question requests
+                          return (
+                            <p
+                              onClick={() =>
+                                this.removeQuestionRequest(
+                                  requests[el].questionBelongToUserKey,
+                                  items[item].createdById,
+                                  requests[el].keyAtQuestions,
+                                  requests[el].keyAtUsers
+                                )
+                              }
                             >
-                              <p>Asked by: {items[item].user}</p>
-                            </Link>
-                          ) : (
-                            <div>
-                              <Link to="/myprofile">
-                                {items[item].user} (My Profile)
-                              </Link>
+                              <img
+                                src="http://cdn.onlinewebfonts.com/svg/img_309151.png"
+                                style={{
+                                  height: "25px",
+                                  width: "25px"
+                                }}
+                              />
+                            </p>
+                          );
+                        }
+                      })}
+                  </div>
+                  {this.state.userId !== items[item].createdById ? (
+                    <Link
+                      to={{
+                        pathname: `/user/${items[item].createdById}`,
+                        createdById: `${items[item].createdById}`,
+                        createdBy: `${items[item].createdBy}`
+                      }}
+                    >
+                      <p>Asked by: {items[item].user}</p>
+                    </Link>
+                  ) : (
+                    <div>
+                      <Link to="/myprofile">
+                        {items[item].user} (My Profile)
+                      </Link>
 
-                              <button
-                                onClick={() =>
-                                  this.removeItem(
-                                    items[item].key,
-                                    this.state.userId
-                                  )
-                                }
-                              >
-                                Remove Question
-                              </button>
-                              <button
-                                onClick={() => this.updForm(items[item].key)}
-                              >
-                                Update Question
-                              </button>
-                            </div>
-                          )}
+                      <button
+                        onClick={() =>
+                          this.removeItem(items[item].key, this.state.userId)
+                        }
+                      >
+                        Remove Question
+                      </button>
+                      <button onClick={() => this.updForm(items[item].key)}>
+                        Update Question
+                      </button>
+                    </div>
+                  )}
+                  {this.state.updId === items[item].key ? (
+                    <div>
+                      <form
+                        onSubmit={() =>
+                          this.updItem(items[item].key, this.state.userId)
+                        }
+                      >
+                        <input
+                          type="text"
+                          name="updName"
+                          placeholder="What's your name?"
+                          onChange={this.handleChange}
+                          value={this.state.updName}
+                        />
+                        <input
+                          type="text"
+                          name="updItem"
+                          placeholder="What is your question ?"
+                          onChange={this.handleChange}
+                          value={this.state.updItem}
+                        />
 
-                          {this.state.updId === items[item].key ? (
-                            <div>
-                              <form
-                                onSubmit={() =>
-                                  this.updItem(
-                                    items[item].key,
-                                    this.state.userId
-                                  )
-                                }
-                              >
-                                <input
-                                  type="text"
-                                  name="updName"
-                                  placeholder="What's your name?"
-                                  onChange={this.handleChange}
-                                  value={this.state.updName}
-                                />
-                                <input
-                                  type="text"
-                                  name="updItem"
-                                  placeholder="What is your question ?"
-                                  onChange={this.handleChange}
-                                  value={this.state.updItem}
-                                />
-
-                                <button
-                                  disabled={
-                                    updItem && updName !== "" ? false : true
-                                  }
-                                >
-                                  Update
-                                </button>
-                              </form>
-                            </div>
-                          ) : null}
-                        </li>
-                      </div>
-                    );
-                  })
-                ) : (
-                  <p>no questions</p>
-                )}
-              </ul>
-            </div>
-          </section>
+                        <button
+                          disabled={updItem && updName !== "" ? false : true}
+                        >
+                          Update
+                        </button>
+                      </form>
+                    </div>
+                  ) : null}
+                </li>
+              );
+            })
+          ) : (
+            <p>no questions</p>
+          )}
         </div>
-      </div>
+      </li>
     );
   }
 }
