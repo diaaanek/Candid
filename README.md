@@ -1,5 +1,5 @@
 
-<h3 align="center"> [Candidapp.co](https://candidapp.co) </h3>
+<h3 align="center"> [Candid](https://candidapp.co) </h3>
 
 
 
