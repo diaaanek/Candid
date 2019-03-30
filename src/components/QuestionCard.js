@@ -27,7 +27,7 @@ class QuestionCard extends Component {
               <h3
                 style={{
                   fontFamily: "Cereal-bold",
-                  color: "grey",
+                  color: "#01010",
                   fontSize: "12x"
                 }}
               >

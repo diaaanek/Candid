@@ -132,6 +132,7 @@ class MyProfile extends Component {
             <li> What are closures in Javascript?</li>
           </ul>
         </div>
+
         <div class="header box" style={{ fontFamily: "Cereal-bold" }}>
           Question Feed
         </div>
