@@ -72,7 +72,7 @@ const NavNonAuth = () => (
         {" "}
         <button className="button signup">Sign Up </button>
       </Link>{" "}
-      <Link to={routes.SIGN_IN}>Sign In</Link>
+      <Link to={routes.SIGN_UP}>Sign In</Link>
     </div>
   </div>
 );

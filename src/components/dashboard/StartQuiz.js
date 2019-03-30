@@ -172,7 +172,7 @@ class QuizList extends Component {
             <img
               src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553652549/picc.png"
               alt="quiz"
-              style={{ height: "100px", width: "125px" }}
+              style={{ height: "100px", width: "125px", marginTop: "2rem" }}
             />
             <h3>
               Time Remaining: {min} : {sec}
