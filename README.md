@@ -1,4 +1,4 @@
-# Candidapp.co
+# CANDID
 Under construction, to check it out live: [Candid](https://candidapp.co) 
 
 
