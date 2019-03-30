@@ -161,7 +161,7 @@ class AllQuestions extends Component {
                   }}
                 >
                   <img
-                    src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-dog-illustration-by-vexels.png"
+                    src="https://pbs.twimg.com/profile_images/549561819010854912/AJonc96g.png"
                     class="avatar"
                   />{" "}
                   <div class="message-text">
@@ -183,6 +183,7 @@ class AllQuestions extends Component {
                     // button 1
 
                     <span
+                      style={{ float: "right" }}
                       onClick={() =>
                         this.sendRequest(
                           items[item].key,

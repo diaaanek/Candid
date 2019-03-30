@@ -130,7 +130,6 @@ class MyProfile extends Component {
           }}
         >
           {" "}
-          Study
           <button
             style={{
               marginTop: "1em",
@@ -346,7 +345,7 @@ class MyProfile extends Component {
           Question Feed
         </div>
         <div class="messages box">
-          <div class="input box">
+          {/*    <div class="input box">
             <div class="input-wrapper">
               {this.state.user ? (
                 <section className="add-item">
@@ -377,6 +376,7 @@ class MyProfile extends Component {
               ) : null}
             </div>
           </div>
+          */}
           <ul class="message-list">
             <li>
               {" "}
@@ -401,6 +401,43 @@ class MyProfile extends Component {
 
             <AllQuestions />
           </ul>
+        </div>
+        <div class="input box">
+          <div class="input-wrapper">
+            {this.state.user ? (
+              <section className="add-item">
+                <form onSubmit={this.handleSubmit}>
+                  <input
+                    type="text"
+                    placeholder="Submit Question: What is Javascript and why do we love it?"
+                    name="currentItem"
+                    onChange={this.handleChange}
+                    value={this.state.currentItem}
+                    style={{
+                      fontSize: "15px",
+                      backgroundColor: "White",
+                      boxShadow:
+                        "0 2px 5px 0 rgba(0, 0, 0, 0.09), 0 2px 5px 0 rgba(0, 0, 0, 0.08)"
+                    }}
+                  />{" "}
+                  <button
+                    className="start"
+                    style={{
+                      display: "inlineBlock",
+                      position: "relative",
+                      padding: "13px",
+                      marginLeft: "10px",
+                      fontFamily: "Cereal-bold",
+                      fontSize: "14px"
+                    }}
+                    disabled={currentItem && username !== "" ? false : true}
+                  >
+                    Post
+                  </button>
+                </form>
+              </section>
+            ) : null}
+          </div>
         </div>
       </div>
     );
