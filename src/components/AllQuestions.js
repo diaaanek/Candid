@@ -151,140 +151,91 @@ class AllQuestions extends Component {
           Object.keys(items).map(item => {
             const requests = items[item].requests;
             return (
-              <div
-                className="messages-container"
-                key={items[item].key}
-                style={{
-                  display: "-webkit-flex",
-                  display: "flex",
-                  margin: "1em"
-                }}
-              >
-                <h3>{items[item].question}</h3>
-                {this.state.userId !== items[item].createdById ? (
-                  // button 1
-                  <p
-                    onClick={() =>
-                      this.sendRequest(items[item].key, items[item].createdById)
-                    }
-                    disabled={
-                      requests &&
-                      Object.keys(requests)
-                        .map(el => {
-                          return requests[el].userId;
-                        })
-                        .includes(userId)
-                        ? true
-                        : false
-                    }
-                  >
-                    <img
-                      src="http://www.sclance.com/pngs/thumb-up-png/thumb_up_png_1379527.png"
-                      style={{ height: "25px", width: "25px" }}
-                    />
-                  </p>
-                ) : null}
-
-                <div>
-                  {requests &&
-                    Object.keys(requests).map(el => {
-                      if (requests[el].userId === userId) {
-                        //only auth user question requests
-                        return (
-                          <p
-                            onClick={() =>
-                              this.removeUserQuestionRequest(
-                                requests[el].questionBelongToUserKey,
-                                items[item].createdById,
-                                requests[el].keyAtQuestions,
-                                requests[el].keyAtUsers
-                              )
-                            }
-                          >
-                            <img
-                              src="http://pluspng.com/img-png/png-thumbs-down-thumbs-down-icon-1600.png"
-                              style={{
-                                height: "25px",
-                                width: "25px"
-                              }}
-                            />
-                          </p>
-                        );
-                      }
-                    })}
-                </div>
-                {this.state.userId !== items[item].createdById ? (
-                  <Link
-                    to={{
-                      pathname: `/user/${items[item].createdById}`,
-                      createdById: `${items[item].createdById}`,
-                      createdBy: `${items[item].createdBy}`
-                    }}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <p>Asked by: {items[item].user}</p>
-                  </Link>
-                ) : (
-                  <div>
-                    <Link to="/myprofile" style={{ textDecoration: "none" }}>
-                      {items[item].user} (My Profile)
-                    </Link>
-
-                    <button
-                      onClick={() =>
-                        this.removeItem(items[item].key, this.state.userId)
-                      }
-                    >
-                      <img
-                        src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-8/256/Open-folder-delete-icon.png"
-                        style={{
-                          height: "25px",
-                          width: "25px"
+              <li>
+                <div
+                  key={items[item].key}
+                  style={{
+                    display: "-webkit-flex",
+                    display: "flex",
+                    margin: "1em"
+                  }}
+                >
+                  <img
+                    src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-dog-illustration-by-vexels.png"
+                    class="avatar"
+                  />{" "}
+                  <div class="message-text">
+                    <h3 style={{ textAlign: "left" }}>
+                      <Link
+                        to={{
+                          pathname: `/user/${items[item].createdById}`,
+                          createdById: `${items[item].createdById}`,
+                          createdBy: `${items[item].createdBy}`
                         }}
-                      />
-                    </button>
-                    <button onClick={() => this.updForm(items[item].key)}>
-                      <img
-                        src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Edit-validated-icon.png"
-                        style={{
-                          height: "25px",
-                          width: "25px"
-                        }}
-                      />
-                    </button>
-                  </div>
-                )}
-                {this.state.updId === items[item].key ? (
-                  <div>
-                    <form
-                      onSubmit={() =>
-                        this.updItem(items[item].key, this.state.userId)
-                      }
-                    >
-                      <input
-                        type="text"
-                        name="updName"
-                        placeholder="What's your name?"
-                        onChange={this.handleChange}
-                        value={this.state.updName}
-                      />
-                      <input
-                        type="text"
-                        name="updItem"
-                        placeholder="What is your question ?"
-                        onChange={this.handleChange}
-                        value={this.state.updItem}
-                      />
-
-                      <button
-                        disabled={updItem && updName !== "" ? false : true}
+                        style={{ textDecoration: "none" }}
                       >
-                        Update
-                      </button>
-                    </form>
+                        <h3>{items[item].user}</h3>
+                      </Link>
+                    </h3>
+                    <p>{items[item].question}</p>
                   </div>
-                ) : null}
-              </div>
+                  {this.state.userId !== items[item].createdById ? (
+                    // button 1
+
+                    <span
+                      onClick={() =>
+                        this.sendRequest(
+                          items[item].key,
+                          items[item].createdById
+                        )
+                      }
+                      disabled={
+                        requests &&
+                        Object.keys(requests)
+                          .map(el => {
+                            return requests[el].userId;
+                          })
+                          .includes(userId)
+                          ? true
+                          : false
+                      }
+                    >
+                      <img
+                        src="http://www.sclance.com/pngs/thumb-up-png/thumb_up_png_1379527.png"
+                        style={{ height: "25px", width: "25px" }}
+                      />
+                    </span>
+                  ) : null}
+                  <div>
+                    {requests &&
+                      Object.keys(requests).map(el => {
+                        if (requests[el].userId === userId) {
+                          //only auth user question requests
+                          return (
+                            <span
+                              onClick={() =>
+                                this.removeUserQuestionRequest(
+                                  requests[el].questionBelongToUserKey,
+                                  items[item].createdById,
+                                  requests[el].keyAtQuestions,
+                                  requests[el].keyAtUsers
+                                )
+                              }
+                            >
+                              <img
+                                src="http://pluspng.com/img-png/png-thumbs-down-thumbs-down-icon-1600.png"
+                                style={{
+                                  height: "25px",
+                                  width: "25px"
+                                }}
+                              />
+                            </span>
+                          );
+                        }
+                      })}
+                  </div>
+                </div>
+              </li>
             );
           })
         ) : (

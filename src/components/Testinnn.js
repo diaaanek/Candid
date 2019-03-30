@@ -1,21 +1,50 @@
 {
   /* QUESTION FEEED  */
 }
-<div class="message-container">
-  <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqkNgqpXwxINSvtSflLYfSSQylL3PAA8fUymskbcPOb9sG3k"
-    class="avatar"
-  />
-  <div class="message-text">
-    <h3 style={{ textAlign: "left" }}>
-      carl carlson <span>10:30 AM</span>
-    </h3>
-    <p>
-      Nemo temporibus autem officia quae ullam pariatur blanditiis
-      velit eveniet, alias at fuga maxime.{" "}
-    </p>{" "}
+<li>
+  <div class="message-container">
+    {" "}
+
+
+
+    <img
+      src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-dog-illustration-by-vexels.png"
+      class="avatar"
+    />{" "}
+
+
+    <div class="message-text">
+      <h3 style={{ textAlign: "left" }}>
+        Candid Demo <span>10:30 AM</span>
+      </h3>
+      <p>Create a map function that does what Array.map() does. </p>{" "}
+    </div>
+
+
+
+
+
   </div>
+</li>
+
+
+
+
+
+<img
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqkNgqpXwxINSvtSflLYfSSQylL3PAA8fUymskbcPOb9sG3k"
+  class="avatar"
+/>
+<div class="message-text">
+  <h3 style={{ textAlign: "left" }}>
+    carl carlson <span>10:30 AM</span>
+  </h3>
+  <p>
+    Nemo temporibus autem officia quae ullam pariatur blanditiis
+    velit eveniet, alias at fuga maxime.{" "}
+  </p>{" "}
 </div>
+
 
 
 
