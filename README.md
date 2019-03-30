@@ -43,7 +43,6 @@ after the dependencies have been installed, you will need to make sure you have 
 * HTML5 & CSS3
 * [Javascript](https://www.javascript.com/) - programming language
 * [Firebase](https://www.firebase.com) - real time cloud database
-* [Rails](https://rubyonrails.com/) - routing framework
 * [React.js](https://reactjs.org/) - user interface library
 * [Node.js](https://nodejs.org/en/) - javascript runtime
 
