@@ -1,5 +1,5 @@
 
-<h3 align="center"> [https://candidapp.co](https://candidapp.co) </h3>
+<h3 align="center"> [Candidapp.co](https://candidapp.co) </h3>
 
 
 
@@ -26,7 +26,6 @@ after the dependencies have been installed, you will need to make sure you have 
 
 ## Built With
 * HTML5 & CSS3
-* [Bootstrap](https://getbootstrap.com/) - CSS framework
 * [Javascript](https://www.javascript.com/) - programming language
 * [Postgres](https://www.postgres.com/) - database
 * [Rails](https://rubyonrails.com/) - routing framework
