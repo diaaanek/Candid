@@ -12,12 +12,12 @@ Users are authenticated via Google OAuth. Upon sign in, users can take coding qu
 *** Currently under construction. To continue this app, I would integrate my /signup /signin forms with my routes, as well as the ability to create and edit quizzes.
 
 Topics include:
-		- Custom Routing
-		- Integrating Firebase
-		- Managing state 
-		- Registering users, Firebase for Google OAuth login
-		- Logging users in and out
-		- Creating, editing, and deleting interview questions from Firebase
+		*- Custom Routing
+		*- Integrating Firebase
+		*- Managing state 
+		*- Registering users, Firebase for Google OAuth login
+		*- Logging users in and out
+		*- Creating, editing, and deleting interview questions from Firebase
 
 
 ### Prerequisites
