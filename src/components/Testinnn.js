@@ -1,6 +1,29 @@
 {
   /* QUESTION FEEED  */
 }
+<div class="message-container">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqkNgqpXwxINSvtSflLYfSSQylL3PAA8fUymskbcPOb9sG3k"
+    class="avatar"
+  />
+  <div class="message-text">
+    <h3 style={{ textAlign: "left" }}>
+      carl carlson <span>10:30 AM</span>
+    </h3>
+    <p>
+      Nemo temporibus autem officia quae ullam pariatur blanditiis
+      velit eveniet, alias at fuga maxime.{" "}
+    </p>{" "}
+  </div>
+</div>
+
+
+
+
+
+
+
+
 <div class="question">
   <div class="votes">
     <div class="upvote" />

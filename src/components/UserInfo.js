@@ -15,6 +15,7 @@ const UserData = ({ authUser }) => (
   <div>
     <div>
       <div className="dropdown">
+        {" "}
         <img src={authUser.photoURL} className="avatar" alt="user-face" />
         <a style={{ marginTop: "18px" }}>
           {" "}

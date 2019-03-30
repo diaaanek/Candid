@@ -126,7 +126,7 @@ class AllQuestions extends Component {
     questionKey,
     userKey
   ) => {
-    db.removequestionRequest(questionBelongToUserKey, questionKey);
+    db.removeUserQuestionRequest(questionBelongToUserKey, questionKey);
     db.removeUserQuestionRequest(
       questionCreatedById,
       questionBelongToUserKey,
@@ -145,150 +145,152 @@ class AllQuestions extends Component {
     } = this.state;
 
     return (
-      <li>
-        <div class="message-container">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqkNgqpXwxINSvtSflLYfSSQylL3PAA8fUymskbcPOb9sG3k"
-            class="avatar"
-          />
-          <div class="message-text">
-            <h3 style={{ textAlign: "left" }}>
-              carl carlson <span>10:30 AM</span>
-            </h3>
-            <p>
-              Nemo temporibus autem officia quae ullam pariatur blanditiis velit
-              eveniet, alias at fuga maxime.{" "}
-            </p>{" "}
-          </div>
+      <div>
+        {this.state.loading ? <div>loading...</div> : null}
+        {this.state.user && items ? (
+          Object.keys(items).map(item => {
+            const requests = items[item].requests;
+            return (
+              <div
+                className="messages-container"
+                key={items[item].key}
+                style={{
+                  display: "-webkit-flex",
+                  display: "flex",
+                  margin: "1em"
+                }}
+              >
+                <h3>{items[item].question}</h3>
+                {this.state.userId !== items[item].createdById ? (
+                  // button 1
+                  <p
+                    onClick={() =>
+                      this.sendRequest(items[item].key, items[item].createdById)
+                    }
+                    disabled={
+                      requests &&
+                      Object.keys(requests)
+                        .map(el => {
+                          return requests[el].userId;
+                        })
+                        .includes(userId)
+                        ? true
+                        : false
+                    }
+                  >
+                    <img
+                      src="http://www.sclance.com/pngs/thumb-up-png/thumb_up_png_1379527.png"
+                      style={{ height: "25px", width: "25px" }}
+                    />
+                  </p>
+                ) : null}
 
-          {this.state.loading ? <div>loading...</div> : null}
-          {this.state.user && items ? (
-            Object.keys(items).map(item => {
-              const requests = items[item].requests;
-              return (
-                <li key={items[item].key}>
-                  <h3>{items[item].question}</h3>
-                  {this.state.userId !== items[item].createdById ? (
-                    // button 1
+                <div>
+                  {requests &&
+                    Object.keys(requests).map(el => {
+                      if (requests[el].userId === userId) {
+                        //only auth user question requests
+                        return (
+                          <p
+                            onClick={() =>
+                              this.removeUserQuestionRequest(
+                                requests[el].questionBelongToUserKey,
+                                items[item].createdById,
+                                requests[el].keyAtQuestions,
+                                requests[el].keyAtUsers
+                              )
+                            }
+                          >
+                            <img
+                              src="http://pluspng.com/img-png/png-thumbs-down-thumbs-down-icon-1600.png"
+                              style={{
+                                height: "25px",
+                                width: "25px"
+                              }}
+                            />
+                          </p>
+                        );
+                      }
+                    })}
+                </div>
+                {this.state.userId !== items[item].createdById ? (
+                  <Link
+                    to={{
+                      pathname: `/user/${items[item].createdById}`,
+                      createdById: `${items[item].createdById}`,
+                      createdBy: `${items[item].createdBy}`
+                    }}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <p>Asked by: {items[item].user}</p>
+                  </Link>
+                ) : (
+                  <div>
+                    <Link to="/myprofile" style={{ textDecoration: "none" }}>
+                      {items[item].user} (My Profile)
+                    </Link>
+
                     <button
                       onClick={() =>
-                        this.sendRequest(
-                          items[item].key,
-                          items[item].createdById
-                        )
-                      }
-                      disabled={
-                        requests &&
-                        Object.keys(requests)
-                          .map(el => {
-                            return requests[el].userId;
-                          })
-                          .includes(userId)
-                          ? true
-                          : false
+                        this.removeItem(items[item].key, this.state.userId)
                       }
                     >
                       <img
-                        src="https://image.flaticon.com/icons/png/512/39/39794.png"
-                        style={{ height: "25px", width: "25px" }}
+                        src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-8/256/Open-folder-delete-icon.png"
+                        style={{
+                          height: "25px",
+                          width: "25px"
+                        }}
                       />
                     </button>
-                  ) : null}
-                  // button 2
-                  <div>
-                    {requests &&
-                      Object.keys(requests).map(el => {
-                        if (requests[el].userId === userId) {
-                          //only auth user question requests
-                          return (
-                            <p
-                              onClick={() =>
-                                this.removeQuestionRequest(
-                                  requests[el].questionBelongToUserKey,
-                                  items[item].createdById,
-                                  requests[el].keyAtQuestions,
-                                  requests[el].keyAtUsers
-                                )
-                              }
-                            >
-                              <img
-                                src="http://cdn.onlinewebfonts.com/svg/img_309151.png"
-                                style={{
-                                  height: "25px",
-                                  width: "25px"
-                                }}
-                              />
-                            </p>
-                          );
-                        }
-                      })}
+                    <button onClick={() => this.updForm(items[item].key)}>
+                      <img
+                        src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Edit-validated-icon.png"
+                        style={{
+                          height: "25px",
+                          width: "25px"
+                        }}
+                      />
+                    </button>
                   </div>
-                  {this.state.userId !== items[item].createdById ? (
-                    <Link
-                      to={{
-                        pathname: `/user/${items[item].createdById}`,
-                        createdById: `${items[item].createdById}`,
-                        createdBy: `${items[item].createdBy}`
-                      }}
+                )}
+                {this.state.updId === items[item].key ? (
+                  <div>
+                    <form
+                      onSubmit={() =>
+                        this.updItem(items[item].key, this.state.userId)
+                      }
                     >
-                      <p>Asked by: {items[item].user}</p>
-                    </Link>
-                  ) : (
-                    <div>
-                      <Link to="/myprofile">
-                        {items[item].user} (My Profile)
-                      </Link>
+                      <input
+                        type="text"
+                        name="updName"
+                        placeholder="What's your name?"
+                        onChange={this.handleChange}
+                        value={this.state.updName}
+                      />
+                      <input
+                        type="text"
+                        name="updItem"
+                        placeholder="What is your question ?"
+                        onChange={this.handleChange}
+                        value={this.state.updItem}
+                      />
 
                       <button
-                        onClick={() =>
-                          this.removeItem(items[item].key, this.state.userId)
-                        }
+                        disabled={updItem && updName !== "" ? false : true}
                       >
-                        Remove Question
+                        Update
                       </button>
-                      <button onClick={() => this.updForm(items[item].key)}>
-                        Update Question
-                      </button>
-                    </div>
-                  )}
-                  {this.state.updId === items[item].key ? (
-                    <div>
-                      <form
-                        onSubmit={() =>
-                          this.updItem(items[item].key, this.state.userId)
-                        }
-                      >
-                        <input
-                          type="text"
-                          name="updName"
-                          placeholder="What's your name?"
-                          onChange={this.handleChange}
-                          value={this.state.updName}
-                        />
-                        <input
-                          type="text"
-                          name="updItem"
-                          placeholder="What is your question ?"
-                          onChange={this.handleChange}
-                          value={this.state.updItem}
-                        />
-
-                        <button
-                          disabled={updItem && updName !== "" ? false : true}
-                        >
-                          Update
-                        </button>
-                      </form>
-                    </div>
-                  ) : null}
-                </li>
-              );
-            })
-          ) : (
-            <p>no questions</p>
-          )}
-        </div>
-      </li>
+                    </form>
+                  </div>
+                ) : null}
+              </div>
+            );
+          })
+        ) : (
+          <p>no questions</p>
+        )}
+      </div>
     );
   }
 }

@@ -219,12 +219,18 @@ class MyProfile extends Component {
 
         <div
           class="channels box"
-          style={{ fontFamily: "Cereal-bold", color: "010101" }}
+          style={{ fontFamily: "Cereal-bold", color: "black" }}
         >
           {" "}
           My Questions
           <div>
-            <li style={{ margin: "0", textAlign: "left", listStyle: "none" }}>
+            <li
+              style={{
+                margin: "0",
+                textAlign: "left",
+                listStyle: "none"
+              }}
+            >
               {this.state.loading ? <div>loading...</div> : null}
               {this.state.user && this.state.items ? (
                 Object.keys(items).map(item => {
@@ -237,7 +243,9 @@ class MyProfile extends Component {
                         marginTop: ".75em",
                         boxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.15)",
                         listStyle: "none",
-                        borderRadius: "3px"
+                        borderRadius: "4px",
+                        paddingLeft: "1em",
+                        paddingRight: "1em"
                       }}
                     >
                       <button
@@ -246,15 +254,14 @@ class MyProfile extends Component {
                         }
                         style={{
                           backgroundColor: "white",
-                          marginLeft: "5px",
-                          marginTop: "5px"
+                          marginTop: "8px"
                         }}
                       >
                         <img
-                          src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png"
+                          src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-8/256/Open-folder-delete-icon.png"
                           style={{
-                            height: "18px",
-                            width: "18px"
+                            height: "25px",
+                            width: "25px"
                           }}
                         />
                       </button>
@@ -263,28 +270,35 @@ class MyProfile extends Component {
                         style={{ backgroundColor: "white" }}
                       >
                         <img
-                          src="http://simpleicon.com/wp-content/uploads/pencil.png"
+                          src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Edit-validated-icon.png"
                           style={{
-                            height: "18px",
-                            width: "18px"
+                            height: "25px",
+                            width: "25px"
                           }}
                         />
                       </button>
                       <span
-                        style={{ fontFamily: "Cereal-bold", color: "black" }}
+                        style={{
+                          fontFamily: "Cereal-bold",
+                          color: "black"
+                        }}
                       >
                         {" "}
                         <br /> {items[item].question}{" "}
                       </span>
                       <p
-                        style={{ fontFamily: "Cereal-light", fontSize: "13px" }}
+                        style={{
+                          fontFamily: "Cereal-light",
+                          fontSize: "13px",
+                          paddingBottom: "5px"
+                        }}
                       >
                         Liked by:
                       </p>
 
                       {requests &&
                         Object.keys(requests).map(el => {
-                          return <div>{requests[el].name}</div>;
+                          return <p>{requests[el].name}</p>;
                         })}
                       {this.state.userId === items[item].createdById ? (
                         <div />
@@ -308,10 +322,10 @@ class MyProfile extends Component {
                               style={{ backgroundColor: "white" }}
                             >
                               <img
-                                src="http://simpleicon.com/wp-content/uploads/pencil.png"
+                                src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/256/Edit-validated-icon.png"
                                 style={{
-                                  height: "18px",
-                                  width: "18px"
+                                  height: "25px",
+                                  width: "25px"
                                 }}
                               />
                             </button>
@@ -368,24 +382,24 @@ class MyProfile extends Component {
               {" "}
               <QuestionCard />
             </li>
+
             <li>
               <div class="message-container">
+                {" "}
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBqkNgqpXwxINSvtSflLYfSSQylL3PAA8fUymskbcPOb9sG3k"
+                  src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-dog-illustration-by-vexels.png"
                   class="avatar"
-                />
+                />{" "}
                 <div class="message-text">
                   <h3 style={{ textAlign: "left" }}>
-                    carl carlson <span>10:30 AM</span>
+                    Candid Demo <span>10:30 AM</span>
                   </h3>
-                  <p>
-                    Nemo temporibus autem officia quae ullam pariatur blanditiis
-                    velit eveniet, alias at fuga maxime.{" "}
-                  </p>{" "}
+                  <p>Create a map function that does what Array.map() does. </p>{" "}
                 </div>
               </div>
             </li>
-            <li> </li>
+
+            <AllQuestions />
           </ul>
         </div>
       </div>
