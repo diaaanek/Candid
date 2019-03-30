@@ -121,16 +121,211 @@ class MyProfile extends Component {
     const { updItem, updName, currentItem, username, items } = this.state;
     return (
       <div class="app-layout" style={{ height: "100vh" }}>
-        <div class="teams box" style={{ fontFamily: "Cereal-bold" }}>
+        <div
+          class="teams box"
+          style={{
+            fontFamily: "Cereal-bold",
+            backgroundColor: "white",
+            color: "#010101"
+          }}
+        >
           {" "}
           Study
+          <button
+            style={{
+              marginTop: "1em",
+              backgroundColor: "white",
+              marginTop: "1em"
+            }}
+          >
+            {" "}
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965944/logo-html-5.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />{" "}
+          </button>
+          <button style={{ marginTop: "1em", backgroundColor: "white" }}>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-css.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />
+          </button>
+          <button style={{ marginTop: "1em", backgroundColor: "white" }}>
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />
+          </button>
+          <button style={{ marginTop: "1em", backgroundColor: "white" }}>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-react.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />
+          </button>
+          <button style={{ marginTop: "1em", backgroundColor: "white" }}>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/c_scale,w_61/v1553965945/logo-ruby.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />
+          </button>
+          <button style={{ marginTop: "1em", backgroundColor: "white" }}>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-data-structures-algorithms.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />
+          </button>
+          <button style={{ marginTop: "1em", backgroundColor: "white" }}>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965942/logo-sql.svg"
+              style={{
+                height: "50px",
+                width: "50px",
+                marginTop: "5px",
+                marginBottom: "5px"
+              }}
+            />
+          </button>
         </div>
-        <div class="channels box" style={{ fontFamily: "Cereal-bold" }}>
+
+        <div
+          class="channels box"
+          style={{ fontFamily: "Cereal-bold", color: "010101" }}
+        >
           {" "}
           My Questions
-          <ul>
-            <li> What are closures in Javascript?</li>
-          </ul>
+          <div>
+            <li style={{ margin: "0", textAlign: "left", listStyle: "none" }}>
+              {this.state.loading ? <div>loading...</div> : null}
+              {this.state.user && this.state.items ? (
+                Object.keys(items).map(item => {
+                  const requests = items[item].requests;
+                  return (
+                    <li
+                      key={items[item].key}
+                      style={{
+                        backgroundColor: "white",
+                        marginTop: ".75em",
+                        boxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.15)",
+                        listStyle: "none",
+                        borderRadius: "3px"
+                      }}
+                    >
+                      <button
+                        onClick={() =>
+                          this.removeItem(items[item].key, this.state.userId)
+                        }
+                        style={{
+                          backgroundColor: "white",
+                          marginLeft: "5px",
+                          marginTop: "5px"
+                        }}
+                      >
+                        <img
+                          src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png"
+                          style={{
+                            height: "18px",
+                            width: "18px"
+                          }}
+                        />
+                      </button>
+                      <button
+                        onClick={() => this.updForm(items[item].key)}
+                        style={{ backgroundColor: "white" }}
+                      >
+                        <img
+                          src="http://simpleicon.com/wp-content/uploads/pencil.png"
+                          style={{
+                            height: "18px",
+                            width: "18px"
+                          }}
+                        />
+                      </button>
+                      <span
+                        style={{ fontFamily: "Cereal-bold", color: "black" }}
+                      >
+                        {" "}
+                        <br /> {items[item].question}{" "}
+                      </span>
+                      <p
+                        style={{ fontFamily: "Cereal-light", fontSize: "13px" }}
+                      >
+                        Liked by:
+                      </p>
+
+                      {requests &&
+                        Object.keys(requests).map(el => {
+                          return <div>{requests[el].name}</div>;
+                        })}
+                      {this.state.userId === items[item].createdById ? (
+                        <div />
+                      ) : null}
+                      {this.state.updId === items[item].key ? (
+                        <div>
+                          <form
+                            onSubmit={() =>
+                              this.updItem(items[item].key, this.state.userId)
+                            }
+                          >
+                            <input
+                              type="text"
+                              name="updItem"
+                              placeholder="What is your question?"
+                              onChange={this.handleChange}
+                              value={this.state.updItem}
+                            />
+                            <button
+                              disabled={updItem !== "" ? false : true}
+                              style={{ backgroundColor: "white" }}
+                            >
+                              <img
+                                src="http://simpleicon.com/wp-content/uploads/pencil.png"
+                                style={{
+                                  height: "18px",
+                                  width: "18px"
+                                }}
+                              />
+                            </button>
+                          </form>
+                        </div>
+                      ) : null}
+                    </li>
+                  );
+                })
+              ) : (
+                <p>Ask a question to the right!</p>
+              )}
+            </li>
+          </div>
         </div>
 
         <div class="header box" style={{ fontFamily: "Cereal-bold" }}>
@@ -190,10 +385,7 @@ class MyProfile extends Component {
                 </div>
               </div>
             </li>
-            <li>
-              {" "}
-              <AllQuestions />{" "}
-            </li>
+            <li> </li>
           </ul>
         </div>
       </div>

@@ -35,6 +35,10 @@ class QuizList extends Component {
             <h4>
               A selection of technical challenges based on your skill set.
             </h4>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/REST_2x.png"
+              style={{ height: "", width: "" }}
+            />
           </div>{" "}
           <br />
           <div class="card__container">
@@ -102,6 +106,7 @@ class QuizList extends Component {
             <h1 style={{ fontFamily: "Cereal-bold" }}>
               Test Your Technical Chops
             </h1>
+            <h4> Coming soon: Prep on the go with our Mobile Application</h4>
           </div>{" "}
           <br />
           {list.map((quiz, index) => {

@@ -226,7 +226,7 @@ input {
 /* Our Grid Code */
 
 .app-layout {
-  margin-top: 68px;
+  margin-top: 65px;
   display: grid;
   height: 100vh;
   grid-template-columns: 100px 250px 1fr;
@@ -251,12 +251,14 @@ input {
 
 .teams {
   grid-column: 1;
+  height: 100vh;
   grid-row: 1 / 4;
 }
 
 .channels {
   grid-column: 2;
   grid-row: 1 / 4;
+  // max-height: 100%;
 }
 
 .header {

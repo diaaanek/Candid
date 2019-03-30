@@ -53,7 +53,7 @@ export default ({ user }) => (
             <h2> Learn from the best, and </h2>{" "}
             <h2>practice your dev skillz with the rest.</h2>{" "}
           </h2>
-          <p id="first-line">
+          <p>
             {" "}
             A social interview prep application for aspiring and bad-ass web
             developers.

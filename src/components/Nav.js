@@ -39,10 +39,10 @@ const NavAuth = () => (
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553635345/logo.png"
         />
       </Link>
-      <Link to={routes.HOME} style={{ marginTop: "13px" }}>
+      <Link to={routes.HOME} style={{ marginTop: ".85em" }}>
         Learn
       </Link>
-      <Link to={routes.MYPROFILE} style={{ marginTop: "13px" }}>
+      <Link to={routes.MYPROFILE} style={{ marginTop: ".85em" }}>
         Study
       </Link>
     </div>

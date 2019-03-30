@@ -46,10 +46,10 @@ h2 {
   font-family: "Cereal-light", "Avenir";
   position: fixed;
   top: 0;
-  padding: 8px 45px;
+  padding: 8px 10px;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 0 0 2px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
+  box-shadow: 0 0px 3px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
   // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.09), 0 2px 10px 0 rgba(0, 0, 0, 0.08);
   z-index: 2;
   display: flex;
@@ -168,38 +168,37 @@ h2 {
 
     height: 100vh;
     overflow: hidden;
-    // height: 100%;
+
     width: 100%;
-    // match the viewport height of the browser window
   }
 
-  #first-line {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    // border-right: 0.15em solid grey; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
-
-  /* The typing effect */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: grey;
-    }
-  }
+  // #first-line {
+  //   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  //   // border-right: 0.15em solid grey; /* The typwriter cursor */
+  //   white-space: nowrap; /* Keeps the content on a single line */
+  //   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  // }
+  //
+  // /* The typing effect */
+  // @keyframes typing {
+  //   from {
+  //     width: 0;
+  //   }
+  //   to {
+  //     width: 100%;
+  //   }
+  // }
+  //
+  // /* The typewriter cursor effect */
+  // @keyframes blink-caret {
+  //   from,
+  //   to {
+  //     border-color: transparent;
+  //   }
+  //   50% {
+  //     border-color: grey;
+  //   }
+  // }
 
   #manage {
     margin-left: 25px;
