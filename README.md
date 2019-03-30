@@ -1,8 +1,23 @@
 # CANDID
-Under construction, to check it out live: [Candid](https://candidapp.co) 
+
+A technical prep/learning platform application for developers & coders. Made with React.js (create-react-app) and Firebase Real time database. 
+
+[Check it out live](https://candidapp.co) 
 
 
 
+## Features 
+Users are authenticated via Google OAuth. Upon sign in, users can take coding quizzes and challenges on /dashboard. They can also checkout the question feed, and create, edit, delete questions, as well as like and unlike other user's questions.
+
+*** Currently under construction. To continue this app, I would integrate my /signup /signin forms with my routes, as well as the ability to create and edit quizzes.
+
+Topics include:
+		- Custom Routing
+		- Integrating Firebase
+		- Managing state 
+		- Registering users, Firebase for Google OAuth login
+		- Logging users in and out
+		- Creating, editing, and deleting interview questions from Firebase
 
 
 ### Prerequisites
