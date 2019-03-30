@@ -1,8 +1,9 @@
+# Candidapp.co
 Under construction, to check it out live: [Candid](https://candidapp.co) 
 
 
 
-## Getting Started
+
 
 ### Prerequisites
 You will need both `node` and `yarn` installed on your computer in order to run this app. You can find out more about `yarn` at their [official site.](https://yarnpkg.com/lang/en/docs/install/)
