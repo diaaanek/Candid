@@ -1,4 +1,4 @@
-Under construction, to check it our: [Candid](https://candidapp.co) 
+Under construction, to check it out live: [Candid](https://candidapp.co) 
 
 
 
