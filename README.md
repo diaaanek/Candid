@@ -1,6 +1,6 @@
 
-<h3 align="center">:computer: Candid :dart: </h3>
-<h1 align="center">:construction: UNDER CONSTRUCTION :construction: </h1>
+<h3 align="center"> [https://candidapp.co](https://candidapp.co) </h3>
+
 
 
 ## Getting Started
