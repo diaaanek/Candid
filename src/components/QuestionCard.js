@@ -3,12 +3,13 @@ import questions from "./questions.json";
 
 import Questionanswerpanel from "./questionpanel.js";
 
-import Button from "@material-ui/core/Button";
+import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 class QuestionCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isFlipped: false,
       number: Math.floor(Math.random() * questions.length)
     };
     this.updateNumber = this.updateNumber.bind(this);
@@ -20,29 +21,44 @@ class QuestionCard extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <div class="question">
-            <div class="question-and-answer">
-              <h3
-                style={{
-                  fontFamily: "Cereal-bold",
-                  color: "#01010",
-                  fontSize: "12x"
-                }}
-              >
-                {Object.keys(questions[this.state.number])}
-              </h3>
-              <p>{Object.values(questions[this.state.number])}</p>
-            </div>
-          </div>
-        </div>
+      <div style={{ justifyContent: "center" }}>
+        <Flippy
+          flipOnHover={false}
+          flipOnClick={false}
+          flipDirection="horizontal"
+          ref={r => (this.flippyHorizontal = r)}
+        >
+          <FrontSide
+            style={{
+              justifyContent: "center",
+
+              alignItems: "center",
+              boxShadow: "0 0 0 0"
+            }}
+          >
+            <h4>{Object.keys(questions[this.state.number])}</h4>
+          </FrontSide>
+          <BackSide
+            style={{
+              alignItems: "center",
+              boxShadow: "0 0 0 0"
+            }}
+          >
+            {Object.values(questions[this.state.number])}
+          </BackSide>
+        </Flippy>
+
+        {"    "}
+        {"    "}
+
+        <button
+          className="start"
+          onClick={() => this.flippyHorizontal.toggle()}
+        >
+          Show Answer
+        </button>
         <button className="start" onClick={this.updateNumber}>
           Next Question
-        </button>
-        {"    "}
-        <button className="start" onClick={this.updateNumber}>
-          Show Answer
         </button>
       </div>
     );

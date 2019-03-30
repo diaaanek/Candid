@@ -10,16 +10,16 @@ class QuizInfo extends Component {
   render() {
     const { quiz, onBack, onPress } = this.props;
     return (
-      <div style={{ marginTop: "72px" }}>
+      <div style={{ marginTop: "80px" }}>
         <h1 style={{ fontWeight: "700", fontFamily: "Cereal-bold" }}>
           {" "}
           Take Quizzes{" "}
         </h1>
         <img
-          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589874/archive.svg"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/REST_2x.png"
           style={{
-            height: "100px",
-            width: "100px",
+            height: "150px",
+            width: "175px",
             maxWidth: 345
           }}
         />
@@ -89,14 +89,17 @@ class QuizInfo extends Component {
                       variant="caption"
                       style={{
                         textAlign: "left",
-                        fontSize: "13px",
+                        fontSize: "15px",
                         fontFamily: "Cereal-light"
                       }}
                     >
                       This Quiz is based on the following criteria:
                     </div>
                     <br />
-                    <div variant="body2" style={{ textAlign: "left" }}>
+                    <div
+                      variant="body2"
+                      style={{ textAlign: "left", fontSize: "13px" }}
+                    >
                       Total Questions: {subQuiz.questions}
                       <br />
                       Total Time: {subQuiz.time}
@@ -107,14 +110,14 @@ class QuizInfo extends Component {
                 )}
               </CardActionArea>
 
-              <CardActions>
+              <CardActions style={{ justifyContent: "center" }}>
                 <button
                   onClick={onBack}
                   size="small"
                   color="secondary"
                   className="start"
                 >
-                  back
+                  Back
                 </button>
                 {!subQuiz.score ? (
                   <button
@@ -123,7 +126,7 @@ class QuizInfo extends Component {
                     color="primary"
                     className="start"
                   >
-                    start
+                    Start
                   </button>
                 ) : null}
               </CardActions>

@@ -3,6 +3,8 @@ import { withRouter, Redirect } from "react-router-dom";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
+import Demo from "../Demo";
+
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -35,10 +37,6 @@ class QuizList extends Component {
             <h4>
               A selection of technical challenges based on your skill set.
             </h4>
-            <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/REST_2x.png"
-              style={{ height: "", width: "" }}
-            />
           </div>{" "}
           <br />
           <div class="card__container">
@@ -102,7 +100,16 @@ class QuizList extends Component {
               </div>
             </div>
           </div>
-          <div id="quix-title">
+          <div id="quix-title" style={{ marginTop: "1em" }}>
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589882/dart-board.svg"
+              style={{
+                height: "105px",
+                width: "125px",
+                float: "left",
+                marginRight: "1em"
+              }}
+            />
             <h1 style={{ fontFamily: "Cereal-bold" }}>
               Test Your Technical Chops
             </h1>
@@ -133,7 +140,11 @@ class QuizList extends Component {
                       gutterBottom
                       variant="headline"
                       component="h1"
-                      style={{ textAlign: "left" }}
+                      style={{
+                        textAlign: "left",
+                        fontSize: "22px",
+                        fontFamily: "Cereal-bold"
+                      }}
                     >
                       {quiz.name}
                     </h1>
@@ -149,7 +160,7 @@ class QuizList extends Component {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <CardActions>
+                <CardActions style={{ justifyContent: "center" }}>
                   <center>
                     <button
                       className="start"
@@ -166,47 +177,6 @@ class QuizList extends Component {
             );
           })}
           <br />
-          <div class="card__container">
-            <div class="card__inner">
-              <div class="search-course-card--card--left-col--3kKip">
-                <a href="/the-web-developer-bootcamp/">
-                  <img
-                    src="https://udemy-images.udemy.com/course/304x171/625204_436a_2.jpg"
-                    alt="coursed"
-                    width="354"
-                    height="171"
-                    class="card__image"
-                  />
-                </a>
-              </div>
-
-              <div class="fx">
-                <div class="card__head">
-                  <span class="card__title" style={{ float: "left" }}>
-                    Fullstack Coding Challenges
-                  </span>
-                </div>
-                <div class="middle-col">
-                  <br />
-                  <p class="card__instructor" style={{ float: "left" }}>
-                    {" "}
-                    5 hour full length course that encompasses Ruby, Rails,
-                    Javascript, React/Redux
-                  </p>
-
-                  <span className="card__subtitle"> Blah blah blah </span>
-                  <span> </span>
-                </div>
-                <div className="right-col">
-                  {" "}
-                  <div className="card__price"> 5,025 students enrolled </div>
-                  <Link to={routes.CODE}>
-                    <button className="start">Enroll Now</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );

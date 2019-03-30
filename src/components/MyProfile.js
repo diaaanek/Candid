@@ -130,6 +130,7 @@ class MyProfile extends Component {
           }}
         >
           {" "}
+          Study{" "}
           <button
             style={{
               marginTop: "1em",
