@@ -363,7 +363,7 @@ class MyProfile extends Component {
                       style={{
                         display: "inlineBlock",
                         position: "relative",
-                        padding: "10px",
+                        padding: "13px",
                         marginLeft: "10px",
                         fontFamily: "Cereal-bold",
                         fontSize: "15px"

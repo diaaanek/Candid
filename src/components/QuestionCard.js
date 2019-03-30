@@ -37,9 +37,12 @@ class QuestionCard extends Component {
             </div>
           </div>
         </div>
-
         <button className="start" onClick={this.updateNumber}>
           Next Question
+        </button>
+        {"    "}
+        <button className="start" onClick={this.updateNumber}>
+          Show Answer
         </button>
       </div>
     );
