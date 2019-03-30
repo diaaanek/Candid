@@ -1,5 +1,4 @@
-
-<h3 align="center"> [Candid](https://candidapp.co) </h3>
+Under construction, to check it our: [Candid](https://candidapp.co) 
 
 
 
