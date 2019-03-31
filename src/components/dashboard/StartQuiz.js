@@ -15,15 +15,14 @@ class QuizList extends Component {
     super();
 
     this.state = {
-      radioVal: null,
+      radioVal: "",
       sec: 60,
       min: 0,
       correct: null,
       scored: false,
       similey: null
     };
-
-    this.quizTimer = this.quizTimer.bind(this);
+    this.quizTimer();
     this.timer();
   }
 
@@ -121,7 +120,7 @@ class QuizList extends Component {
       this.setState({
         similey: (
           <img
-            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/1.png"
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/2.png"
             className="similey"
           />
         )
@@ -130,7 +129,7 @@ class QuizList extends Component {
       this.setState({
         similey: (
           <img
-            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/1.png"
+            src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553094897/3.png"
             className="similey"
           />
         )
@@ -138,7 +137,7 @@ class QuizList extends Component {
     }
   }
 
-  quizTimer() {
+  quizTimer = () => {
     const { sec, min } = this.state;
 
     if (sec === 0 && min === 0) {
@@ -155,7 +154,7 @@ class QuizList extends Component {
         sec: sec - 1
       });
     }
-  }
+  };
 
   timer() {
     this.time = setInterval(this.quizTimer, 1000);
@@ -180,8 +179,8 @@ class QuizList extends Component {
 
             <div>
               <CircularProgress
-                size={100}
-                thickness={5}
+                size={125}
+                thickness={8}
                 variant="static"
                 value={scored}
               />

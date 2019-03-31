@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import questions from "./questions.json";
 
-import Questionanswerpanel from "./questionpanel.js";
-
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 class QuestionCard extends Component {
@@ -12,12 +10,11 @@ class QuestionCard extends Component {
       isFlipped: false,
       number: Math.floor(Math.random() * questions.length)
     };
-    this.updateNumber = this.updateNumber.bind(this);
   }
 
-  updateNumber() {
+  updateNumber = () => {
     this.setState({ number: Math.floor(Math.random() * questions.length) });
-  }
+  };
 
   render() {
     return (

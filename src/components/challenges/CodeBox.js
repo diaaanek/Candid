@@ -3,12 +3,17 @@ import "./CodeChallenges.css";
 import "./Codebox.scss";
 
 import SaveButton from "./SaveButton";
+// import { Controlled as CodeMirror } from "react-codemirror2";
 import CodeMirror from "@uiw/react-codemirror";
+
 import "codemirror/addon/display/autorefresh";
 import "codemirror/addon/comment/comment";
 import "codemirror/addon/edit/matchbrackets";
 import "codemirror/keymap/sublime";
 import "codemirror/theme/monokai.css";
+require("codemirror/addon/selection/active-line");
+require("codemirror/addon/edit/closebrackets");
+require("codemirror/addon/edit/matchtags");
 
 // const code = '//';
 
@@ -20,18 +25,25 @@ function CodeBox(props) {
           <br />
           <br />
           <CodeMirror
-            value={props.body}
+            value={props.codeBoxvalue}
             options={{
+              className: "editor",
+              defaultValue: "null",
               theme: "monokai",
               keyMap: "sublime",
               mode: "jsx",
+              matchBrackets: true,
+              showCursorWhenSelecting: true,
+              autoCloseBrackets: true,
+              styleSelectedText: true,
               lineWrapping: true
             }}
           />
           <div className="buttonContainer">
             <button className="test button">Test </button>
             <button className="submit button">Reset </button>
-            <button className="save button" onClick={props.body}>
+
+            <button className="save button" onClick={props.handleInputChange}>
               Show Solution{" "}
             </button>
           </div>

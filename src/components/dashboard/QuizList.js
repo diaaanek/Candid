@@ -3,6 +3,7 @@ import { withRouter, Redirect } from "react-router-dom";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
+import Footer from "../Footer";
 import Demo from "../Demo";
 
 import Card from "@material-ui/core/Card";
@@ -178,6 +179,7 @@ class QuizList extends Component {
           })}
           <br />
         </div>
+        <Footer />
       </div>
     );
   }

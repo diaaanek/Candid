@@ -18,7 +18,7 @@ export default class CodeChallenges extends Component {
     problemIndex: [],
     problemSelected: false,
     selectedProblem: "default",
-    codeBoxvalue: null,
+    codeBoxvalue: " ",
     currentProblem: {
       title: "",
       body: "",
@@ -60,7 +60,8 @@ export default class CodeChallenges extends Component {
       this.setState({
         problemSelected: true,
         currentProblem: { title, body, description },
-        selectedProblem: target
+        selectedProblem: target,
+        codeBoxvalue: body
       });
     });
   };
@@ -98,11 +99,13 @@ export default class CodeChallenges extends Component {
           <CodeBox
             title={this.state.currentProblem.title}
             handleSelectionChange={event => this.fetchProblemHandler(event)}
+            handleInputChange={event => this.fetchProblemHandler(event)}
             problemIndex={this.state.problemIndex}
             problemSelected={this.state.problemSelected}
             selectedProblem={this.state.selectedProblem}
             body={this.state.currentProblem.body}
             description={this.state.currentProblem.description}
+            codeBoxvalue={this.state.codeBoxvalue}
           />
         </div>
       </div>

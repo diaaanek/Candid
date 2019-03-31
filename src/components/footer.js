@@ -4,7 +4,7 @@ import "./Splash.scss";
 export default () => (
   <div className="footer">
     <section id="footer-left">
-      <a href="https://github.com/diaaanek">
+      <a href="https://github.com/diaaanek" style={{ margin: ".5em" }}>
         <img
           src="https://image.flaticon.com/icons/svg/25/25231.svg"
           alt="github"
@@ -13,7 +13,10 @@ export default () => (
         />
       </a>
 
-      <a href="https://www.linkedin.com/in/dianeelizabeth/">
+      <a
+        href="https://www.linkedin.com/in/dianeelizabeth/"
+        style={{ margin: ".5em" }}
+      >
         <img
           src="https://cdn1.iconfinder.com/data/icons/somacro___dpi_social_media_icons_by_vervex-dfjq/500/linkedin.png"
           alt="linkedin"
@@ -22,7 +25,7 @@ export default () => (
         />
       </a>
 
-      <a href="http://dianedesigned.com">
+      <a href="http://dianedesigned.com" style={{ margin: ".5em" }}>
         <img
           src="http://www.iconsalot.com/asset/icons/dinosoftlabs/banking-and-finance-7/512/039-portfolio-icon.png"
           alt="portfolio"
