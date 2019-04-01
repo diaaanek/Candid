@@ -168,15 +168,15 @@ class QuizList extends Component {
         <main>
           <aside className="sidebar">
             <div id="side"> Learning {" " + quizName}</div>
+
             <img
               src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553652549/picc.png"
               alt="quiz"
-              style={{ height: "100px", width: "125px", marginTop: "2rem" }}
+              style={{ width: "125px", marginTop: "2rem" }}
             />
             <h3>
               Time Remaining: {min} : {sec}
             </h3>
-
             <div>
               <CircularProgress
                 size={125}
@@ -192,7 +192,6 @@ class QuizList extends Component {
               </div>
               <p variant="subheading">Correct: {correct}</p>
             </div>
-
             <br />
           </aside>
 

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-// import { render } from "react-dom";
-import firebase, { auth, provider } from "./firebase.js";
-import { db } from "../firebase/index";
+import firebase, { auth, provider } from "../firebase.js";
+import { db } from "../../firebase/index";
 import { Link } from "react-router-dom";
-import withAuthorization from "./withAuthorization";
-import AuthUserContext from "./AuthUserContext";
+import withAuthorization from "../withAuthorization";
+import AuthUserContext from "../AuthUserContext";
 
 // import Test from "./Test.scss";
 

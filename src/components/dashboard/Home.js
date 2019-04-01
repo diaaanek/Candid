@@ -637,6 +637,7 @@ export default class Home extends Component {
       started,
       qstnNo,
       quizName,
+      answer,
       subQuizName
     } = this.state;
     return (
@@ -659,6 +660,7 @@ export default class Home extends Component {
               <StartQuiz
                 quizName={quizName}
                 subQuizName={subQuizName}
+                answer={answer}
                 started={started}
                 qstnNo={qstnNo}
                 onPress={this.nextQstn}

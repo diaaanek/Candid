@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import firebase, { auth, provider } from "./firebase.js"; // <--- add this line
-import { db } from "../firebase/index";
-import AuthUserContext from "./AuthUserContext";
-import withAuthorization from "./withAuthorization";
+import firebase, { auth, provider } from "../firebase.js";
+import { db } from "../../firebase/index";
+import AuthUserContext from "../AuthUserContext";
+import withAuthorization from "../withAuthorization";
+
+import html from "./info/html.pdf";
+import css from "./info/css.pdf";
+import js from "./info/js.pdf";
+import react from "./info/react.pdf";
+import sql from "./info/sql.pdf";
 
 import Test from "./Test.scss";
 import AllQuestions from "./AllQuestions";
@@ -139,48 +145,56 @@ class MyProfile extends Component {
             }}
           >
             {" "}
-            <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965944/logo-html-5.svg"
-              style={{
-                height: "50px",
-                width: "50px",
-                marginTop: "5px",
-                marginBottom: "5px"
-              }}
-            />{" "}
+            <a href={html} target="_blank">
+              <img
+                src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965944/logo-html-5.svg"
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "5px",
+                  marginBottom: "5px"
+                }}
+              />{" "}
+            </a>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-css.svg"
-              style={{
-                height: "50px",
-                width: "50px",
-                marginTop: "5px",
-                marginBottom: "5px"
-              }}
-            />
+            <a href={css} target="_blank">
+              <img
+                src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-css.svg"
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "5px",
+                  marginBottom: "5px"
+                }}
+              />
+            </a>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
-              style={{
-                height: "50px",
-                width: "50px",
-                marginTop: "5px",
-                marginBottom: "5px"
-              }}
-            />
+            <a href={js} target="_black">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "5px",
+                  marginBottom: "5px"
+                }}
+              />
+            </a>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-react.svg"
-              style={{
-                height: "50px",
-                width: "50px",
-                marginTop: "5px",
-                marginBottom: "5px"
-              }}
-            />
+            <a href={react} target="_black">
+              <img
+                src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-react.svg"
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "5px",
+                  marginBottom: "5px"
+                }}
+              />
+            </a>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
             <img
@@ -194,26 +208,30 @@ class MyProfile extends Component {
             />
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-data-structures-algorithms.svg"
-              style={{
-                height: "50px",
-                width: "50px",
-                marginTop: "5px",
-                marginBottom: "5px"
-              }}
-            />
+            <a href="http://cooervo.github.io/Algorithms-DataStructures-BigONotation/algorithms.html">
+              <img
+                src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-data-structures-algorithms.svg"
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "5px",
+                  marginBottom: "5px"
+                }}
+              />
+            </a>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965942/logo-sql.svg"
-              style={{
-                height: "50px",
-                width: "50px",
-                marginTop: "5px",
-                marginBottom: "5px"
-              }}
-            />
+            <a href={sql} target="_black">
+              <img
+                src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965942/logo-sql.svg"
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "5px",
+                  marginBottom: "5px"
+                }}
+              />{" "}
+            </a>
           </button>
         </div>
 
@@ -336,7 +354,7 @@ class MyProfile extends Component {
                   );
                 })
               ) : (
-                <p>Ask a question to the right!</p>
+                <p>Ask a question on the bottom right!</p>
               )}
             </li>
           </div>

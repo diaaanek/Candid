@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import MyProfile from "./MyProfile";
-import AnotherUser from "./AnotherUser";
 import Landing from "./Landing";
 import AuthUserContext from "./AuthUserContext";
-import SignUpPage from "./SignUp";
+import SignUpPage from "./user/SignUp";
 import LandingPage from "./Landing";
 
 import HomePage from "./dashboard/Home";
 import CodeChallenges from "./challenges/CodeChallenges";
+
+import MyProfile from "./study/MyProfile";
+import AnotherUser from "./study/AnotherUser";
 
 import * as routes from "../constants/routes";
 

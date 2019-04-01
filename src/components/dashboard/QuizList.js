@@ -43,19 +43,20 @@ class QuizList extends Component {
           <div class="card__container">
             <div class="card__inner">
               <div class="search-course-card--card--left-col--3kKip">
-                <a href="/the-web-developer-bootcamp/">
-                  <img
-                    src="https://cdn.rswebsols.com/wp-content/uploads/2016/06/web-design-development-programming-coding-developer-programmer.jpg"
-                    alt="code-challenge"
-                    width="354"
-                    height="171"
-                    class="card__image"
-                  />
-                </a>
+                <img
+                  src="https://cdn.rswebsols.com/wp-content/uploads/2016/06/web-design-development-programming-coding-developer-programmer.jpg"
+                  alt="code-challenge"
+                  maxWidth="354"
+                  maxHeight="171"
+                  class="card__image"
+                />
               </div>
 
               <div class="fx">
                 <div class="card__head">
+                  <p style={{ color: "grey", fontSize: "12px" }}>
+                    FULL STACK WEB DEVELOPMENT{" "}
+                  </p>
                   <div
                     class="card__title"
                     style={{
@@ -67,42 +68,49 @@ class QuizList extends Component {
                     Javascript Coding Challenges
                   </div>
                   <br />
-
                   <div>
-                    <div class="card__subtitle">
-                      The only course you need to learn <strong>coding</strong>{" "}
-                      <strong>challenges</strong> -for top tech companies.
-                    </div>
-                    <div
-                      class="card__metadata"
-                      style={{ float: "left", fontSize: "8" }}
-                    >
-                      <span class="card__meta-item">
-                        <span class="card__icon fa fa-play-circle" />
-                        Features: blah blah
-                      </span>
-                      <span class="card__meta-item">
-                        <span class="card__icon fa fa-clock-o" />5 hours
-                      </span>
-                      <span class="card__meta-item">
-                        <span class="card__icon fa fa-sliders" />
-                        Level: Beginner-Intermediate
-                      </span>
+                    <div class="card__subtitle" style={{ marginTop: "15px" }}>
+                      A series of community curated Javascript Coding Challenges
+                      to practice and learn from. <br />
+                      The only course you need to learn <strong>
+                        coding
+                      </strong>{" "}
+                      <strong>challenges</strong> -for top tech companies.{" "}
+                      <p>
+                        {" "}
+                        <img
+                          style={{
+                            height: "25px",
+                            width: "25px",
+                            verticalAlign: "middle"
+                          }}
+                          src="  http://www.sclance.com/pngs/time-icon-png/time_icon_png_1384729.png"
+                        />{" "}
+                        1 hr{" "}
+                        <img
+                          style={{
+                            height: "25px",
+                            width: "25px",
+                            verticalAlign: "middle",
+                            marginLeft: "1em"
+                          }}
+                          src="http://www.sclance.com/pngs/books-icon-png/books_icon_png_166902.png"
+                        />{" "}
+                        5,025 students enrolled{" "}
+                      </p>{" "}
                     </div>
                   </div>
                 </div>
                 <div className="right-col">
-                  {" "}
-                  <div className="card__price"> 5,025 students enrolled </div>
                   <Link to={routes.CODE}>
-                    <button className="start">Enroll Now</button>
+                    <button className="start">Start Now</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
           <div id="quix-title" style={{ marginTop: "1em" }}>
-            <img
+            {/*}<img
               src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589882/dart-board.svg"
               style={{
                 height: "105px",
@@ -110,7 +118,7 @@ class QuizList extends Component {
                 float: "left",
                 marginRight: "1em"
               }}
-            />
+            /> */}
             <h1 style={{ fontFamily: "Cereal-bold" }}>
               Test Your Technical Chops
             </h1>

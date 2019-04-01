@@ -7,9 +7,9 @@ import { Link, BrowserRouter as Router } from "react-router-dom";
 import AuthUserContext from "./AuthUserContext";
 import UserInfo from "./UserInfo";
 
-import SignUpPage from "./SignUp";
+import SignUpPage from "./user/SignUp";
 import SignIn from "./SignIn";
-import SignOut from "./SignOut";
+import SignOut from "./user/SignOut";
 import "./Splash.scss";
 
 // logout = () => {
@@ -19,6 +19,8 @@ import "./Splash.scss";
 //     });
 //   });
 // };
+
+// ****** is user logged in ??? ****** //
 
 const Nav = () => (
   <AuthUserContext.Consumer>
@@ -47,7 +49,7 @@ const NavAuth = () => (
       </Link>
     </div>
 
-    <div>
+    <div style={{ marginRight: "1em" }}>
       <UserInfo />
     </div>
   </nav>

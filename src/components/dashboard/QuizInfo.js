@@ -15,15 +15,14 @@ class QuizInfo extends Component {
           {" "}
           Take Quizzes{" "}
         </h1>
-        <img
+        {/*}<img
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/REST_2x.png"
           style={{
             height: "150px",
             width: "175px",
             maxWidth: 345
           }}
-        />
-
+        /> */}
         <br />
         {quiz.subQuiz.map((subQuiz, index) => {
           return (

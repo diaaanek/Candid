@@ -15,11 +15,18 @@ const UserData = ({ authUser }) => (
   <div>
     <div className="dropdown">
       {" "}
-      <img src={authUser.photoURL} className="avatar" alt="user-face" />
-      <a style={{ marginTop: "18px" }}>
-        {" "}
-        👋 Welcome, {authUser.displayName || authUser.email}!
-      </a>
+      <img
+        src="https://image.flaticon.com/icons/svg/25/25623.svg"
+        style={{
+          height: "12px",
+          width: "12px",
+          marginTop: "1em"
+        }}
+      />{" "}
+      <span style={{ marginRight: ".5em" }}>
+        {authUser.displayName || authUser.email}{" "}
+      </span>{" "}
+      <img src={authUser.photoURL} className="avatar" alt="user-face" />{" "}
       <div className="dropdown-content">
         <SignIn />
       </div>

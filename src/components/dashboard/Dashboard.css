@@ -45,8 +45,8 @@ h4 {
 .nextBtn {
   background: #ffc334;
   border-radius: 100%;
-  /* box-shadow: 0 -2px 0 3px #ffb401 inset, 0 5px 5px rgba(103, 73, 0, 0.17),
-    0 15px rgba(255, 255, 255, 0.25) inset; */
+  box-shadow: 0 -2px 0 3px #ffb401 inset, 0 5px 5px rgba(103, 73, 0, 0.17),
+    0 15px rgba(255, 255, 255, 0.25) inset;
   cursor: pointer;
   display: inline-block;
   height: 75px;
@@ -61,14 +61,13 @@ h4 {
 .card__inner {
   font-family: "Cereal-light", sans-serif;
   /* border: 1px solid white; */
-  border-radius: 8px 8px 8px 8px;
+  border-radius: 5px;
   position: relative;
   padding-right: 30px;
   margin-bottom: 30px;
   background-color: #fff;
   min-height: 148px;
   display: flex;
-
   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.2);
 }
 .card__inner * {
@@ -76,8 +75,9 @@ h4 {
 }
 .card__image {
   display: block;
-  border-radius: 6px 0px 0px 6px;
-  width: 275px;
+  border-radius: 5px 0px 0px 5px;
+  width: 300px;
+  height: 170px;
   margin-right: 30px;
 }
 .card__image img {
@@ -96,21 +96,12 @@ h4 {
   min-width: 1px;
 }
 .card__head {
-  padding-top: 10px;
+  text-align: left;
+  /* padding-top: 20px; */
   margin-right: 10px;
-}
-.card__head a {
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: 700;
-  color: #29303b;
-  margin: 0;
-  margin-top: 5px;
-  line-height: 18px;
 }
 
 .middle-col {
-  text-align: left;
   flex: 1;
   min-width: 1px;
   padding: 0 30px 0 0;

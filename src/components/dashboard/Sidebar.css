@@ -39,7 +39,8 @@ aside {
   margin: 1rem 4rem 1.5rem 2rem;
   min-width: 50%;
   background-color: white;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px darken(#f3f3f3, 20%);
+  /* box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2); */
   flex-grow: 400;
   flex-basis: 10;
   position: relative;
@@ -47,9 +48,9 @@ aside {
 }
 
 #side {
-  background-color: #3ec4ff;
+  /* background-color: #3ec4ff; */
   height: 100%;
-  color: white;
+  color: black;
   font-weight: 800;
   font-size: 25px;
   border-radius: 5px 5px 0px 0px;
