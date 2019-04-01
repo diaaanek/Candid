@@ -3,9 +3,9 @@
 //  + nav-bar
 //  + splash
 //  + footer
-//
 
-// src/components/circular-book.ttf
+// import fonts
+
 @font-face {
   font-family: "Cereal-light";
   src: url("./fonts/cereal-200.ttf") format("truetype");
@@ -29,28 +29,26 @@
 
 .splash {
   position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 h2 {
-  font-family: "Cereal-bold", "Avenir";
-  font-weight: 700;
+  font-family: "Cereal-med", "Avenir";
   color: #1d1d1d;
 }
 // Nav bar main page
 .nav-bar {
   height: 65px;
-  font-family: "Cereal-light", "Avenir";
+  font-family: "Cereal-reg", "Avenir";
   position: fixed;
   top: 0;
   padding: 8px 10px;
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-  //
   // 0 0px 3px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
   // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.09), 0 2px 10px 0 rgba(0, 0, 0, 0.08);
   z-index: 2;
@@ -70,12 +68,10 @@ h2 {
   }
   a:hover {
     color: #ea555c;
+    font-family: "Cereal-med", "Avenir";
   }
 }
 .float {
-  // float: left;
-  //
-  // display: inline-block;
   display: flex;
 }
 .links {
@@ -135,7 +131,6 @@ h2 {
   position: absolute;
   top: 25%;
   cursor: pointer;
-  // width: 50%;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -147,68 +142,35 @@ h2 {
 .splash {
   overflow: hidden;
   padding: 20px 45px;
-  padding-top: 150px;
-  // min-height: calc(100vh - 40px);
-
+  padding-top: 160px;
   background: linear-gradient(to bottom, #f9fbf7, #c9d8ff);
 
   .first-page {
     min-height: 100vh;
-    font-family: "Cereal-bold";
-
+    font-family: "Cereal-med", "Avenir", sans-serif;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
     height: 100vh;
     overflow: hidden;
-
     width: 100%;
   }
-
-  // #first-line {
-  //   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  //   // border-right: 0.15em solid grey; /* The typwriter cursor */
-  //   white-space: nowrap; /* Keeps the content on a single line */
-  //   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  // }
-  //
-  // /* The typing effect */
-  // @keyframes typing {
-  //   from {
-  //     width: 0;
-  //   }
-  //   to {
-  //     width: 100%;
-  //   }
-  // }
-  //
-  // /* The typewriter cursor effect */
-  // @keyframes blink-caret {
-  //   from,
-  //   to {
-  //     border-color: transparent;
-  //   }
-  //   50% {
-  //     border-color: grey;
-  //   }
-  // }
 
   #manage {
     margin-left: 25px;
   }
 
   p {
-    font-size: 16px;
-    font-family: "Cereal-reg";
+    font-size: 1em;
+    font-family: "Cereal-reg", "Avenir", sans-serif;
     margin-left: 20px;
   }
 
   #first-line {
-    margin-top: 18px;
+    margin-top: 1em;
   }
   #second-line {
-    margin-top: 10px;
+    margin-top: 0.75em;
     display: flex;
     p {
       padding-top: 10px;
@@ -218,12 +180,12 @@ h2 {
   .mainbutton {
     margin-left: 20px;
     margin-bottom: 10px;
-    font-family: "Cereal-bold";
-    font-size: 17px;
+    font-family: "Cereal-reg", "Avenir", sans-serif;
+    font-size: 1em;
   }
 
   #laptop {
-    padding: 10px;
+    padding: 1em;
     background-image: url("https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553737659/PICCC.png");
     width: 450px;
     height: 400px;
@@ -233,7 +195,7 @@ h2 {
 }
 .footer {
   // position: sticky;
-  font-family: "Cereal-light";
+  font-family: "Cereal-light", "Avenir", sans-serif;
   position: relative;
   bottom: 0;
   padding: 15px 40px 15px 40px;
@@ -246,10 +208,9 @@ h2 {
 
 .button {
   padding: 15px 20px;
-  font-family: "Cereal-reg";
+  font-family: "Cereal-reg", "Avenir", sans-serif;
   font-size: 15px;
   color: white;
-  font-weight: bold;
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
@@ -287,7 +248,7 @@ h2 {
 }
 
 input.rsc-input.sc-kAzzGY.fCeMBp {
-  font-family: "Cereal-reg";
+  font-family: "Cereal-reg", "Avenir", sans-serif;
 }
 
 h2.rsc-header-title.sc-VigVT.kOELXo {

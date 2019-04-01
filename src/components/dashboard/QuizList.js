@@ -4,7 +4,6 @@ import { Link, BrowserRouter as Router } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
 import Footer from "../Footer";
-import Demo from "../Demo";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";

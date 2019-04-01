@@ -233,11 +233,11 @@ input {
   grid-row: 3;
 }
 
-@media (max-width: 768px) {
-  .input {
-    display: none;
-  }
-}
+// @media (max-width: 768px) {
+//   .input {
+//     display: none;
+//   }
+// }
 
 //
 // Messages
@@ -270,15 +270,5 @@ input {
   font-weight: lighter;
 }
 
-.input.box {
-  // background: grey;
-}
-
 @media (max-width: 768px) {
-  .messages {
-    display: none;
-  }
-  .header {
-    display: none;
-  }
 }

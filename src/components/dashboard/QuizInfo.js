@@ -10,11 +10,8 @@ class QuizInfo extends Component {
   render() {
     const { quiz, onBack, onPress } = this.props;
     return (
-      <div style={{ marginTop: "80px" }}>
-        <h1 style={{ fontWeight: "700", fontFamily: "Cereal-bold" }}>
-          {" "}
-          Take Quizzes{" "}
-        </h1>
+      <div style={{ paddingTop: "5em" }}>
+        <h1 style={{ fontFamily: "Cereal-med" }}> Take Quizzes </h1>
         {/*}<img
           src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/REST_2x.png"
           style={{
@@ -77,7 +74,7 @@ class QuizInfo extends Component {
                       component="h1"
                       style={{
                         textAlign: "left",
-                        fontFamily: "Cereal-bold",
+                        fontFamily: "Cereal-med",
                         fontWeight: "700"
                       }}
                     >

@@ -1,0 +1,78 @@
+#main {
+  min-height: 800px;
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+#main > article {
+  margin: 4px;
+  padding: 5px;
+  background: #e6e7e8;
+  -webkit-flex: 3 1 60%;
+  flex: 3 1 60%;
+  -webkit-order: 2;
+  order: 2;
+}
+
+#main > nav {
+  margin: 4px;
+  padding: 5px;
+  background: #fff;
+  -webkit-flex: 1 6 20%;
+  flex: 1 6 20%;
+  -webkit-order: 1;
+  order: q;
+}
+
+#main > aside {
+  margin: 4px;
+  padding: 5px;
+  background: #e6e7e8;
+  color: #444;
+  -webkit-flex: 1 6 20%;
+  flex: 1 6 20%;
+  -webkit-order: 3;
+  order: 3;
+}
+span.o {
+  color: #f67;
+  font-weight: 300;
+}
+
+nav ul {
+  background: #f67;
+  width: 100%;
+  height: 3em;
+  padding: 10px 0px 10px 0px;
+  color: #111;
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  body {
+    background: #888;
+  }
+  #main,
+  #page {
+    -webkit-flex-flow: column;
+    flex-flow: column;
+  }
+
+  #main > article,
+  #main > nav,
+  #main > aside {
+    /* Return them to document order */
+    -webkit-order: 0;
+    order: 0;
+  }
+
+  #main > nav,
+  #main > aside {
+    min-height: 50px;
+    max-height: 50px;
+  }
+}

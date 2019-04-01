@@ -4,6 +4,7 @@ export const SIGN_UP = "/signup";
 export const SIGN_IN = "/signin";
 
 export const STUDY = "/study";
+export const QUESTIONS = "/questions";
 export const ANOTHERUSER = "/user/:id";
 
 export const HOME = "/dashboard";

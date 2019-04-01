@@ -10,6 +10,8 @@ import HomePage from "./dashboard/Home";
 import CodeChallenges from "./challenges/CodeChallenges";
 
 import Study from "./study/Study";
+
+import QuestionCard from "./study/QuestionCard";
 import AnotherUser from "./study/AnotherUser";
 
 import * as routes from "../constants/routes";
@@ -19,6 +21,8 @@ const Main = () => (
     <Route exact path={routes.SIGN_UP} component={SignUpPage} />
     <Route exact path={routes.LANDING} component={Landing} />
     <Route exact path={routes.STUDY} component={Study} />
+    <Route exact path={routes.QUESTIONS} component={QuestionCard} />
+
     <Route exact path={routes.ANOTHERUSER} component={AnotherUser} />
     <Route exact path={routes.HOME} component={HomePage} />
     <Route exact path={routes.CODE} component={CodeChallenges} />

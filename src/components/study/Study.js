@@ -5,6 +5,10 @@ import { db } from "../../firebase/index";
 import AuthUserContext from "../AuthUserContext";
 import withAuthorization from "../withAuthorization";
 
+import { withRouter, Redirect } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
+import * as routes from "../../constants/routes";
+
 import html from "./info/html.pdf";
 import css from "./info/css.pdf";
 import js from "./info/js.pdf";
@@ -136,7 +140,7 @@ class Study extends Component {
           }}
         >
           {" "}
-          Study{" "}
+          Topics{" "}
           <button
             style={{
               marginTop: "1em",
@@ -145,7 +149,7 @@ class Study extends Component {
             }}
           >
             {" "}
-            <a href={html} target="_blank">
+            <Link to={routes.QUESTIONS}>
               <img
                 src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965944/logo-html-5.svg"
                 style={{
@@ -155,10 +159,10 @@ class Study extends Component {
                   marginBottom: "5px"
                 }}
               />{" "}
-            </a>
+            </Link>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <a href={css} target="_blank">
+            <Link to={routes.QUESTIONS}>
               <img
                 src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-css.svg"
                 style={{
@@ -168,10 +172,10 @@ class Study extends Component {
                   marginBottom: "5px"
                 }}
               />
-            </a>
+            </Link>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <a href={js} target="_black">
+            <Link to={routes.QUESTIONS}>
               <img
                 src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
                 style={{
@@ -181,10 +185,10 @@ class Study extends Component {
                   marginBottom: "5px"
                 }}
               />
-            </a>
+            </Link>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <a href={react} target="_black">
+            <Link to={routes.QUESTIONS}>
               <img
                 src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965943/logo-react.svg"
                 style={{
@@ -194,7 +198,7 @@ class Study extends Component {
                   marginBottom: "5px"
                 }}
               />
-            </a>
+            </Link>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
             <img
@@ -221,7 +225,7 @@ class Study extends Component {
             </a>
           </button>
           <button style={{ marginTop: "1em", backgroundColor: "white" }}>
-            <a href={sql} target="_black">
+            <Link to={routes.QUESTIONS}>
               <img
                 src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553965942/logo-sql.svg"
                 style={{
@@ -231,7 +235,7 @@ class Study extends Component {
                   marginBottom: "5px"
                 }}
               />{" "}
-            </a>
+            </Link>
           </button>
         </div>
 
@@ -397,11 +401,6 @@ class Study extends Component {
           </div>
           */}
           <ul class="message-list">
-            <li>
-              {" "}
-              <QuestionCard />
-            </li>
-
             <li>
               <div class="message-container">
                 {" "}
