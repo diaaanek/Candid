@@ -4,7 +4,14 @@ A technical prep/learning platform application for developers & coders. Made wit
 
 [Check it out live](https://candidapp.co)
 
-## Features
+### Landing Page
+![Candid](https://raw.githubusercontent.com/diaaanek/candid/master/public/candidmock1.png)
+
+### Dashboard
+![Spoon2](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/myplate.png)
+
+
+### Features
 
 Users are authenticated via Google OAuth. Upon sign in, users can take coding quizzes and challenges on /dashboard. They can also checkout the question feed, and create, edit, delete questions, as well as like and unlike other user's questions.
 
