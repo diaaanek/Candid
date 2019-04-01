@@ -5,10 +5,10 @@ A technical prep/learning platform application for developers & coders. Made wit
 [Check it out live](https://candidapp.co)
 
 ### Landing Page
-![Candid](https://raw.githubusercontent.com/diaaanek/candid/master/public/candidmock1.png)
+![Candid1](https://raw.githubusercontent.com/diaaanek/candid/master/public/candidmock1.png)
 
 ### Dashboard
-![Spoon2](https://raw.githubusercontent.com/diaaanek/SPOON_Client/master/public/myplate.png)
+![Candid2](https://raw.githubusercontent.com/diaaanek/candid/master/public/candid2.png)
 
 
 ### Features
