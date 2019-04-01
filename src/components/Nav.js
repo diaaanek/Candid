@@ -44,7 +44,7 @@ const NavAuth = () => (
       <Link to={routes.HOME} style={{ marginTop: ".85em" }}>
         Learn
       </Link>
-      <Link to={routes.MYPROFILE} style={{ marginTop: ".85em" }}>
+      <Link to={routes.STUDY} style={{ marginTop: ".85em" }}>
         Study
       </Link>
     </div>

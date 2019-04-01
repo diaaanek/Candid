@@ -54,7 +54,7 @@ class SignIn extends React.Component {
       <div>
         {authUser ? (
           <div>
-            {redirect && <Redirect to={routes.MYPROFILE} />}
+            {redirect && <Redirect to={routes.STUDY} />}
             <button className="signup button mainbutton" onClick={this.logout}>
               {" "}
               Sign Out

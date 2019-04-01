@@ -13,12 +13,12 @@ export { db };
 // const settings = { timestampsInSnapshots: true };
 //
 // const config = {
-//   apiKey: "AIzaSyAF-5GWykIAhZDhNnK70wqJ7hpP0J8sA_4",
-//   authDomain: "candid-3f079.firebaseapp.com",
+//   apiKey:
+//   authDomain:
 //   databaseURL: "https://candid-3f079.firebaseio.com",
 //   projectId: "candid-3f079",
 //   storageBucket: "candid-3f079.appspot.com",
-//   messagingSenderId: "521674173274"
+//   messagingSenderId: "
 // };
 //
 // firebase.initializeApp(config);

@@ -16,7 +16,7 @@ import AllQuestions from "./AllQuestions";
 
 import QuestionCard from "./QuestionCard";
 
-class MyProfile extends Component {
+class Study extends Component {
   constructor() {
     super();
     this.state = {
@@ -465,4 +465,4 @@ class MyProfile extends Component {
 
 const authCondition = authUser => !!authUser;
 
-export default withAuthorization(authCondition)(MyProfile);
+export default withAuthorization(authCondition)(Study);
