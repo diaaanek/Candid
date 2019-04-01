@@ -10,6 +10,8 @@ A technical prep/learning platform application for developers & coders. Made wit
 ### Dashboard
 ![Candid2](https://raw.githubusercontent.com/diaaanek/candid/master/public/candid2.png)
 
+### Code Challenges
+![Candid3](https://raw.githubusercontent.com/diaaanek/candid/master/public/candid3.png)
 
 ### Features
 
