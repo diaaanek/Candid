@@ -1,23 +1,40 @@
 # CANDID
 
-A technical prep/learning platform application for developers & coders. Made with React.js (create-react-app) and Firebase Real time database.
+A technical prep/learning platform application for developers & coders. Made with React.js (create-react-app) and Firebase real time database. Inspired by dev.io, quizlet, stackoverflow, codeacademy, and egghead.io
 
+[Original Site Map](https://github.com/diaaanek/candid/wiki/Originial-Site-Map/_edit)
 [Check it out live](https://candidapp.co)
 
 ### Landing Page
+
 ![Candid1](https://raw.githubusercontent.com/diaaanek/candid/master/public/candidmock1.png)
 
 ### Dashboard
+
 ![Candid2](https://raw.githubusercontent.com/diaaanek/candid/master/public/candid2.png)
 
+### Take Quizzes
+
 ### Code Challenges
+
 ![Candid3](https://raw.githubusercontent.com/diaaanek/candid/master/public/candid3.png)
+
+### Study Page (by topic)
+
+### Question Feed
 
 ### Features
 
-Users are authenticated via Google OAuth. Upon sign in, users can take coding quizzes and challenges on /dashboard. They can also checkout the question feed, and create, edit, delete questions, as well as like and unlike other user's questions.
+- Users are authenticated via Google OAuth.
+- Upon sign in, users can take coding quizzes and coding challenges on '/dashboard'.
+- They can also checkout the /study path for the user submitted question feed. There they can create, edit, delete questions, as well as like and unlike other user's questions.
+- Users can also view flashcards to study interview questions by topic
 
 \*\*\* Currently under construction. To continue this app, I would integrate my /signup /signin forms with my routes, as well as the ability to create and edit quizzes.
+
+### Challenges
+
+Coming from a NoSQL background, database design was a struggle for me in firebase. I will continue learning and implementing restructure of my database schema. Another challenge was attempting responsiveness without the use of a framework.
 
 Topics include:
 
@@ -26,11 +43,11 @@ Topics include:
 - Managing state
 - Registering users, Firebase for Google OAuth login
 - Logging users in and out
-- Creating, editing, and deleting interview questions from Firebase
+- Creating, editing, and deleting interview questions from Firebase real time database
 
 ### Prerequisites
 
-You will need both `node` and `yarn` installed on your computer in order to run this app. You can find out more about `yarn` at their [official site.](https://yarnpkg.com/lang/en/docs/install/)
+You will need `node` or `yarn` installed on your computer in order to run this app.
 
 ### Installation :file_folder:
 

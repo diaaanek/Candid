@@ -27,32 +27,59 @@ export default class Home extends Component {
           subQuiz: [
             {
               name: "Basics",
-              questions: "3",
+              questions: "6",
               time: "60 sec",
               score: false,
               qArr: [
                 {
-                  question: "What is use for image insertion?",
-                  option1: "img",
-                  option2: "h1",
-                  option3: "none",
-                  option4: "body",
-                  answer: "1"
+                  question: "Who is making the Web Standards?",
+                  option1: "Mozilla",
+                  option2: "Microsoft",
+                  option3: "Apple",
+                  option4: "The World Wide Web Consortium",
+                  answer: "4"
                 },
                 {
-                  question: "To underline the text?",
-                  option1: "u",
-                  option2: "underline",
-                  option3: "style",
+                  question:
+                    "What is the correct sequence of HTML tags for starting a webpage?",
+                  option1: "Head, Title, HTML",
+                  option2: "Title, Head, HTML",
+                  option3: "HTML, Head, Title ",
                   option4: "none",
-                  answer: "1"
+                  answer: "3"
                 },
                 {
                   question: "HTML stands for?",
                   option1: "HYPER TEXT MARKUP LANGUAGE'",
                   option2: "HTPER TEXT TELESCOPR",
                   option3: "HELP TEXT TERMINAL LANGUAGE",
-                  option4: "NONE",
+                  option4: "Hyperlinks and Text Markup Language",
+                  answer: "1"
+                },
+                {
+                  question:
+                    "Choose the correct HTML tag for the largest heading",
+                  option1: "<h6>",
+                  option2: "<head>",
+                  option3: "<heading>",
+                  option4: "<h1>",
+                  answer: "4"
+                },
+                {
+                  question:
+                    "What is the correct HTML element for inserting a line break?",
+                  option1: "<lb>",
+                  option2: "<br>",
+                  option3: "<break>",
+                  option4: "<brk>",
+                  answer: "2"
+                },
+                {
+                  question: "HTML use for?",
+                  option1: "structure",
+                  option2: "styling",
+                  option3: "scripting",
+                  option4: "none",
                   answer: "1"
                 }
               ]
@@ -270,9 +297,9 @@ export default class Home extends Component {
             "Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language learn more.",
           subQuiz: [
             {
-              name: "Quiz 1",
+              name: "Basics",
               questions: "4",
-              time: "30 sec",
+              time: "60 sec",
               score: false,
               qArr: [
                 {

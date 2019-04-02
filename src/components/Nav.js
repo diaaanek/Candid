@@ -8,6 +8,7 @@ import AuthUserContext from "./AuthUserContext";
 import UserInfo from "./UserInfo";
 
 import SignUpPage from "./user/SignUp";
+import LogIn from "./user/LogIn";
 import SignIn from "./SignIn";
 import SignOut from "./user/SignOut";
 import "./Splash.scss";
@@ -70,11 +71,11 @@ const NavNonAuth = () => (
       </Link>
     </div>{" "}
     <div>
-      <Link to={routes.SIGN_UP}>
+      <Link to={routes.LANDING}>
         {" "}
         <button className="button signup">Sign Up </button>
       </Link>{" "}
-      <Link to={routes.SIGN_UP}>Sign In</Link>
+      <Link to={routes.LANDING}>Sign In</Link>
     </div>
   </div>
 );

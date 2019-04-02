@@ -15,7 +15,7 @@ class QuizList extends Component {
     super();
 
     this.state = {
-      radioVal: "",
+      radioVal: null,
       sec: 60,
       min: 0,
       correct: null,
@@ -255,8 +255,15 @@ class QuizList extends Component {
                           />
                         </RadioGroup>
                       </FormControl>
-                    </div>
 
+                      <input
+                        class="with-gap"
+                        name="group1"
+                        type="radio"
+                        id="test1"
+                      />
+                    </div>
+                    <label for="test1">{started.qArr[qstnNo].option4}</label>
                     <br />
                     <button
                       className="nextBtn"
