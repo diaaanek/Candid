@@ -25,7 +25,7 @@
 h1 {
   font-size: 25px;
   align-self: center;
-  font-family: "Cereal-light";
+  font-family: "Cereal-light", "Avenir";
 }
 
 /* front pane, placed above back */
@@ -42,13 +42,13 @@ h1 {
 
 div.instructions {
   align-self: center;
-  font-family: "Cereal-bold";
+  font-family: "Cereal-bold", "Avenir";
   font-size: 10px;
 }
 
 .button {
   padding: 15px 20px;
-  font-family: "Cereal-light";
+  font-family: "Cereal-light", "Avenir";
   font-size: 15px;
   font-weight: bold;
   border-radius: 6px;

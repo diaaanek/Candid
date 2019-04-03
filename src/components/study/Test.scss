@@ -1,30 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 * {
   box-sizing: border-box;
-  // font-family: "Cereal-light", "Avenir", sans-serif;
 }
 
-$background-gray: rgba(198, 198, 198, 0.1);
 $accent-gray: rgba(198, 198, 198, 0.9);
-$button-gray: rgba(198, 198, 198, 1);
-$dark-gray: rgba(0, 0, 0, 0.75);
+
 $box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 $small-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
 $medium-box-shadow: $box-shadow;
 $large-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 $xlarge-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
 
-$gray: $accent-gray;
-$yellow: #ffba00;
-$green: #7ad03a;
-$red: #ea0000;
-
-$arrow-size: 7px;
-$border-left-size: 4px;
-
 body {
-  font-family: "Cereal-reg";
+  font-family: "Cereal-med", "Avenir";
 }
 
 form {
@@ -104,21 +91,6 @@ form {
         z-index: -1;
       }
     }
-
-    // .question {
-    //   margin: 0.75em auto;
-    //   padding: 0.5em;
-    //   font-family: "Cereal-light";
-    //   background: $background-gray;
-    //   box-shadow: $large-box-shadow;
-    //   transition: all 0.1s, border 0.25s ease-out;
-    // }
-
-    // .question-and-answer {
-    //   display: inline-block;
-    //   vertical-align: top;
-    //   width: calc(100% - 5em);
-    // }
   }
 }
 
@@ -129,26 +101,10 @@ form {
 
 body {
   margin: 0;
-  font-family: "Cereal-reg";
-  background-color: #f4f8fb;
+  font-family: "Cereal-med", "Avenir";
+  // background-color: #f4f8fb;
   box-sizing: border-box;
 }
-// .box::-webkit-scrollbar {
-//   width: 10px;
-// }
-//
-// .box::-webkit-scrollbar-track {
-//   box-shadow: inset 0 0 5px grey;
-//   border-radius: 5px;
-// }
-//
-// .box::-webkit-scrollbar-thumb {
-//   background: #3ec4ff;
-//   border-radius: 8px;
-// }
-// .box::-webkit-scrollbar-thumb:hover {
-//   background: rgb(54, 56, 58);
-// }
 
 .box {
   color: grey;

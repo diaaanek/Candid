@@ -125,7 +125,7 @@ h3 {
   color: #6f6f6f;
 }
 
-.bots.section-landing,
+.topics.section-landing,
 .footer.section-landing {
   background: #f6f6f6;
   border-bottom: solid 1px #dfdfdf;
@@ -258,7 +258,7 @@ h3 {
   right: 15%;
 }
 
-.bubble-tree {
+.laptop-2 {
   background-image: url(https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553652549/picc.png);
   background-size: 455px 361px;
   width: 455px;
@@ -270,31 +270,34 @@ h3 {
   opacity: 1;
 }
 
-.bot-1 {
-  background-image: url(https://dzvpwvcpo1876.cloudfront.net/illustration-chef-2.svg);
+.topic-1 {
+  background-image: url(https://res.cloudinary.com/dxrvvjvpf/image/upload/v1554317654/git.png);
   background-repeat: no-repeat;
   width: 135px;
   height: 170px;
   display: inline-block;
   margin: 0 auto;
+  background-size: contain;
 }
 
-.bot-2 {
-  background-image: url(https://dzvpwvcpo1876.cloudfront.net/illustration-driver-2.svg);
+.topic-2 {
+  background-image: url(https://res.cloudinary.com/dxrvvjvpf/image/upload/v1554317960/java.png);
   background-repeat: no-repeat;
   width: 135px;
   height: 170px;
   display: inline-block;
   margin: 0 auto;
+  background-size: contain;
 }
 
-.bot-3 {
-  background-image: url(https://res.cloudinary.com/dxrvvjvpf/image/upload/v1554315947/144_166.png);
+.topic-3 {
+  background-image: url(https://res.cloudinary.com/dxrvvjvpf/image/upload/v1554318130/css.png);
   background-repeat: no-repeat;
   width: 135px;
   height: 170px;
   display: inline-block;
   margin: 0 auto;
+  background-size: contain;
 }
 
 .signup button mainbutton {
@@ -346,7 +349,7 @@ h3 {
   }
   .progress.section-landing,
   .tree.section-landing,
-  .bots.section-landing,
+  .topics.section-landing,
   .footer.section-landing {
     padding: 0;
     height: auto;
@@ -373,7 +376,7 @@ h3 {
     width: 250px;
   }
 
-  .new-bots {
+  .new-topics {
     margin: 0 auto 30px auto;
   }
   .col-3 {
@@ -384,7 +387,7 @@ h3 {
   .col-3:last-child {
     width: 70%;
   }
-  .bubble-tree {
+  .laptop-2 {
     width: 300px;
     background-size: 300px;
     height: 238px;
@@ -481,7 +484,7 @@ h3 {
   .footer.section-landing li {
     margin: 10px 15px;
   }
-  .bot-wrapper {
+  .topic-wrapper {
     margin: 0 -10px;
   }
   .col-3 {
@@ -490,7 +493,7 @@ h3 {
   .col-3 p {
     font-size: 15px;
   }
-  .bot {
+  .topic {
     width: 100px;
     background-size: 100px;
     height: 120px;
@@ -499,7 +502,7 @@ h3 {
   .image-container {
     width: 100%;
   }
-  .bubble-tree {
+  .laptop-2 {
     margin: 0 auto;
     display: block;
   }
@@ -509,8 +512,8 @@ h3 {
   .progress.section-landing .container1 {
     min-height: 300px;
   }
-  .bot,
-  .bubble-tree {
+  .topic,
+  .laptop-2 {
   }
 }
 

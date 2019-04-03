@@ -11,10 +11,10 @@ import { ThemeProvider } from "styled-components";
 const theme = {
   background: "#f5f8fb",
   fontFamily: "Avenir",
-  headerBgColor: "#aadd32 ",
+  headerBgColor: "#32cdff ",
   headerFontColor: "#fff",
   headerFontSize: "15px",
-  botBubbleColor: "#aadd32  ",
+  botBubbleColor: "#32cdff  ",
   botFontColor: "#fff",
   userBubbleColor: "#fff",
   userFontColor: "#4a4a4a",
@@ -71,23 +71,26 @@ export default ({ user }) => (
         <span class="phone-img" />
       </div>
     </div>
-    <div class="section-landing bots">
+    <div class="section-landing topics">
       <div class="container1 center">
         <h2 class="center">Trending Topics</h2>
 
-        <div class="bot-wrapper">
+        <div class="topic-wrapper">
           <div class="col-3">
-            <span class="bot bot-1" />
-            <h3>Algorithms </h3>
-            <p>Have fun solving problems and grokking algos </p>
+            <span
+              class="topic topic-1"
+              style={{ width: "135px", height: "170px" }}
+            />
+            <h3>Master Git </h3>
+            <p>Have fun with version-control system for tracking changes </p>
           </div>
           <div class="col-3">
-            <span class="bot bot-2" />
+            <span class="topic topic-2" />
             <h3>Javascript Bootcamp</h3>
             <p> Practice the fundamentals of Javascript language</p>
           </div>
           <div class="col-3">
-            <span class="bot bot-3" />
+            <span class="topic topic-3" />
             <h3>CSS Flexbox Fun</h3>
             <p>
               A guide to css 3 flexbox, and all the fun that goes along with it
@@ -99,11 +102,11 @@ export default ({ user }) => (
     <div class="section-landing tree">
       <div class="container1">
         <div class="image-container">
-          <span class="bubble-tree" />
+          <span class="laptop-2" />
         </div>
         <div class="text">
           <h2>Powered by Firebase & React</h2>
-          <p>Candid is made with</p>
+          <p>Candid is made with React, Firebase, Javascript, HTML/CSS.</p>
           <p>Best of all — it's completely free and open source.</p>
         </div>
       </div>

@@ -7,7 +7,7 @@ function InfoPanel(props) {
   return (
     <div className="info-panel">
       {props.title ? (
-        <h1>{props.title}</h1>
+        <h1 style={{ color: "black" }}>{props.title}</h1>
       ) : (
         <div className="info-bx">
           <img

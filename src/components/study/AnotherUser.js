@@ -44,13 +44,15 @@ export default class AnotherUser extends Component {
             <div className="profile-image" />
 
             <div className="profile-info">
-              <h1 style={{ fontSize: "25px", lineHeight: "60px" }}>
+              <h1
+                style={{ fontSize: "25px", lineHeight: "60px", color: "black" }}
+              >
                 {" "}
                 {createdBy}
               </h1>
 
-              <h2>New York, NY</h2>
-              <h2>Started Candid in April 2019</h2>
+              <p>New York, NY</p>
+              <p>Started Candid in April 2019</p>
             </div>
           </header>
           <ul>
@@ -60,7 +62,7 @@ export default class AnotherUser extends Component {
                 return (
                   <li key={items[item].key}>
                     <h3>{items[item].question}</h3>
-                    <p>Liked by: {items[item].user}</p>
+                    <h3>Liked by: {items[item].user}</h3>
                   </li>
                 );
               })

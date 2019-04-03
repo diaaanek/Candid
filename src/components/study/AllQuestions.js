@@ -171,7 +171,7 @@ class AllQuestions extends Component {
                           createdById: `${items[item].createdById}`,
                           createdBy: `${items[item].createdBy}`
                         }}
-                        style={{ textDecoration: "none" }}
+                        style={{ textDecoration: "none", textAlign: "left" }}
                       >
                         <h3>{items[item].user}</h3>
                       </Link>
