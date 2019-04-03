@@ -10,7 +10,7 @@
 h1 {
   font-size: 24px;
   align-self: center;
-  color: rgb(72, 72, 72) !important;
+  /* color: rgb(72, 72, 72) !important; */
   font-family: "Cereal-med", "Avenir", sans-serif;
   font-weight: 800;
 }

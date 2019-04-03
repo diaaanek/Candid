@@ -39,5 +39,35 @@ export default () => (
       <span />
       2019 Diane
     </section>
+    {/*} NEW FOOTER 
+    <div class="section-landing footer">
+      <div class="container1">
+        <h2 class="center">Try it out!</h2>
+        <a class="blue-app">
+          <SignIn />
+        </a>
+        <p class="center footer-text">
+          Currently available for beta testing! More content is coming soon!
+        </p>
+
+        <ul>
+          <li>
+            <a href="https://duolingo.com">Duolingo</a>
+          </li>
+          <li>
+            <a href="http://www.duolingo.com/design/assets.zip">Press Kit</a>
+          </li>
+          <li>
+            <a href="http://www.duolingo.com/contact">Contact</a>
+          </li>
+          <li>
+            <a href="https://facebook.com/duolingo">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/duolingo">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div> */}
   </div>
 );

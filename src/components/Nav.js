@@ -45,8 +45,11 @@ const NavAuth = () => (
       <Link to={routes.HOME} style={{ marginTop: ".85em" }}>
         Learn
       </Link>
-      <Link to={routes.STUDY} style={{ marginTop: ".85em" }}>
+      <Link to={routes.QUESTIONS} style={{ marginTop: ".85em" }}>
         Study
+      </Link>
+      <Link to={routes.STUDY} style={{ marginTop: ".85em" }}>
+        Discussion
       </Link>
     </div>
 
@@ -59,23 +62,22 @@ const NavAuth = () => (
 // ****** when user is NOT LOGGED IN ****** //
 
 const NavNonAuth = () => (
-  <div className="nav-bar">
-    <div className="float">
-      <Link to={routes.LANDING}>
-        {" "}
-        <img
-          className="logo"
-          style={{ verticalAlign: "middle" }}
-          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553635345/logo.png"
-        />
-      </Link>
-    </div>{" "}
-    <div>
-      <Link to={routes.LANDING}>
-        {" "}
-        <button className="button signup">Sign Up </button>
-      </Link>{" "}
-      <Link to={routes.LANDING}>Sign In</Link>
+  <div class="topbar">
+    <div class="container1">
+      <div class="header-logo">
+        <Link to={routes.LANDING}>
+          <span class="candid-logo">
+            <img
+              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1554312765/logonew.png"
+              style={{ height: "70px" }}
+            />
+          </span>
+          <span class="lockup">beta</span>
+        </Link>
+      </div>
+      <a class="white-app topbar-btn">
+        <SignIn />
+      </a>
     </div>
   </div>
 );

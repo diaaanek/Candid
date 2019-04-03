@@ -28,49 +28,63 @@ class QuestionCard extends Component {
         <body>
           <div id="main">
             <article role="main">
-              <h2>Under Construction</h2>
-              <p>
-                <Flippy
-                  flipOnHover={false}
-                  flipOnClick={false}
-                  flipDirection="horizontal"
-                  ref={r => (this.flippyHorizontal = r)}
-                >
-                  <FrontSide
-                    style={{
-                      justifyContent: "center",
+              <Flippy
+                flipOnHover={false}
+                flipOnClick={true}
+                flipDirection="horizontal"
+                ref={r => (this.flippyHorizontal = r)}
+              >
+                <FrontSide
+                  id="flashcard"
+                  style={{
+                    justifyContent: "center",
 
-                      alignItems: "center",
-                      boxShadow: "0 0 0 0"
-                    }}
-                  >
+                    alignItems: "center",
+                    boxShadow: "0 0 0 0"
+                  }}
+                >
+                  <div id="word">
                     <h4>{Object.keys(questions[this.state.number])}</h4>
-                  </FrontSide>
-                  <BackSide
-                    style={{
-                      alignItems: "center",
-                      boxShadow: "0 0 0 0"
-                    }}
-                  >
-                    {Object.values(questions[this.state.number])}
-                  </BackSide>
-                </Flippy>
-
-                {"    "}
-                {"    "}
-
-                <button
-                  className="start"
-                  onClick={() => this.flippyHorizontal.toggle()}
+                  </div>
+                </FrontSide>
+                <BackSide
+                  id="flashcard"
+                  style={{
+                    alignItems: "center",
+                    boxShadow: "0 0 0 0"
+                  }}
                 >
-                  Show Answer
-                </button>
-                <button className="start" onClick={this.updateNumber}>
-                  Next Question
-                </button>
-              </p>
+                  {Object.values(questions[this.state.number])}
+                </BackSide>
+              </Flippy>
+
+              {"    "}
+              {"    "}
+
+              <button
+                style={{
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+                className="start"
+                onClick={() => this.flippyHorizontal.toggle()}
+              >
+                Show Answer
+              </button>
+              <button
+                style={{
+                  justifyContent: "center",
+
+                  alignItems: "center"
+                }}
+                className="start"
+                onClick={this.updateNumber}
+              >
+                Next Question
+              </button>
             </article>
-            <nav>Question Type</nav>
+
+            <nav>UNDER CONSTRUCTION*</nav>
           </div>
         </body>
       </div>
