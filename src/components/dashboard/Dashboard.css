@@ -54,10 +54,9 @@ h4 {
   color: white;
 }
 
-/*
 @media only screen and (max-width: 205px) {
   grid-template-columns: repeat(auto-fill, 200px);
-} */
+}
 .card__container {
   padding-right: 2em;
   padding-left: 2em;
@@ -127,4 +126,197 @@ h4 {
   bottom: 15px;
   display: flex;
   flex-direction: column;
+}
+
+/*
+ ***** General QUIZ INFO CARD GRIDDD *****
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  font-family: "Avenir";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+/*
+ * Course card
+ */
+.main-card-container {
+  padding-top: "5em";
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.quiz-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-item {
+  display: flex;
+  padding: 1rem;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 25rem;
+  height: 30rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23);
+}
+
+/* Card header */
+.card-header {
+  width: 100%;
+  height: 100px;
+  padding: 1em;
+  background-image: url("");
+  background-size: 100% 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: white;
+  h1 {
+    position: relative;
+    top: 45%;
+    z-index: 10;
+    color: white;
+  }
+}
+
+/* .course-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: #fff;
+} */
+
+/* Card body */
+.card-body {
+  display: block;
+  padding: 40px;
+  color: #759790;
+}
+
+.course-description {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 0.85em;
+}
+
+.course-author,
+.course-attributes {
+  display: inline-block;
+  height: 72px;
+  vertical-align: middle;
+}
+
+.course-author {
+  width: 116px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: -4px; /* Remove inline-block auto whitespace */
+}
+
+.author-photo {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.author-name {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.course-attributes {
+  padding: 12px 0 12px 24px;
+  font-size: 14px;
+  border-left: 1px solid #e3e3e3;
+}
+
+.course-duration {
+  height: 16px;
+  margin-bottom: 16px;
+}
+
+.course-likes {
+  height: 16px;
+  font-weight: 300;
+}
+
+.course-attributes .icon-time,
+.course-attributes .icon-heart {
+  display: inline-block;
+  float: left;
+  margin-right: 4px; /* 8-4px to compensate for inline-block auto whitespace */
+  vertical-align: middle;
+}
+
+.course-attributes .text {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 16px;
+  vertical-align: middle;
+  float: left;
+}
+
+/* Card footer */
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3ec4ff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: background-color 0.1s linear;
+}
+
+.card-footer:hover {
+  background-color: #5ff2d2;
+}
+
+.card-footer .icon-play {
+  display: inline-block;
+  height: 28px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.card-footer .text {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  vertical-align: middle;
 }

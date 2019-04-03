@@ -10,7 +10,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import { shadows } from "@material-ui/system";
+import "./QuizCard.css";
 import "./Dashboard.css";
 
 // map through quiz
@@ -27,7 +28,7 @@ class QuizList extends Component {
             <h1
               style={{
                 fontWeight: "700",
-                fontFamily: "Cereal-bold",
+                fontFamily: "Cereal-med",
                 color: "# 111111"
               }}
             >
@@ -61,7 +62,7 @@ class QuizList extends Component {
                     style={{
                       float: "left",
                       fontSize: "20px",
-                      fontFamily: "Cereal-bold"
+                      fontFamily: "Cereal-med"
                     }}
                   >
                     Javascript Coding Challenges
@@ -118,7 +119,7 @@ class QuizList extends Component {
                 marginRight: "1em"
               }}
             /> */}
-            <h1 style={{ fontFamily: "Cereal-bold" }}>
+            <h1 style={{ fontFamily: "Cereal-med" }}>
               Test Your Technical Chops
             </h1>
             <h4> Coming soon: Prep on the go with our Mobile Application</h4>
@@ -127,16 +128,31 @@ class QuizList extends Component {
           {list.map((quiz, index) => {
             return (
               <Card
+                boxShadow={3}
                 // className={classes.card}
-                style={{ maxWidth: 345, display: "inline-block", margin: "1%" }}
+                style={{
+                  maxWidth: 345,
+                  display: "inline-block",
+                  margin: "1%"
+                }}
               >
                 <CardActionArea>
+                  {/*  <img
+                    src={quiz.image}
+                    style={{
+                      objectFit: "cover",
+                      height: "150px",
+                      width: "150px",
+                      marginTop: "1.5em",
+                      borderRadius: "100%"
+                    }}
+                  /> */}
+
                   <CardMedia
                     component="img"
                     // className={classes.media}
                     style={{
-                      objectFit: "cover",
-                      boxShadow: "0 0 2px  0 3px 16px "
+                      objectFit: "cover"
                     }}
                     height="170"
                     image={quiz.image}
@@ -144,14 +160,22 @@ class QuizList extends Component {
                   />
 
                   <CardContent>
+                    <p
+                      style={{
+                        color: "grey",
+                        fontSize: "12px",
+                        textAlign: "left"
+                      }}
+                    >
+                      WEB DEVELOPMENT{" "}
+                    </p>
                     <h1
                       gutterBottom
-                      variant="headline"
-                      component="h1"
                       style={{
                         textAlign: "left",
+                        color: "black",
                         fontSize: "22px",
-                        fontFamily: "Cereal-bold"
+                        fontFamily: "Cereal-reg"
                       }}
                     >
                       {quiz.name}
@@ -160,7 +184,7 @@ class QuizList extends Component {
                       component="p"
                       style={{
                         textAlign: "left",
-                        fontSize: "14px",
+                        fontSize: "13px",
                         fontFamily: "Cereal-reg"
                       }}
                     >
@@ -168,19 +192,40 @@ class QuizList extends Component {
                     </div>
                   </CardContent>
                 </CardActionArea>
-                <CardActions style={{ justifyContent: "center" }}>
-                  <center>
-                    <button
-                      className="start"
-                      onClick={() => onPress(index)}
-                      size="large"
-                      color="primary"
-                    >
+
+                <div class="footer-card">
+                  <div class="left">
+                    <button className="start" onClick={() => onPress(index)}>
                       {" "}
+                      <img
+                        class="icon-play"
+                        src="https://rawgit.com/nelsonreitz/349a70325c2c14dc5e66581b73d6287f/raw/a92ae40c5d28a3231dfe36376184007694d51c37/icon-play.svg"
+                      />{" "}
                       Start
                     </button>
-                  </center>
-                </CardActions>
+                  </div>
+                  <div class="right">
+                    <img
+                      className="button-right"
+                      style={{
+                        height: "30px",
+                        width: "30px",
+                        verticalAlign: "middle"
+                      }}
+                      src="  http://www.sclance.com/pngs/time-icon-png/time_icon_png_1384729.png"
+                    />
+
+                    <img
+                      className="button-right"
+                      style={{
+                        height: "30px",
+                        width: "30px",
+                        verticalAlign: "middle"
+                      }}
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1z5hTK_PtD1G-yN2x_PiVOg6MDI5i9gM86dBM0weq-cyizpQ-"
+                    />
+                  </div>
+                </div>
               </Card>
             );
           })}

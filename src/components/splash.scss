@@ -67,7 +67,7 @@ h2 {
     cursor: pointer;
   }
   a:hover {
-    color: #ea555c;
+    color: #5ff2d2;
     font-family: "Cereal-med", "Avenir";
   }
 }
@@ -182,8 +182,13 @@ h2 {
     margin-bottom: 10px;
     font-family: "Cereal-reg", "Avenir", sans-serif;
     font-size: 1em;
-  }
 
+    background-color: #3ec4ff;
+    transition: background-color 0.1s linear;
+  }
+  .mainbutton:hover {
+    background-color: #5ff2d2;
+  }
   #laptop {
     padding: 1em;
     background-image: url("https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553737659/PICCC.png");
@@ -211,7 +216,7 @@ h2 {
   font-family: "Cereal-reg", "Avenir", sans-serif;
   font-size: 15px;
   color: white;
-  border-radius: 6px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
 }
@@ -227,6 +232,7 @@ h2 {
 
 .signup {
   background-color: #3ec4ff;
+  transition: background-color 0.1s linear;
   color: white;
   font-weight: bold;
   border: 2px solid #3ec4ff;
@@ -235,8 +241,8 @@ h2 {
 }
 
 .signup:hover {
-  background-color: #aadd32;
-  border: 2px solid #aadd32;
+  background-color: #5ff2d2;
+  border: 2px solid #5ff2d2;
 }
 
 .nav-bar .signup {

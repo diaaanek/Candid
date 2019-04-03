@@ -1,0 +1,251 @@
+.course-card-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+.course-card {
+  width: 100%;
+  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.2);
+  /* font-family:Arial; */
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.course-card .header {
+  height: 70px;
+  background: #bad;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  color: #fff;
+  font-weight: bold;
+  font-family: Open Sans;
+  border-radius: 4px 4px 0 0;
+}
+
+.course-card .header .course-icon {
+  font-size: 20px;
+}
+
+.course-card .body {
+  padding: 2rem;
+  background: #fff;
+  font-weight: bold;
+  border-radius: 0 0 4px 4px;
+}
+
+.course-card .body .type {
+  font-size: 20px;
+  color: gray;
+}
+
+.course-card .body .name {
+  font-size: 24px;
+  margin: 0.5rem 0;
+}
+
+.course-card .body .description {
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: gray;
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+.footer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 1rem;
+}
+
+.footer-card .left button {
+  min-width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.footer-card .right {
+  display: flex;
+}
+
+.footer-card .right .button-right {
+  background: transparent;
+  /* border: 1px solid gray; */
+  margin: 4px;
+  /* width: 40px;
+  height: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  /* color: gray; */
+  cursor: pointer;
+}
+
+/*
+ * General
+ */
+/* html {
+  box-sizing: border-box;
+} */
+/* *,
+*:before,
+*:after {
+  box-sizing: inherit;
+} */
+
+/*
+ * Course card
+ */
+.course-card {
+  position: relative;
+  width: 464px;
+  /* height: 560px; */
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.23);
+}
+
+/* Card header */
+.card-header {
+  width: 100%;
+  height: 200px;
+  padding: 64px;
+  background-image: url("https://udemy-images.udemy.com/course/750x422/1832410_d0da_2.jpg");
+  background-size: 100% 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 30px;
+  font-family: "Cereal-reg", "Avenir";
+}
+
+.course-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* Card body */
+.card-body {
+  display: block;
+  /* padding: 40px; */
+  font-weight: 700;
+  color: #759790;
+}
+
+.course-description {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.course-author,
+.course-attributes {
+  display: inline-block;
+  height: 72px;
+  vertical-align: middle;
+}
+
+.course-author {
+  width: 216px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: -4px; /* Remove inline-block auto whitespace */
+}
+
+.author-photo {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin-right: 12px; /* 16-4px to compensate for inline-block auto whitespace */
+  vertical-align: middle;
+}
+
+.author-name {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.course-attributes {
+  padding: 12px 0 12px 24px;
+  font-size: 14px;
+  border-left: 1px solid #e3e3e3;
+}
+
+.course-duration {
+  height: 16px;
+  margin-bottom: 16px;
+}
+
+.course-likes {
+  height: 16px;
+  font-weight: 300;
+}
+
+.course-attributes .icon-time,
+.course-attributes .icon-heart {
+  display: inline-block;
+  margin-right: 4px; /* 8-4px to compensate for inline-block auto whitespace */
+  vertical-align: middle;
+}
+
+.course-attributes .text {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+/* Card footer */
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #50e3c2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: background-color 0.1s linear;
+}
+
+.card-footer:hover {
+  background-color: #5ff2d2;
+}
+
+.card-footer .icon-play {
+  display: inline-block;
+
+  /* margin-right: 4px; */
+  vertical-align: middle;
+}
+
+.icon-play {
+  width: 18px;
+}
+.card-footer .text {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  vertical-align: middle;
+}

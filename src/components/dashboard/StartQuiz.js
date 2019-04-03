@@ -170,7 +170,7 @@ class QuizList extends Component {
             <div id="side"> Learning {" " + quizName}</div>
 
             <img
-              src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553652549/picc.png"
+              src="https://image.flaticon.com/icons/svg/337/337941.svg"
               alt="quiz"
               style={{ width: "125px", marginTop: "2rem" }}
             />
@@ -251,19 +251,11 @@ class QuizList extends Component {
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option4}
-                            style={{ fontFamily: "Cereal-light" }}
                           />
                         </RadioGroup>
                       </FormControl>
-
-                      <input
-                        class="with-gap"
-                        name="group1"
-                        type="radio"
-                        id="test1"
-                      />
                     </div>
-                    <label for="test1">{started.qArr[qstnNo].option4}</label>
+
                     <br />
                     <button
                       className="nextBtn"
