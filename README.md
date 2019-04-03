@@ -3,11 +3,12 @@
 A technical prep/learning platform application for developers & coders. Made with React.js (create-react-app) and Firebase real time database. Inspired by dev.io, quizlet, stackoverflow, codeacademy, and egghead.io
 
 [Original Site Map](https://github.com/diaaanek/candid/wiki/Originial-Site-Map/_edit)
+
 [Check it out live](https://candidapp.co)
 
 ### Landing Page
 
-![Candid1](https://raw.githubusercontent.com/diaaanek/candid/master/public/candidmock1.png)
+![Candid1](https://raw.githubusercontent.com/diaaanek/candid/master/public/splash.png)
 
 ### Dashboard
 
