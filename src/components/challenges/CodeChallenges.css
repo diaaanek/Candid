@@ -5,11 +5,8 @@
 
 .info-panel {
   background-color: #f8f8f8;
-  /* border-top: 10px solid #adb2bd;
-  box-shadow: inset -1px 2px 2px #404040;
-  box-sizing: border-box; */
-  font-family: "Cereal-light", sans-serif;
-  padding: 16px;
+  font-family: "Cereal-med", sans-serif;
+  padding: 18px;
   width: 100%;
 }
 
@@ -39,4 +36,105 @@
 
 .info-bx {
   text-align: center;
+}
+
+.codebox-page {
+  display: flex;
+  flex-direction: column;
+}
+/* entire container, keeps perspective */
+.codebox-container {
+  align-self: center;
+  perspective: 1000px;
+
+  width: 680px;
+  padding-right: 100px;
+  padding-left: 50px;
+  height: 370px;
+
+  top: 100px;
+}
+
+h1 {
+  font-size: 25px;
+  align-self: center;
+  font-family: "Cereal-med", "Avenir";
+}
+
+.button {
+  padding: 15px 20px;
+  font-family: "Cereal-light", "Avenir";
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.button:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.submit {
+  background-color: #4d9f51;
+  color: white;
+  font-weight: bold;
+  border: 2px solid;
+}
+
+.test {
+  background-color: #eca570;
+  color: white;
+  font-weight: bold;
+  border: 2px solid;
+}
+.save {
+  background-color: #3ec4ff;
+  color: white;
+}
+.buttonContainer {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ####### SIDE BAR ####### */
+
+.Sidebar {
+  border-right: 2px solid #e7e7e7;
+  display: flex;
+  flex: 1;
+  margin-left: 25px;
+}
+
+.ProblemList {
+  justify-content: center;
+  margin-right: 30px;
+  padding-top: 25px;
+}
+
+.problemBtn {
+  padding: 15px 25px;
+  font-family: "Cereal-reg";
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #d90;
+  color: white;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.problemBtn:hover {
+  background-color: #32cdff;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }

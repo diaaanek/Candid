@@ -376,7 +376,7 @@ class Study extends Component {
                   <form onSubmit={this.handleSubmit}>
                     <input
                       type="text"
-                      placeholder="Submit Question: What is Javascript and why do we love it?"
+                      placeholder="Submit Question: How does one program?"
                       name="currentItem"
                       onChange={this.handleChange}
                       value={this.state.currentItem}
@@ -411,27 +411,28 @@ class Study extends Component {
                 />{" "}
                 <div class="message-text">
                   <h3 style={{ textAlign: "left" }}>
+                    Candid Demo <span>10:30 AM</span>
+                  </h3>
+                  <p>Create a map function that does what Array.map() does. </p>{" "}
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="message-container">
+                {" "}
+                <img
+                  src=" https://cdn.iconscout.com/icon/free/png-256/avatar-375-456327.png"
+                  class="avatar"
+                />{" "}
+                <div class="message-text">
+                  <h3 style={{ textAlign: "left" }}>
                     Git Solo <span>11:11 AM</span>
                   </h3>
                   <p>
                     What's the difference between functional vs object-oriented
                     programming???{" "}
                   </p>{" "}
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="message-container">
-                {" "}
-                <img
-                  src="  https://cdn.iconscout.com/icon/free/png-256/avatar-375-456327.png"
-                  class="avatar"
-                />{" "}
-                <div class="message-text">
-                  <h3 style={{ textAlign: "left" }}>
-                    Candid Demo <span>10:30 AM</span>
-                  </h3>
-                  <p>Create a map function that does what Array.map() does. </p>{" "}
                 </div>
               </div>
             </li>

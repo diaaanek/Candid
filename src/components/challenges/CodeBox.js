@@ -1,6 +1,5 @@
 import React from "react";
 import "./CodeChallenges.css";
-import "./Codebox.scss";
 
 import SaveButton from "./SaveButton";
 // import { Controlled as CodeMirror } from "react-codemirror2";
@@ -20,8 +19,8 @@ require("codemirror/addon/edit/matchtags");
 function CodeBox(props) {
   return (
     <div className="CodeBox">
-      <div className="flashcards-page">
-        <div className="flip-container">
+      <div className="codebox-page">
+        <div className="codebox-container">
           <br />
           <br />
           <CodeMirror

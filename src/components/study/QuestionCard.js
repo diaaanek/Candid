@@ -4,11 +4,6 @@ import questions from "./questions.json";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 import QuestionCardStyle from "./QuestionCardStyle.css";
 
-import html from "./info/html.pdf";
-import css from "./info/css.pdf";
-import js from "./info/js.pdf";
-import react from "./info/react.pdf";
-import sql from "./info/sql.pdf";
 class QuestionCard extends Component {
   constructor(props) {
     super(props);
@@ -100,32 +95,3 @@ class QuestionCard extends Component {
 }
 
 export default QuestionCard;
-
-{
-  /* <Flippy
-  flipOnHover={false}
-  flipOnClick={true}
-  ref={r => (this.flippyHorizontal = r)}
->
-  <FrontSide id="flashcard">
-    <div id="word">
-      <h4>{Object.keys(questions[this.state.number])}</h4>
-    </div>
-  </FrontSide>
-  <BackSide id="flashcard">
-    {Object.values(questions[this.state.number])}
-  </BackSide>
-</Flippy>
-
-
-<button
-  className="start"
-  onClick={() => this.flippyHorizontal.toggle()}
->
-  Show Answer
-</button>
-<button className="start" onClick={this.updateNumber}>
-  Next Question
-</button>
-*/
-}

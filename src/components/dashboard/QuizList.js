@@ -30,7 +30,7 @@ class QuizList extends Component {
                 fontWeight: "700",
                 fontSize: "25px",
                 fontFamily: "Cereal-med",
-                color: "black"
+                color: "#1b1b1b"
               }}
             >
               {" "}
@@ -64,7 +64,7 @@ class QuizList extends Component {
                       float: "left",
                       fontSize: "20px",
                       fontFamily: "Cereal-med",
-                      color: "black"
+                      color: "#1b1b1b"
                     }}
                   >
                     Javascript Coding Challenges
@@ -126,7 +126,7 @@ class QuizList extends Component {
                 fontWeight: "700",
                 fontSize: "25px",
                 fontFamily: "Cereal-med",
-                color: "black"
+                color: "#1b1b1b"
               }}
             >
               Test Your Technical Chops

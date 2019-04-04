@@ -11,15 +11,11 @@ class QuizInfo extends Component {
     const { quiz, onBack, onPress } = this.props;
     return (
       <div style={{ paddingTop: "5em" }}>
-        <h1 style={{ fontFamily: "Cereal-med" }}> Take Quizzes </h1>
-        {/*}<img
-          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1552589873/REST_2x.png"
-          style={{
-            height: "150px",
-            width: "175px",
-            maxWidth: 345
-          }}
-        /> */}
+        <h1 style={{ fontFamily: "Cereal-med", color: "#1b1b1b" }}>
+          {" "}
+          Take Quizzes{" "}
+        </h1>
+
         <br />
         {quiz.subQuiz.map((subQuiz, index) => {
           return (
@@ -75,7 +71,8 @@ class QuizInfo extends Component {
                       style={{
                         textAlign: "left",
                         fontFamily: "Cereal-med",
-                        fontWeight: "700"
+                        fontWeight: "700",
+                        color: "#1b1b1b"
                       }}
                     >
                       {subQuiz.name}

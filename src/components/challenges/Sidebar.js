@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./Sidebar.css";
-
 //Conditionally render problems based on list
 
 function Sidebar(props) {
