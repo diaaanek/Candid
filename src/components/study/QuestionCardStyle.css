@@ -1,80 +1,134 @@
 .main-cardi {
   display: flex;
-  /* margin: 0 auto; */
-  /* width: 1082px; */
   margin-top: "7em";
+  background: rgba(175, 175, 175, 0.1);
 }
+
 /*
-New stufff  */
-.cardi-left {
-  /* margin: 0 auto; */
-  flex: 40%;
-  padding: 2em;
-  margin-top: "7em";
+New layout styling  */
+
+.main {
+  grid-column: 2/4;
+  min-height: calc(100vh - 10.5rem);
+  padding: 2rem;
+  background: #f5f7fa;
 }
 
-/* .cardi-left1 {
-  grid-column-gap: 24px;
-  width: 224px;
-} */
-.button-box {
-}
-.cardi-right {
-  flex: 60%;
-  padding: 10px;
-  margin-right: 3.75em;
+.sidebar {
+  grid-column: 1;
+  grid-row: 2;
+  color: white;
+  padding: 2rem;
 }
 
-.flippy-card.flippy-front.tinycard {
-  margin-top: 5em;
-  margin-right: 5em;
+.sidebar ul {
+  margin-top: 1rem;
 }
 
-.tinycard {
+/* First simple components */
+.card {
   background: white;
-  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
   padding: 20px;
-  min-height: 250px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.card:last-child {
+  margin-bottom: 0px;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.text-center {
+  text-align: center;
+}
+.list-inline {
+  padding-left: 0;
+}
+.list-inline li {
+  display: inline-block;
+  padding: 20px;
+}
+.list-inline li i {
+  font-size: 25px;
+}
+
+/* Specific CSS rules */
+
+#img-profile {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #cccccc;
+}
+
+/* Dashboard layout */
+
+#wrapper {
+  padding: 20px;
+  width: 1200px;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+#left-container {
+  width: 35%;
+  float: left;
+  min-height: 600px;
+}
+#left-container .card:first-child {
+  min-height: 350px;
+  background-image: url(" ");
+  /*   opacity: 0.5; */
+}
+#left-container .card:last-child {
+  min-height: 120px;
+}
+
+#right-container {
+  width: 60%;
+  float: right;
+  min-height: 600px;
+}
+#right-container .card {
+  min-height: 530px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#share {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  right: 0px;
+}
+
+.elem-div-progress-container {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  border: 0px dotted #000;
+  height: 15px;
+  margin-bottom: 35px;
+  min-height: 15px;
+  width: 100%;
 }
 
-.tinycard1 {
-  background: white;
-  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-
-  min-height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.elem-small-progress-val {
+  margin-left: 5px;
 }
 
-.bigcard {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
-  box-sizing: border-box;
-  display: inline-block;
-  margin-left: 64px;
-  width: 776px;
-  height: 555px;
-  position: relative;
-  vertical-align: top;
+progress {
+  display: block;
+  padding: 4px;
+  border: 0 none;
+  background: #f3f3f3;
+  border-radius: 14px;
 }
 
-.cardi {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
-  box-sizing: border-box;
-  display: inline-block;
-  margin-left: 64px;
-  max-width: 776px;
-  position: relative;
-  vertical-align: top;
-  width: 776px;
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  border-radius: 12px;
+  background: darken(lime, 15%);
 }

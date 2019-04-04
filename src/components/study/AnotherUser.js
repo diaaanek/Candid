@@ -61,8 +61,8 @@ export default class AnotherUser extends Component {
               Object.keys(items).map(item => {
                 return (
                   <li key={items[item].key}>
-                    <h3>{items[item].question}</h3>
-                    <h3>Liked by: {items[item].user}</h3>
+                    <p>{items[item].question}</p>
+                    <p>Liked by: {items[item].user}</p>
                   </li>
                 );
               })
@@ -70,17 +70,6 @@ export default class AnotherUser extends Component {
               <p>nothing to show</p>
             )}
           </ul>
-          <section className="friends">
-            <h1>Friends</h1>
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-          </section>
           <Link to={routes.STUDY}>
             <button
               className="start"

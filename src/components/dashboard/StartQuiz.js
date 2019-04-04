@@ -196,7 +196,7 @@ class QuizList extends Component {
           </aside>
 
           <div className="section">
-            <h1>{subQuizName}</h1>
+            <h1 style={{ color: "grey" }}>{subQuizName}</h1>
             <div>
               <div style={{ margin: "80px 3% 3% 3%" }}>
                 {scored !== false ? (
@@ -230,21 +230,18 @@ class QuizList extends Component {
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option1}
-                            style={{ fontFamily: "Cereal-light" }}
                           />
                           <FormControlLabel
                             value="2"
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option2}
-                            style={{ fontFamily: "Cereal-light" }}
                           />
                           <FormControlLabel
                             value="3"
                             name="option"
                             control={<Radio />}
                             label={started.qArr[qstnNo].option3}
-                            style={{ fontFamily: "Cereal-light" }}
                           />
                           <FormControlLabel
                             value="4"

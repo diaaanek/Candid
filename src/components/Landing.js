@@ -113,9 +113,9 @@ export default ({ user }) => (
     </div>
 
     <div className="section-landing footer">
-      <div className="container">
+      <div className="container1">
         <h2 class="center">Try it out!</h2>
-        <a className="blue-app" />
+
         <p className="center footer-text">
           Currently available for beta testing! More content is coming soon!
         </p>
@@ -142,28 +142,6 @@ export default ({ user }) => (
       </ul>
     </div>
 
-    {/*  <div className="splash">
-      <section className="first-page">
-        <section className="splash-left">
-          <div />
-          <h2 id="manage">
-            <h2> Learn from the best, and </h2>{" "}
-            <h2>practice your dev skillz with the rest.</h2>{" "}
-          </h2>
-          <p>
-            {" "}
-            A social interview prep application for aspiring and bad-ass web
-            developers.
-          </p>
-          <span> </span>
-          <SignIn />
-        </section>
-
-        <section className="splash-right">
-          <div id="laptop" />
-        </section>
-      </section>
-*/}
     <ThemeProvider theme={theme}>
       <ChatBot
         speechSynthesis={{ enable: false, lang: "en" }}

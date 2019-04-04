@@ -9,12 +9,6 @@ import { withRouter, Redirect } from "react-router-dom";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
-import html from "./info/html.pdf";
-import css from "./info/css.pdf";
-import js from "./info/js.pdf";
-import react from "./info/react.pdf";
-import sql from "./info/sql.pdf";
-
 import Test from "./Test.scss";
 import AllQuestions from "./AllQuestions";
 
