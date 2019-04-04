@@ -24,72 +24,108 @@ class QuestionCard extends Component {
 
   render() {
     return (
-      <div style={{ justifyContent: "center", marginTop: "4em" }}>
-        <body>
-          <div id="main">
-            <article role="main">
-              <Flippy
-                flipOnHover={false}
-                flipOnClick={true}
-                flipDirection="horizontal"
-                ref={r => (this.flippyHorizontal = r)}
-              >
-                <FrontSide
-                  id="flashcard"
-                  style={{
-                    justifyContent: "center",
+      <div id="main-cardi">
+        <div style={{ justifyContent: "center", marginTop: "4em" }}>
+          <body>
+            <div className="main-cardi">
+              <div className="cardi-left">
+                <div className="tinycard">
+                  {" "}
+                  <h2>Daily Goal: </h2>
+                </div>
+                <h1 style={{ color: "black", marginTop: "2em" }}>
+                  {" "}
+                  Questions Flashcards
+                </h1>
+              </div>
 
-                    alignItems: "center",
-                    boxShadow: "0 0 0 0"
-                  }}
-                >
-                  <div id="word">
-                    <h4>{Object.keys(questions[this.state.number])}</h4>
+              <div className="cardi-right">
+                <div className="bigcard">
+                  <Flippy
+                    flipOnHover={false}
+                    flipOnClick={true}
+                    flipDirection="horizontal"
+                    ref={r => (this.flippyHorizontal = r)}
+                  >
+                    <FrontSide className="tinycard1">
+                      <div id="word">
+                        <h4>{Object.keys(questions[this.state.number])}</h4>
+                      </div>
+                    </FrontSide>
+                    <BackSide className="tinycard1">
+                      {Object.values(questions[this.state.number])}
+                    </BackSide>
+                  </Flippy>
+
+                  {"    "}
+                  {"    "}
+                  <div
+                    className="button-box"
+                    style={{
+                      textAlign: "center",
+                      justifyContent: "center",
+                      margin: "3em"
+                    }}
+                  >
+                    <button
+                      style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginRight: "1em"
+                      }}
+                      className="start"
+                      onClick={() => this.flippyHorizontal.toggle()}
+                    >
+                      Show Answer
+                    </button>
+                    <button
+                      style={{
+                        justifyContent: "center",
+                        marginLeft: "1em"
+                      }}
+                      className="start"
+                      onClick={this.updateNumber}
+                    >
+                      Next Question
+                    </button>
                   </div>
-                </FrontSide>
-                <BackSide
-                  id="flashcard"
-                  style={{
-                    alignItems: "center",
-                    boxShadow: "0 0 0 0"
-                  }}
-                >
-                  {Object.values(questions[this.state.number])}
-                </BackSide>
-              </Flippy>
-
-              {"    "}
-              {"    "}
-
-              <button
-                style={{
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-                className="start"
-                onClick={() => this.flippyHorizontal.toggle()}
-              >
-                Show Answer
-              </button>
-              <button
-                style={{
-                  justifyContent: "center",
-
-                  alignItems: "center"
-                }}
-                className="start"
-                onClick={this.updateNumber}
-              >
-                Next Question
-              </button>
-            </article>
-
-            <nav>UNDER CONSTRUCTION*</nav>
-          </div>
-        </body>
+                </div>
+              </div>
+            </div>
+          </body>
+        </div>
       </div>
     );
   }
 }
 
 export default QuestionCard;
+
+{
+  /* <Flippy
+  flipOnHover={false}
+  flipOnClick={true}
+  ref={r => (this.flippyHorizontal = r)}
+>
+  <FrontSide id="flashcard">
+    <div id="word">
+      <h4>{Object.keys(questions[this.state.number])}</h4>
+    </div>
+  </FrontSide>
+  <BackSide id="flashcard">
+    {Object.values(questions[this.state.number])}
+  </BackSide>
+</Flippy>
+
+
+<button
+  className="start"
+  onClick={() => this.flippyHorizontal.toggle()}
+>
+  Show Answer
+</button>
+<button className="start" onClick={this.updateNumber}>
+  Next Question
+</button>
+*/
+}

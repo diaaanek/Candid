@@ -39,7 +39,7 @@ const NavAuth = () => (
       <Link to={routes.LANDING}>
         <img
           className="logo"
-          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1553635345/logo.png"
+          src="https://res.cloudinary.com/dxrvvjvpf/image/upload/v1554312765/logonew.png"
         />
       </Link>
       <Link to={routes.HOME} style={{ marginTop: ".85em" }}>

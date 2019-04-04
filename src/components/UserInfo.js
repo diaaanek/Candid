@@ -23,7 +23,7 @@ const UserData = ({ authUser }) => (
           marginTop: "1em"
         }}
       />{" "}
-      <span style={{ marginRight: ".5em" }}>
+      <span style={{ marginRight: ".5em", color: "white" }}>
         {authUser.displayName || authUser.email}{" "}
       </span>{" "}
       <img src={authUser.photoURL} className="avatar" alt="user-face" />{" "}

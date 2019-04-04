@@ -23,18 +23,19 @@ class QuizList extends Component {
     const { list, onPress } = this.props;
     return (
       <div>
-        <div className="quizContainer" style={{ margin: "20px 10% 10% 10%" }}>
+        <div className="quizContainer" style={{ margin: "40px 10% 10% 10%" }}>
           <div id="quix-title">
-            <h1
+            <span
               style={{
                 fontWeight: "700",
+                fontSize: "25px",
                 fontFamily: "Cereal-med",
-                color: "# 111111"
+                color: "black"
               }}
             >
               {" "}
               New & Noteworthy
-            </h1>
+            </span>
             <h4>
               A selection of technical challenges based on your skill set.
             </h4>
@@ -62,7 +63,8 @@ class QuizList extends Component {
                     style={{
                       float: "left",
                       fontSize: "20px",
-                      fontFamily: "Cereal-med"
+                      fontFamily: "Cereal-med",
+                      color: "black"
                     }}
                   >
                     Javascript Coding Challenges
@@ -119,9 +121,16 @@ class QuizList extends Component {
                 marginRight: "1em"
               }}
             /> */}
-            <h1 style={{ fontFamily: "Cereal-med" }}>
+            <span
+              style={{
+                fontWeight: "700",
+                fontSize: "25px",
+                fontFamily: "Cereal-med",
+                color: "black"
+              }}
+            >
               Test Your Technical Chops
-            </h1>
+            </span>
             <h4> Coming soon: Prep on the go with our Mobile Application</h4>
           </div>{" "}
           <br />

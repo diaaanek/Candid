@@ -43,14 +43,6 @@ form {
         appearance: none;
         border-radius: 4px;
       }
-
-      i {
-        position: absolute;
-        top: 50%;
-        left: 0.75em;
-        transform: translateY(-50%);
-        color: $accent-gray;
-      }
     }
 
     button {
@@ -101,7 +93,7 @@ form {
 
 body {
   margin: 0;
-  font-family: "Cereal-med", "Avenir";
+  font-family: "Cereal-light", "Avenir";
   // background-color: #f4f8fb;
   box-sizing: border-box;
 }
@@ -172,6 +164,7 @@ input {
 }
 .messages {
   background-color: #ffffff;
+  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.1);
   grid-column: 3;
   grid-row: 2;
   padding: 0 1em;
@@ -213,6 +206,7 @@ input {
   padding-left: 10px;
 }
 .message-text h3 {
+  text-align: left;
   font-size: 15px;
   margin: 0;
   text-transform: capitalize;
@@ -225,34 +219,4 @@ input {
 .message-text span {
   color: rgba(0, 0, 0, 0.5);
   font-weight: lighter;
-}
-
-@media (max-width: 768px) {
-}
-
-#flashcard {
-  width: 500px;
-  height: 300px;
-  border-radius: 5px;
-  background: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  margin-left: calc(50% - 250px);
-  margin-top: 100px;
-  transition: 0.7s all;
-  &:hover {
-    cursor: pointer;
-  }
-
-  #word {
-    text-align: center;
-    padding-top: 100px;
-    font-size: 2.5em;
-  }
-
-  #defn {
-    font-family: nunito;
-    font-size: 1.5em;
-    padding-top: 100px;
-    padding: 30px 30px;
-  }
 }

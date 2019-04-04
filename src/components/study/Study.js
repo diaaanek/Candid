@@ -263,11 +263,12 @@ class Study extends Component {
                       style={{
                         backgroundColor: "white",
                         marginTop: ".75em",
-                        boxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.15)",
+
                         listStyle: "none",
                         borderRadius: "4px",
                         paddingLeft: "1em",
-                        paddingRight: "1em"
+                        paddingRight: "1em",
+                        boxShadow: "-1px 1px 20px rgba(0, 0, 0, 0.1)"
                       }}
                     >
                       <button
@@ -406,6 +407,24 @@ class Study extends Component {
                 {" "}
                 <img
                   src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-dog-illustration-by-vexels.png"
+                  class="avatar"
+                />{" "}
+                <div class="message-text">
+                  <h3 style={{ textAlign: "left" }}>
+                    Git Solo <span>11:11 AM</span>
+                  </h3>
+                  <p>
+                    What's the difference between functional vs object-oriented
+                    programming???{" "}
+                  </p>{" "}
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="message-container">
+                {" "}
+                <img
+                  src="  https://cdn.iconscout.com/icon/free/png-256/avatar-375-456327.png"
                   class="avatar"
                 />{" "}
                 <div class="message-text">

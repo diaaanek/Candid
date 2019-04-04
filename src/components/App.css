@@ -21,13 +21,13 @@
 }
 
 .App {
-  font-family: "Cereal-reg";
+  font-family: "Cereal-reg", "Avenir";
   font-style: normal;
-  background-color: #f4f8fb;
+  /* background-color: #f4f8fb; */
 }
 
 h1 {
-  font-family: "Cereal-bold";
+  font-family: "Cereal-bold", "Avenir";
 }
 
 button,

@@ -1,78 +1,80 @@
-#main {
-  min-height: 800px;
-  margin: 0px;
-  padding: 0px;
-  display: -webkit-flex;
+.main-cardi {
   display: flex;
-  -webkit-flex-flow: row;
-  flex-flow: row;
+  /* margin: 0 auto; */
+  /* width: 1082px; */
+  margin-top: "7em";
+}
+/*
+New stufff  */
+.cardi-left {
+  /* margin: 0 auto; */
+  flex: 40%;
+  padding: 2em;
+  margin-top: "7em";
 }
 
-#main > article {
-  margin: 4px;
-  padding: 5px;
-  background: #e6e7e8;
-  -webkit-flex: 3 1 60%;
-  flex: 3 1 60%;
-  -webkit-order: 2;
-  order: 2;
+/* .cardi-left1 {
+  grid-column-gap: 24px;
+  width: 224px;
+} */
+.button-box {
+}
+.cardi-right {
+  flex: 60%;
+  padding: 10px;
+  margin-right: 3.75em;
 }
 
-#main > nav {
-  margin: 4px;
-  padding: 5px;
-  background: #fff;
-  -webkit-flex: 1 6 20%;
-  flex: 1 6 20%;
-  -webkit-order: 1;
-  order: q;
+.flippy-card.flippy-front.tinycard {
+  margin-top: 5em;
+  margin-right: 5em;
 }
 
-#main > aside {
-  margin: 4px;
-  padding: 5px;
-  background: #e6e7e8;
-  color: #444;
-  -webkit-flex: 1 6 20%;
-  flex: 1 6 20%;
-  -webkit-order: 3;
-  order: 3;
-}
-span.o {
-  color: #f67;
-  font-weight: 300;
+.tinycard {
+  background: white;
+  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav ul {
-  background: #f67;
-  width: 100%;
-  height: 3em;
-  padding: 10px 0px 10px 0px;
-  color: #111;
+.tinycard1 {
+  background: white;
+  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Too narrow to support three columns */
-@media all and (max-width: 640px) {
-  body {
-    background: #888;
-  }
-  #main,
-  #page {
-    -webkit-flex-flow: column;
-    flex-flow: column;
-  }
+.bigcard {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 64px;
+  width: 776px;
+  height: 555px;
+  position: relative;
+  vertical-align: top;
+}
 
-  #main > article,
-  #main > nav,
-  #main > aside {
-    /* Return them to document order */
-    -webkit-order: 0;
-    order: 0;
-  }
-
-  #main > nav,
-  #main > aside {
-    min-height: 50px;
-    max-height: 50px;
-  }
+.cardi {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 64px;
+  max-width: 776px;
+  position: relative;
+  vertical-align: top;
+  width: 776px;
 }

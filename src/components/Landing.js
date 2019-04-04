@@ -112,6 +112,36 @@ export default ({ user }) => (
       </div>
     </div>
 
+    <div className="section-landing footer">
+      <div className="container">
+        <h2 class="center">Try it out!</h2>
+        <a className="blue-app" />
+        <p className="center footer-text">
+          Currently available for beta testing! More content is coming soon!
+        </p>
+      </div>
+
+      <ul>
+        <li>
+          <a href="https://candidapp.co">Candid</a>
+        </li>
+        <li>
+          <a href="http://dianedesigned.com">Portfolio</a>
+        </li>
+        <li>
+          <a href="mailto:dkorongy@gmail.com?subject = Feedback&body = Message">
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/dianeelizabeth/">Linkedin</a>
+        </li>
+        <li>
+          <a href="https://github.com/diaaanek">Github</a>
+        </li>
+      </ul>
+    </div>
+
     {/*  <div className="splash">
       <section className="first-page">
         <section className="splash-left">
