@@ -68,8 +68,6 @@ or
 yarn install
 ```
 
-after the dependencies have been installed, you will need to make sure you have mongoDB configured on your computer as outlined in the next section.
-
 ### NPM Packages
 
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom) - Routing library for React with DOM bindings
