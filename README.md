@@ -2,9 +2,9 @@
 
 A technical prep/learning platform application for developers & coders. Made with React.js (create-react-app) and Firebase real time database. Inspired by dev.io, quizlet, stackoverflow, codeacademy, and egghead.io
 
-[Original Site Map](https://github.com/diaaanek/candid/wiki/Originial-Site-Map/_edit)
+Planning: [Original Site Map](https://github.com/diaaanek/candid/wiki/Originial-Site-Map/_edit)
 
-[Check it out live](https://candidapp.co)
+Live site: [Check it out live](https://candidapp.co)
 
 ### Landing Page
 
@@ -31,12 +31,6 @@ A technical prep/learning platform application for developers & coders. Made wit
 - They can also checkout the /study path for the user submitted question feed. There they can create, edit, delete questions, as well as like and unlike other user's questions.
 - Users can also view flashcards to study interview questions by topic
 
-\*\*\* Currently under construction. To continue this app, I would integrate my /signup /signin forms with my routes, as well as the ability to create and edit quizzes.
-
-### Challenges
-
-Coming from a NoSQL background, database design was a struggle for me in firebase. I will continue learning and implementing restructure of my database schema. Another challenge was attempting responsiveness without the use of a framework.
-
 Topics include:
 
 - Custom Routing
@@ -45,6 +39,16 @@ Topics include:
 - Registering users, Firebase for Google OAuth login
 - Logging users in and out
 - Creating, editing, and deleting interview questions from Firebase real time database
+
+\*\*\* Currently under construction. To continue this app, I would integrate my /signup /signin forms with my routes, as well as the ability to create and edit quizzes.
+
+### Challenges Faced 
+
+As someone who has been working with SQL databases, switching to Firebase’s realtime database model was a struggle for me. 
+In Firebase, I learned data duplication is key for handling data in different ways. If my app needed to display some data in a certain way in one place and another way somewhere else, (example user >-- user questions >-- questions) that means I needed to duplicate my data to multiple nodes. Even though the backend is my weakness when it comes to the fullstack, I will continue learning and implementing new ways of handling the reading and writing of data. 
+ 
+ Another challenge was attempting responsiveness without the use of a framework.
+
 
 ### Prerequisites
 
@@ -72,7 +76,7 @@ after the dependencies have been installed, you will need to make sure you have 
 
 ## Built With
 
-- HTML5 & CSS3
+- HTML5 & CSS3/SASS (semi-responsive)
 - [Javascript](https://www.javascript.com/) - programming language
 - [Firebase](https://www.firebase.com) - real time cloud database
 - [React.js](https://reactjs.org/) - user interface library
