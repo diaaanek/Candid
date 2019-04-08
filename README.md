@@ -6,6 +6,8 @@ Planning: [Original Site Map](https://github.com/diaaanek/candid/wiki/Originial-
 
 Live site: [Check it out live](https://candidapp.co)
 
+*** Work in progress *** 
+
 ### Landing Page
 
 ![Candid1](https://raw.githubusercontent.com/diaaanek/candid/master/public/splash.png)
